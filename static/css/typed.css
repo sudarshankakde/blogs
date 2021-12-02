@@ -1,0 +1,109 @@
+/* :root {
+  --primary-text: rgb(20, 20, 20);
+  --elegance: rgb(39 39 39);
+  --secondary-text: #ffffff;
+  --primary-theme: #4285f4;
+  --secondary-theme: #a6c;
+  --card-bg:#37474f;
+  --card-bg: #ffffff;
+
+} */
+
+:root {
+  --primary-text: white;
+  --elegance: rgb(39 39 39);
+  --primary-theme: #a6c;
+  --card-bg:#37474f;
+  /* --card-bg: #ffffff; */
+}
+
+.carousel-item {
+  position: relative;
+
+}
+
+#quote {
+  font-size: xx-large;
+  width: 75%;
+  padding: 2vh 0;
+  background-color: var(--card-bg);
+  background: rgba(55, 71, 79, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: Merriweather;
+}
+
+#carousel-continer {
+
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: default;
+  height: 90vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#typedTextP {
+  font-size: 5vh;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: inherit;
+  overflow: hidden;
+
+
+}
+
+.typed-text {
+  font-weight: normal;
+  color: white;
+
+}
+
+#typedTextP span.cursor {
+  display: inline-block;
+  background-color: white;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+#typedTextP span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ccc;
+  }
+}
+
+@media (max-width:375px) {}
+
+@media (max-width:620px) {
+  #quote {
+    font-size: x-large;
+    width: 90%;
+  }
+
+}

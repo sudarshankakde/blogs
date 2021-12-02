@@ -1,0 +1,60 @@
+{% extends 'base_layout.html' %}
+{% block index %}
+    <title>{{data.site_name}}  Newsletter</title>
+{% endblock index %}
+{% block content %}
+{% load static %}
+
+<div class="container my-5" style="">
+    <div class="row">
+        <div class="col-12">
+            {% if user.is_superuser %}
+            <div class="newsletter">
+                <form action="/newsletter" method="post">
+                    {% csrf_token %}
+                    <div class="">
+                        <h5>title</h5>
+                        <input class="form-control" type="text" name="title" id="title" >
+                        <h5>message</h5>
+                        <textarea class="form-control" name="message" id="id_body" cols="30" rows="10"></textarea>
+                        <br>
+                    </div>
+                    <button type="submit" class="btn-1 btn-info">send newsletter</button>
+                </form>
+            </div>
+            {%else%}
+            <div class="container" id="Subscribe">
+                <div class="row">
+                    <div class="col-12 mx-auto w-100 text-center p-lg-5 p-sm-5 px-2 card">
+                        <h3>Subscribe to my newsletter !</h3>
+                        <h6>So that you never miss any update.</h6>
+                        <form action="/home#Subscribe" method="post">
+                            {% csrf_token %}
+                            <div class="input-group my-3">
+                                <input type="email" class="form-control " placeholder="Your Email"
+                                    aria-label="Your Email" aria-describedby="basic-addon2" name="SubscriptionEmail">
+                                <div class="input-group-append">
+                                    <button class="btn  btn-success" type="submit">Subscribe <i class="bi bi-bell"></i></button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {%endif%}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-5 card p-4">
+            <h1>What is Newsletter ?</h1>
+            <h5>An email newsletter is basically an email used in a marketing campaign. It contains important news and updates to make you subscribes aware of your brand or products and other significant information.</h5>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+
+{% block scripts %}
+<!-- <script src={% static 'js/tinyInject.js' %}></script> -->
+{% endblock scripts %}

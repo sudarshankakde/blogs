@@ -1,0 +1,60 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<div class="container my-3">
+    <h1 class="py-3">All Blog Posts <i class="bi bi-folder2-open"></i></h1>
+    <div class="row">
+        {% for post in posts%}
+        <div class="col-lg-6 col-sm-6 col-12 my-lg-1 my-sm-1 my-0 ">
+            <div class="card mb-3" style="max-width: 100%;height: min-content;">
+                <div class="row g-0 " style="height:100%;width: auto;">
+                    <div class="col-md-4 mx-auto my-auto">
+                        <img src={{post.image.url}} class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title|safe}}</h5>
+
+                            <p class="card-text"><strong class="bi bi-info-circle"
+                                    title=" A summary contains only the ideas of the original text." style="cursor: pointer;">
+                                    Summary : </strong>
+                                {{post.summary|truncatewords:20|safe}}</p>
+                            <span class="card-text"><small class=""
+                                    style="color: var(--primary-text);opacity: 0.7;">Last updated-
+                                    {{post.publish_date|date:'d M,Y'}}</small></span>
+                            <br>
+                            <span class="card-text text-capitalize"><small class=""
+                                    style="color: var(--primary-text);opacity: 0.7;"><i class="bi bi-person"></i>Author
+                                    - {{post.author}}</small></span>
+
+
+                            <br>
+                        </div>
+                        <span class="tags mb-1 mx-3">
+                            <div class="row">
+                                <div class="col-8">
+                                    {%for tag in post.tags.all%}
+                                    <span
+                                        class="badge bg-info text-dark mx-1 my-2 px-2 text-capitalize font-italic bi bi-tag">{{tag}}</span>
+                                    {%endfor%}
+                                </div>
+                                <div class="col-4">
+                                    <span class="bi bi-eye-fill float-right pr-3"
+                                        style="font-size: medium;opacity: 0.7; cursor:default;"
+                                        title='{{post.views}} views'>&nbsp;{{post.views}}</span>
+                                </div>
+                            </div>
+                            <br>
+                            <a href='{{post.slug}}'><button class="btn btn-success mb-3 mr-3 px-4 float-right "
+                                    style="border-color: transparent;">Read More <i
+                                        class="bi bi-arrow-right font-weight-bolder"></i></button></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

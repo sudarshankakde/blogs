@@ -1,0 +1,173 @@
+{% extends 'base_layout.html' %}
+{% load extras_filter %}
+{% block content %}
+{% load static %}
+{% block index %}
+<title>{{data.site_name}} | {{blog.title}} </title>
+{% endblock index %}
+{%block csslinks%}
+<link rel="stylesheet" href={% static 'css/detailStyle.css' %}>
+{%endblock csslinks%}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center text-capitalize" id="blog-title">{{blog.title}}</h2>
+            <h6 class="float-left"><i class="bi bi-clock-history"></i> {{blog.publish_date|date:'d M,Y'}}</h6>
+            <span class="text-capitalize float-right"><i class="bi bi-person"></i> author - {{blog.author}}</span>
+            <span class="float-right" style="font-size: medium;cursor: default;" title='{{post.views}} views'><i
+                    class="bi bi-eye-fill"></i> {{blog.views}}&nbsp;|&nbsp;</span>
+
+        </div>
+
+    </div>
+    <div class="row ">
+        <div class="col-12 w-100 my-3">
+            <div class="blog-image d-flex">
+                <img src={{blog.image.url}} alt="" class="img-fluid mx-auto  my-3 ">
+            </div>
+            {{blog.body|safe}}
+        </div>
+        <br>
+        <div class="col-6">
+            {%for tag in blog.tags.all%}
+            <span class="badge bg-info text-dark mx-1 my-2 px-2 text-capitalize"
+                style="font-size: medium;cursor: default;"><i class="bi bi-tag"></i>{{tag}}</span>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+<!-- commnets -->
+<div class="container py-2  mt-3">
+    <h3>Comments <i class="bi bi-chat-dots"></i> ({{comments.count}}) </h3>
+    <p style="font-weight: 600;">comment and share if you found this article to be helpful! </p>
+    <div class="row">
+
+        <div class="row w-100 my-3 border-secondary border py-3 border-left-0 border-right-0 ">
+            <!-- if else for comment box -->
+            {% if request.user.is_authenticated %}
+            <div class="col-lg-2 col-sm-2 col-3 my-auto mx-auto text-center">
+                <i class="bi bi-pencil-square" style="font-size: 4vh;"></i>
+                <br>
+                <small>write your comment</small>
+            </div>
+            <div class="col-lg-10 col-sm-10 col-9 mx-auto text-capitalize">
+
+                <form action="/postComment" method="post">
+                    {% csrf_token %}
+                    <div class="form-floating">
+                        <label for="commandBox">Reply to this post</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" name="Postcomment"
+                            id="commandBox" style="height: 100px"></textarea>
+                    </div>
+                    <input type="hidden" name="PostSno" value="{{blog.id}}">
+                    <input type="hidden" name="PostSlug" value="{{blog.slug}}">
+                    <input type="hidden" name="parentSno" value="{{comment.sno}}">
+                    <button type="submit" class=" btn btn-1 btn-info my-2">comment</button>
+                </form>
+
+            </div>
+            <!-- login if not to comment -->
+            {% else %}
+            <div class="col-lg-2 col-sm-2 col-3 my-auto mx-auto text-center">
+                <i class="bi bi-person-x" style="font-size: 6vh;"></i>
+                <br>
+                Login Required
+                <br>
+            </div>
+            <div class="col-lg-10 col-sm-10 col-9 mx-auto text-capitalize text-center text-lg-left text-sm-left"
+                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                <h3>In Order to write your comment you need to login first.</h3>
+                <div class="login singup d-flex justify-content-center">
+                    <button type="button" class="btn btn-1 nav-link mx-3" data-toggle="modal" data-target="#LoginModal">
+                        Login
+                    </button>
+                    <button type="button" class="btn btn-1 nav-link mx-3" data-toggle="modal" data-target="#SinupModal">
+                        Singup
+                    </button>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+    <!-- comments made before -->
+    <div class="row w-100 overflow-hidden">
+        {%for comment in comments.all%}
+        <div class="col-lg-1 col-2 col-sm-2 float-right ">
+            <i class="bi bi-person-circle float-right" style="font-size: 6vh;"></i>
+        </div>
+        <div class="col-lg-11 col-10 col-sm-10 border border-secondary border-left-0 border-right-0">
+            <div class="comment my-lg-1">
+                <strong class="text-capitalize font-weight-bold my-auto" style="font-size: 3vh;">{{comment.user}}
+                </strong><br>
+                <span class="badge bg-secondary mx-1" title="{{comment.timeStamp|date:'g : i A'}}"><span
+                        class="my-auto p-1" style="font-size: 1.5vh;">{{comment.timeStamp|date:'M d,Y'}}</span></span>
+                <br>
+                <span class="mx-4"><i class="bi bi-arrow-return-right"></i> {{comment.comment}}</span>
+
+                <!-- reply -->
+                <div class="reply ml-5 ">
+                    <p>
+                        {% if request.user.is_authenticated %}
+                        <a class="btn btn-sm btn-info" data-toggle="collapse" href="#replyComment{{comment.sno}}"
+                            role="button" aria-expanded="false" aria-controls="replyComment{{comment.sno}}">
+                            <i class="bi bi-reply"></i>reply
+                        </a>
+                        {% else %}
+
+                        {% endif %}
+                    </p>
+                    <div class="collapse" id="replyComment{{comment.sno}}">
+                        <div class="card card-body">
+                            <!-- reply form  -->
+                            <form action="/postComment" method="post">
+                                {% csrf_token %}
+                                <div class="form-floating">
+                                    <label for="commandBox">Comments</label>
+                                    <textarea class="form-control" placeholder="Leave a comment here" name="Postcomment"
+                                        id="commandBox" style="height: 100px"></textarea>
+                                </div>
+                                <input type="hidden" name="PostSno" value="{{blog.id}}">
+                                <input type="hidden" name="PostSlug" value="{{blog.slug}}">
+                                <input type="hidden" name="parentSno" value="{{comment.sno}}">
+                                <button type="submit" class=" btn btn-sm btn-info my-2">Reply</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6 class="font-italic">Reply's:-</h6>
+            {% for reply in replyDict|get_val:comment.sno reversed %}
+            <div class="reply w-100 ml-5 my-2 ">
+                <!-- <i class="bi bi-arrow-return-right"></i> {{reply.comment}} -->
+                <div class="row">
+                    <div class="col-lg-1 col-2 float-right">
+                        <i class="bi bi-person-circle float-right" style="font-size: 3vh;"></i>
+                    </div>
+                    <div class="col-lg-11 col-10 float-left">
+                        <span class="text-capitalize font-weight-bold my-auto">{{reply.user}}
+                        </span>
+                        <span class="badge bg-secondary mx-1" title="{{reply.timeStamp|date:'g : i A'}}"
+                            style="cursor:default;"><span class="my-auto p-1">
+                                {{reply.timeStamp|date:'M d,Y'}}
+                            </span>
+                        </span>
+                        <br>
+                        <strong class=""><i class="bi bi-arrow-return-right"></i> {{reply.comment}}</strong>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+
+{% endblock %}
+{% block scripts %}
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61a286a175bf78d5"></script>
+{% endblock scripts %}

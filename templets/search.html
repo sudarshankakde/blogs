@@ -1,0 +1,69 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+{% load static %}
+
+{%if posts|length < 1 %} 
+    <div class="container my-3">
+    <div class="alert alert-info alert-dismissible fade show text-center w-100 mx-auto text-capitalize" role="alert">
+        no search results for
+        <strong> {{query}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="col-lg-8 col-12 mx-auto text-center mt-5">
+        <img src="{%static 'images/404.svg'%}" alt="" class="img-fluid">
+        <h3 class="my-4">Seems like you are lost !</h3>
+        <a href="/home">
+            <span class="btn btn-outline-info text-uppercase px-5 mb-5">GO to home</span></a>
+    </div>
+    </div>
+    {%else%}
+    <div class="container my-3">
+        <h1>Search results for " {{query}} ".</h1>
+        <hr>
+        <div class="row">
+            {% for post in posts.all%}
+            <div class="col-lg-6 col-sm-6 col-12">
+                <div class="card mb-3" style="max-width: 100%;">
+                    <div class="row g-0 " style="height: auto;">
+                        <div class="col-md-4 mx-auto my-auto">
+                            <img src={{post.image.url}} class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{post.title|safe}}</h5>
+                                <p class="card-text">{{post.summary|truncatewords:20|safe}}</p>
+                                <span class="card-text"><small class=""
+                                        style="color: var(--primary-text);opacity: 0.7;">Last updated-
+                                        {{post.publish_date|date:'d M,Y'}}</small></span>
+                                <br>
+                                <span class="card-text text-capitalize"><small class=""
+                                        style="color: var(--primary-text);opacity: 0.7;"><i
+                                            class="bi bi-person"></i>Author - {{post.author}}</small></span>
+                                <span class="bi bi-eye-fill float-right"
+                                    style="font-size: medium;opacity: 0.5; cursor: default;"
+                                    title='{{post.views}} views'>&nbsp;{{post.views}}</span>
+
+                                <br>
+                            </div>
+                            <span class="tags my-2 mx-3">
+                                {%for tag in post.tags.all%}
+                                <span
+                                    class="badge bg-success text-dark mx-1 my-2 px-2 text-capitalize font-italic bi bi-tag">{{tag}}</span>
+                                {%endfor%}
+                                <a href='{{post.slug}}'><button class="btn btn-success mb-3 mr-3 px-4 float-right"
+                                        style="border-color: transparent;">Visit <i
+                                            class="bi bi-arrow-right font-weight-bolder"></i></button></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {%endfor%}
+        </div>
+    </div>
+    
+{%endif%}
+{% endblock %}

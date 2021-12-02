@@ -1,0 +1,191 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+{% load static %}
+{%block csslinks%}
+<link rel="stylesheet" href={% static 'css/style.css' %}>
+<link rel="stylesheet" href={% static 'css/typed.css' %}>
+
+{%endblock csslinks%}
+<div class="section1">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="container-fluid my-auto" id="carousel-continer"
+            style="background-image:linear-gradient(to bottom, rgba(5, 26, 56, 0.75),
+        rgb(12, 37, 62,0.75), rgb(24, 48, 68,0.75), rgb(39, 60, 73,0.75), rgb(55, 71, 79,0.75)),url('{{data.slider1.url}}');">
+            <div class="row">
+                <div class="col-12 mt-lg-5 text-center">
+                    <h1 class="text-capitalize py-lg-2 py-sm-2 py-2 mt-5">hello {% if user.is_authenticated %}
+                        <span class="font-weight-bold"><b style="color:whitesmoke;">{{user.first_name}}</b>,
+                        </span>
+                        {% else %}
+                        there,
+                        {% endif %}<br>welcome to {{data.site_name}}.
+                    </h1>
+                    <h4>My self <span><a href="https://www.instagram.com/sudarshan_kakde_/" target="_blank"
+                                rel="noopener noreferrer" class="link">{{data.mine_name}}</a>.</span></h4>
+                    <p id="typedTextP">I Am <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                    <br>
+                    <h5 class="text-white mx-auto my-lg-5 font-weight-lighter slider-quote" id="quote"><i
+                            class="fa fa-quote-left text-light"></i>{{data.HomePage_qoute}} <i
+                            class="fa fa-quote-right text-light"></i></h5>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src= class="d-block w-100" alt="..." style="filter: brightness(75%);"
+                    id="slider-img">
+            </div>
+        </div> -->
+    </div>
+</div>
+<div class="section2">
+    <div class="container-fluid my-5">
+        <div class="row">
+            <div class="col-lg-8 col-12 order-lg-1  order-3">
+                <div class="card py-5 text-center">
+                    <h2 class="card-header-tabs font-weight-bolder text-capitalize mx-auto">Explore blog posts</h2>
+                    <div class="card-body">
+                        <p class="card-title">{{data.site_name}} is a personal blog website for sharing my experience
+                            about web development, computer science, mathematics and life. I also love to write about
+                            sports, food, nature, tech etc topics. </p>
+                        <a href="AllBlogs" class="btn-1 btn-info py-2  my-2 text-capitalize">Browse all posts</a>
+                    </div>
+                </div>
+                <div class="card py-5 mt-3 text-center order-2">
+                    <h2 class="card-header-tabs font-weight-bolder text-capitalize mx-auto"></h2>
+                    <div class="card-body">
+                        <p class="card-title">Have a look at my <a
+                                href="https://www.instagram.com/sudarshan_kakde_/">Instagram account </a> or just
+                            connect with me on <a
+                                href="https://www.linkedin.com/in/sudarshan-kakde-510b15194?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BdMlcCHEETG2m0Q1TW%2BcuRw%3D%3D">
+                                LinkedIn.</a><br> I am always excited to do business with like minded people,<br> lets
+                            discuss over <a href="https://sudarshankakde.github.io/sudarshan-kakde/#coffeewithme">
+                                coffee.</a> </p>
+                        <a href="https://github.com/sudarshankakde" class="btn-1 btn-info py-2 my-2  text-capitalize"
+                            target="_blank">All
+                            Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 text-center  order-lg-2 py-2 order-1">
+                <div class="aboutme ">
+                    <h5>ABOUT ME</h5>
+                </div>
+                <div class="card mx-auto my-3 py-3" style="width: 100%;">
+                    <img src={{data.my_image.url}} class="card-img-top mx-auto my-auto w-75 shadow" alt="...">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4>{{data.mine_name}}</h4>
+                        </div>
+                        <hr>
+                        <p class="card-text">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            {{data.About_me}}<i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </p>
+                        <a href="https://www.buymeacoffee.com/sudarshankakde" target="_blank"><img
+                                src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee"
+                                style="height: 7vh !important;width: 60% !important;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section3">
+    <h2 class="mx-3" id="latestpost"><i class="fa fa-clock " style="color: inherit;"></i> Latest Posts.</h2>
+    <div class="container-fluid mb-5">
+        <div class="row ">
+            {%for post in posts.all%}
+            <div class="col-lg-4 col-sm-4 col-12  py-3">
+                <div class="card" style="width:auto ;height:auto">
+                    <img src="{{post.image.url}}" class="card-img-top" alt="" style="height:35vh;">
+                    <div class="card-body">
+                        <h5 class="card-title text-capitalize font-weight-bold">{{post.title}}</h5>
+                        <small class='font-weight-light'>{{post.publish_date|date:'d M,Y'}}</small>
+                        <span class="bi bi-eye-fill float-right"
+                            style="font-size: medium;opacity: 0.5; cursor: default;"
+                            title='{{post.views}} views'>&nbsp;{{post.views}}</span>
+
+                        <br>
+                        <hr>
+                        <h5 class="card-text" title="summary in 25 words">{{post.summary|truncatewords:25|safe}}</h5>
+
+                    </div>
+                    <small class="my-4 mx-4">
+                        {%for tag in post.tags.all%}
+                        <span class="badge text-dark mx-1 mb-4 px-2 text-capitalize bi bi-tag"
+                            style="font-size: medium; background-color: var(--primary-theme);">{{tag}}</span>
+                        {%endfor%}
+
+                        <br>
+                        <a href='{{post.slug}}'><button class="btn-info btn-1 px-4 py-2 float-right"
+                                style="border-color: transparent;">Read <i
+                                    class="bi bi-arrow-right font-weight-bolder"></i></button></a>
+                    </small>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    <!-- popular posts -->
+    <h2 class="mx-3 text-capitalize" id="latestpost"><i class="fa fa-fire " style="color: #e25822;"></i> popular Posts.
+    </h2>
+</div>
+<div class="container-fluid">
+    <div class="row ">
+        {%for post in PopularPosts.all%}
+        <div class="col-lg-4 col-sm-4 col-12  py-3">
+            <div class="card" style="width:auto ;height:auto">
+                <img src="{{post.image.url}}" class="card-img-top" alt="" style="height:35vh;">
+                <div class="card-body">
+                    <h5 class="card-title text-capitalize font-weight-bold">{{post.title}}</h5>
+                    <small class='font-weight-light'>{{post.publish_date|date:'d M,Y'}}</small>
+                    <span class="bi bi-eye-fill float-right" style="font-size: medium;opacity: 0.5; cursor: default;"
+                        title='{{post.views}} views'>&nbsp;{{post.views}}</span>
+                    <br>
+                    <hr>
+                    <h5 class="card-text" title="summary in 25 words">{{post.summary|truncatewords:25|safe}}</h5>
+                </div>
+                <small class="my-4 mx-4">
+                    {%for tag in post.tags.all%}
+                    <span class="badge text-light mx-1 mb-4 px-2 text-capitalize bi bi-tag"
+                        style="font-size: medium; background-color: var(--primary-theme);">{{tag}}</span>
+                    {%endfor%}
+
+                    <br>
+                    <a href='{{post.slug}}'><button class="btn-info btn-1 px-4 py-2 float-right"
+                            style="border-color: transparent;">Read <i
+                                class="bi bi-arrow-right font-weight-bolder"></i></button></a>
+                </small>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+<div class="container mt-4" id="Subscribe" data-aos="flip-right">
+    <div class="row ">
+        <div class="col-11 mx-auto w-100 text-center p-lg-5 p-sm-5 px-5 card">
+
+            <h3>Subscribe to my newsletter! </h3>
+            <h6 class="mb-4">So that you never miss any update <i class="bi bi-envelope"></i></h6>
+            <form action="/home#Subscribe" method="post" class="pb-2">
+                {%csrf_token%}
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email"
+                        aria-describedby="basic-addon2" name="SubscriptionEmail">
+                    <div class="input-group-append">
+                        <button class="btn  btn-success" type="submit">Subscribe <i class="bi bi-bell"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+{% block scripts %}
+
+
+{% endblock scripts %}

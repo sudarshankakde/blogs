@@ -1,0 +1,36 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container my-3">
+    <div class="alert alert-info alert-dismissible fade show text-center w-100 mx-auto text-capitalize" role="alert">
+        no search results for
+        <strong> {{query}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="col-lg-8 col-12 mx-auto text-center mt-5">
+        <img src="{%static 'images/404.svg'%}" alt="" class="img-fluid" id="image404">
+        <h3 class="my-4">Seems like you are lost !</h3>
+        <a href="/home">
+            <span class="btn btn-1 text-uppercase px-5 mb-5" style="background-color: transparent;border-color: var(--primary-theme);border-radius: 2vh;">GO to home</span></a>
+    </div>
+</div>
+{%else%}
+
+{%endif%}
+{% endblock %}
+{% block scriptstyped %}
+<script>
+    var image404 = document.getElementById('404image');
+    if (currentTheme == 0){
+        image404.src="{%static 'images/404.svg'%}";
+        console.log('dark')
+    }
+    else{
+        image404.src="{%static 'images/404dark.svg'%}";
+
+    }
+</script>
+{% endblock scriptstyped %}

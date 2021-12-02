@@ -1,0 +1,392 @@
+<!-- site_name,index(which page) -->
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block index %}
+    <title>{{data.site_name}} | {{index}}</title>
+    {% endblock index %}
+    <link rel="shortcut icon" href={%static 'images/logo.png' %} type="image/x-icon">
+    <!-- cdn's -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <!-- css -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link rel="stylesheet" href={% static 'css/style.css' %}>
+    <link rel="stylesheet" href={% static 'css/loader.css' %}>
+    {%block csslinks%}
+    {%endblock csslinks%}
+    <!-- JS -->
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <!-- aso -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        /* border, padding, margin, width */
+        #fs-frm input,
+        #fs-frm select,
+        #fs-frm textarea,
+        #fs-frm #card-element {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 0.75em 1rem;
+            margin-bottom: 1.5rem;
+            color: black;
+        }
+
+        #fs-frm input:focus,
+        #fs-frm select:focus,
+        #fs-frm textarea:focus {
+            background-color: white;
+            outline-style: solid;
+            outline-width: thin;
+            outline-color: gray;
+            outline-offset: -1px;
+        }
+
+        #fs-frm [type="text"],
+        #fs-frm [type="email"] {
+            width: 100%;
+        }
+
+        #fs-frm [type="button"],
+        #fs-frm [type="submit"],
+        #fs-frm [type="reset"] {
+            width: auto;
+            cursor: pointer;
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+        }
+
+        #fs-frm [type="button"]:focus,
+        #fs-frm [type="submit"]:focus,
+        #fs-frm [type="reset"]:focus {
+            outline: none;
+        }
+
+        #fs-frm [type="submit"],
+        #fs-frm [type="reset"] {
+            margin-bottom: 0;
+        }
+
+        #fs-frm select {
+            text-transform: none;
+        }
+
+        #fs-frm [type="checkbox"] {
+            -webkit-appearance: checkbox;
+            -moz-appearance: checkbox;
+            appearance: checkbox;
+            display: inline-block;
+            width: auto;
+            margin: 0 0.5em 0 0 !important;
+        }
+
+        #fs-frm [type="radio"] {
+            -webkit-appearance: radio;
+            -moz-appearance: radio;
+            appearance: radio;
+        }
+
+        address,
+        locale #fs-frm fieldset.locale input[name="city"],
+        #fs-frm fieldset.locale select[name="state"],
+        #fs-frm fieldset.locale input[name="postal-code"] {
+            display: inline;
+        }
+
+        #fs-frm fieldset.locale input[name="city"] {
+            width: 52%;
+        }
+
+        #fs-frm fieldset.locale select[name="state"],
+        #fs-frm fieldset.locale input[name="postal-code"] {
+            width: 20%;
+        }
+
+        #fs-frm fieldset.locale input[name="city"],
+        #fs-frm fieldset.locale select[name="state"] {
+            margin-right: 3%;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <!-- #loading screen -->
+    <div id="loader">
+        <b class="dot"></b>
+        <b class="dot"></b>
+        <b class="dot"></b>
+        <b class="dot"></b>
+    </div>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg " style="background-color: var(--card-bg);">
+        <a class="navbar-brand" href="home"
+            style="font-size: 4vh;font-family: Merriweather; width: 900;">{{data.site_name}}</a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: var(--primary-text);"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AllBlogs">Blog Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">Contact me</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mt-lg-0 ">
+                <form class="form-inline d-flex justify-content-center " style="width: max-content;" method="get"
+                    action="/search">
+                    <input class="form-control form-control-sm mr-3 my-auto" type="text" placeholder="Search"
+                        style="color: inherit;" type="search" placeholder="Search In Blogs" aria-label="Search"
+                        name="query" id="query" style="color: var(--primary-text);">
+
+                    <button class="btn btn-secondary btn-sm my-auto text-white  w-25 h-75 " type="submit"
+                        style="background-color: var(--primary-text);">
+                        <i class="fas fa-search" aria-hidden="true" style="color: var(--primary-theme);"></i>
+                    </button>
+
+
+                </form>
+
+                <li class="nav-item my-auto mx-3 ">
+                    <i class="bi bi-moon-stars-fill" id="ThemeIcon" onclick="changeTheme()"
+                        style="cursor:pointer; font-size:x-large;"></i>
+                    <input type="hidden" value="dark" id="theme">
+                </li>
+                <div class="userlogin d-flex">
+
+
+
+                    <li>
+
+
+                    </li>
+                    {% if request.user.is_authenticated %}
+                    <div class="userlogout mx-2 my-auto nav-item">
+                        <a href="/logout"><button class="btn btn-1 nav-link" type="submit"><i
+                                    class="bi bi-door-open-fill"></i> Logout</button></a>
+                    </div>
+                    {% else %}
+                    <li class="nav-item my-auto  ">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-1 nav-link" data-toggle="modal" data-target="#LoginModal">
+                            Login
+                        </button>
+                    </li>
+                    <li class="nav-item mx-2 my-auto">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-1 nav-link" data-toggle="modal" data-target="#SinupModal">
+                            Singup
+                        </button>
+                    </li>
+
+                    {% endif %}
+                    <li>
+                        <a href="/newsletter" title="Newsletter" class="nav-link">
+                            <button class="btn btn-1 my-auto  px-2 py-1 mx-auto my-auto" type="button">
+                                <i class="bi bi-envelope-plus-fill" style="font-size:large;"></i>
+                            </button></a>
+                    </li>
+                </div>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- message  -->
+    <div class="message" id="AlertMessage">
+        {%for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            <strong>Message: </strong>{{message|safe}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {%endfor%}
+    </div>
+
+
+
+
+
+    <!-- sinup modal -->
+    <div class="modal fade mt-5 " id="SinupModal" tabindex="-1" role="dialog" aria-labelledby="SinupModal"
+        aria-hidden="true">
+        <div class="modal-dialog bg-dark " role="document" id="singup">
+            <div class="modal-content ">
+                <div class="modal-header bg-dark ">
+                    <h3 class="modal-title pt-2" id="SinupModal">SingUP Here
+                        <br>
+                        <small><small title="                            
+                            1.username should be in lower case and numbric only, 2.username should be uniq , 3.password should match and have minimum lenght of 5.
+
+                            " style="font-size: small;">while creating user account your enter details should match to
+                                <i class="bi bi-book"></i>
+                            </small></small>
+                    </h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="" style="color: var(--primary-theme);">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-dark">
+                    <form action='/singup' method="post">
+                        {% csrf_token %}
+                        <!-- name -->
+                        <div class="row mb-2">
+                            <div class="col">
+                                <label for="fname">First Name</label>
+                                <input type="text" class="form-control" placeholder="First name" name="fname" required
+                                    id="fname">
+                            </div>
+                            <div class="col">
+                                <label for="lname">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last name" name="lname" required
+                                    id="lname">
+                            </div>
+                        </div>
+                        <!-- username -->
+                        <div class="form-group">
+                            <label for="username">User Name</label>
+                            <input type="text" class="form-control" id="username" name="username" required
+                                placeholder="lower case and numbric only ">
+                        </div>
+                        <!-- mail -->
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" required
+                                placeholder="name@example.com">
+                        </div>
+                        <!-- password -->
+                        <div class="form-group">
+                            <label for="password1">Password <small class="text-white-50">*more then 5
+                                    character</small></label>
+                            <input type="password" class="form-control" id="password1" name="password1" required
+                                placeholder="password " minlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Comfirm password</label>
+                            <input type="password" class="form-control" id="password2" name="password2"
+                                placeholder="ReEnter Password" minlength="">
+                        </div>
+                        <button type="submit" class="btn btn-1 btn-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- login Modal -->
+    <div class="modal fade mt-5" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModal"
+        aria-hidden="true">
+        <div class="modal-dialog bg-dark" role="document">
+            <div class="modal-content ">
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title " id="LoginModal">Login Here
+                        <br>
+                        <small><strong>Note: </strong> once login you will be return to home page.</small>
+                    </h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: var(--primary-theme);">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-dark">
+                    <form action='/login' method="post">
+                        {% csrf_token %}
+                        <!-- username -->
+                        <div class="form-group">
+                            <label for="loginUsername">User Name </label>
+                            <input type="text" class="form-control" id="loginUsername" name="loginusername" required
+                                placeholder="Jhone Smith">
+                        </div>
+                        <!-- password -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="loginpassword" required
+                                placeholder="Enter your Password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-1 btn-info mb-3">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {%block content%}
+    {%endblock%}
+    <!-- footer -->
+    <footer class="mt-3 pt-5"
+        style="color: var(--primary-text);background-color: var(--seconday-text);background-image: url('{%static 'images/wave.svg'%}');">
+        <div class="container-fluid pt-5">
+            <div class="row text-center pt-5">
+                <div class="col-12">
+                    <a href="https://www.instagram.com/sudarshan_kakde_/" target="_blank" rel="noopener noreferrer" >
+                        <i class="bi bi-instagram  footer-icons"></i>
+                    </a>
+                    <a href="/contact">
+                        <i class="bi bi-envelope footer-icons" id="mail"></i>
+                    </a>
+                    <a href="https://github.com/sudarshankakde" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-github footer-icons"></i>
+                    </a>
+                </div>
+                <hr>
+
+            </div>
+            <div class="row mt-2 ">
+                <div class="col-12">
+                    <div class="col-12 py-3 text-center ">
+                        &COPY; {%now 'Y'%} Copyright : <a href="https://sudarshankakde.github.io/sudarshan-kakde/"
+                            target="_blank" class="font-weight-bold">Sudarshan Kakde</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src={% static 'js/loader.js' %}></script>
+    <script src={% static 'js/typed.js' %}></script>
+    <script src={% static 'js/main.js' %}></script>
+    <!-- typed  -->
+    <script src="https://unpkg.com/typeit@8.0.7/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- script -->
+    <script>
+        AOS.init();
+    </script>
+
+
+    {% block scripts %}
+    {% endblock scripts %}
+    {% block scriptstyped %}
+    {% endblock scriptstyped %}
+</body>
+
+</html>

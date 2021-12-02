@@ -1,0 +1,88 @@
+/* page loader */
+
+:root{
+    --peace: white;
+    /* motivated by peace */
+    --elegance: rgb(39 39 39);
+    --loyality:#1de1ff;
+    /* intimacy , loyality ,confidance */
+    --power:red;
+    /* motivated by power */
+    --intimacy:blue;
+    /* motivated by intimacy , loyality ,confidance */
+    --youth:#9a9ad6;
+    /* youth */
+}
+#loader{
+    background-color: var(--elegance);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#loader>.dot{
+    padding: 1.5vh;
+    margin: 0 1vh;
+    border: thin solid var(--youth);
+    border-radius: 10vh;
+    background: var(--youth);
+}
+#loader>.dot:nth-child(1){
+    background: var(--loyality);
+    border: transparent;
+    animation-name: dotmove;
+    animation-delay: 100ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#loader>.dot:nth-child(2){
+    background:red;
+    border: transparent;
+    animation-name: dotmove;
+    animation-delay: 300ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#loader>.dot:nth-child(3){
+    background: orange;
+    border: white;
+    animation-name: dotmove;
+    animation-delay: 500ms;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+#loader>.dot:nth-child(4){
+    border: transparent;
+    background: green;
+    animation-name: dotmove;
+    animation-delay: 700ms;
+    animation-duration: 3s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+}
+#loader::after{
+    content: 'Loding...';
+    position: absolute;
+    font-size: 4vh;
+    font-weight: 600;
+    bottom:  38%;
+    color: var(--peace);
+}
+@keyframes dotmove {
+    0%{
+        transform: translateY(-5vh);
+    }
+    50%{
+        transform: translateY(0vh);
+    }
+    100%{
+        transform: translateY(-5vh);
+    }
+}
