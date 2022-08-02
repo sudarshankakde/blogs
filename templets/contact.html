@@ -1,24 +1,43 @@
 {% extends 'base_layout.html' %}
-{% block content %}
 {% load static %}
-<h1 class="text-center text-capitalize font-weight-bold mt-5">Contact me.</h1>
-<div class="container my-auto mx-auto py-2 aboutme" style="font-family: inherit;padding-bottom: 25vh;">
-    <div class="col-lg-12 col-11 col-sm-12 mx-auto">
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xnqwadkw"
-            method="post" class="w-100">
-            <fieldset id="fs-frm-inputs">
-                <label for="full-name">Full Name</label>
-                <input type="text" name="name" id="full-name" required="" placeholder="Full Name" />
-                <label for="email-address">Email Address</label>
-                <input type="email" name="_replyto" id="email-address" required="" placeholder="Example@gmail.com" />
-                <label for="message">Message</label>
-                <br>
-                <textarea rows="7" name="message" id="message" class="w-100" required=""
-                    placeholder="Your message here"></textarea>
-                <input type="hidden"  name="_subject" id="email-subject" value="Contact Form Submission" />
-            </fieldset>
-            <input class="px-4 btn-1 btn btn-info" type="submit" value="Submit" />
-        </form>
+{%block csslinks%}
+<link rel="stylesheet" href={% static 'css/contact.css' %}>
+{%endblock csslinks%}
+{% block content %}
+<div class="container py-4 pb-0">
+    <div class="text-center text-capitalize my-5 ">
+        <h1 class="heading">Contact Me</h1>
+        <p class="">Do you have any questions ? Please do not hesitate to contact Me directly. I will come back to you
+            within a
+            matter of hours to help you.</p>
     </div>
+    <div class="row">
+        <div class="col-lg-8 col-12 col-sm-10 mx-auto ">
+            <form action="contact" method="post" class="input-group text-dark">
+                {% csrf_token %}
+                <div class="form-floating mb-3 col-12">
+                    <input type="text" class="form-control " id="name" name='name' placeholder="Jhon Smith">
+                    <label for="name" class="mx-3">Your Name</label>
+                </div>
+                <div class="form-floating mb-3 col-12">
+                    <input type="email" class="form-control" id="email" name='email' placeholder="example@gmail.com">
+                    <label for="email" class="mx-3">Email address</label>
+                </div>
+                <div class="form-floating col-12">
+                    <textarea class="form-control " placeholder="Leave a Message here" id="message" name="message"
+                        style="height: 100px"></textarea>
+                    <label for="message" class="mx-3">Message</label>
+                </div>
+                <div class="mx-auto my-2">
+                    <button class="btn btn-user-primary px-4 py-1 my-lg-3 my-2  text-capitalize " type="submit">submit
+                        <i class="bi bi-chat-dots"></i>
+                        <button class="btn btn-user-primary  px-4 py-1 my-lg-3 mx-lg-4 mx-3 text-capitalize "
+                            type="reset" title="Clear Entered Data.">Clear <i class="bi bi-x-octagon"></i>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
 </div>
 {% endblock %}

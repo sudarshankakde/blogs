@@ -13,76 +13,59 @@
     --youth:#9a9ad6;
     /* youth */
 }
+body{
+    overflow: hidden;
+}
 #loader{
     background-color: var(--elegance);
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 1500;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
-#loader>.dot{
-    padding: 1.5vh;
-    margin: 0 1vh;
-    border: thin solid var(--youth);
-    border-radius: 10vh;
-    background: var(--youth);
+#wrapper>span{
+    margin: 4vh 0;
 }
-#loader>.dot:nth-child(1){
-    background: var(--loyality);
-    border: transparent;
-    animation-name: dotmove;
-    animation-delay: 100ms;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+#wrapper{
+    cursor: pointer;
+    font-size: larger;
+    position: relative;
+    height: max-content;
+    width: max-content;
+    padding-bottom: 0.5vh;
+    text-transform: uppercase;
+    user-select: none;
+
 }
-#loader>.dot:nth-child(2){
-    background:red;
-    border: transparent;
-    animation-name: dotmove;
-    animation-delay: 300ms;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+#logo-part1{
+    color: white;
 }
-#loader>.dot:nth-child(3){
-    background: orange;
-    border: white;
-    animation-name: dotmove;
-    animation-delay: 500ms;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-}
-#loader>.dot:nth-child(4){
-    border: transparent;
-    background: green;
-    animation-name: dotmove;
-    animation-delay: 700ms;
-    animation-duration: 3s;
-    animation-fill-mode:forwards;
-    animation-iteration-count: infinite;
-}
-#loader::after{
-    content: 'Loding...';
+#small-loader{
+    border: thin solid white;
+    width: 25%;
     position: absolute;
-    font-size: 4vh;
-    font-weight: 600;
-    bottom:  38%;
-    color: var(--peace);
+    bottom: 0;
+    left: 0;
+    animation-name: small-loader;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
 }
-@keyframes dotmove {
+@keyframes small-loader {
     0%{
-        transform: translateY(-5vh);
+        left: 0%;
+
     }
     50%{
-        transform: translateY(0vh);
+        left: 75%;
     }
     100%{
-        transform: translateY(-5vh);
+        left: 0%;
     }
+    
 }

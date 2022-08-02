@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href={% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css' %}> 
+    <script src={%static 'bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js' %}></script>
+    -->
+    <link rel="stylesheet" href='../static/bootstrap-5.1.3-dist/css/bootstrap.min.css'>
+    <script src='../static/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js'></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+
+
+    <link rel="stylesheet" href='../static/css/aboutme.css'>
+
+    <script src="../static/js/aboutme.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="../static/css/loader.css">
+    <title>Sudarshan Kakde</title>
+</head>
+
+<body>
+    <!-- #loading screen -->
+    <div id="loader">
+        <div id="wrapper">
+            <span class="logo-part1">Sid's</span> <span class="logo-part2">Blog</span></a>
+            <i id="small-loader"></i>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="  text-decoration-none " href="{%url 'home'%}">
+                <div class="" id="logo">
+                    <span class="logo-part1 text-white ">Sudarshan</span><span class="logo-part2">Kakde</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end bg-dark text-white text-center" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent" href="{%url 'home'%}"><span
+                                    class="logo-part1">Sid's</span> <span class="logo-part2">Blog</span></a>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#MyJourney">My Journey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#AboutMe">About Me NutShell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contact">Contact Me </a>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="main" class="mt-5 mt-lg-2">
+        <i class="code mx-lg-4 mx-0">body</i>
+        <div class="container" id="intro">
+            <div class="row my-auto">
+                <div class="col-12 my-lg-5 my-4">
+                    <i class="code m">h1 id="Introduction"</i>
+                    <h1 class="mx-4 introText mb-lg-4 mt-2" aria-label="Hi,I'm Sid,Web Devloper">
+                        <span class="blast">H</span><span class="blast">i</span><span class="blast">,</span>
+                        <br>
+                        <span class="blast">I</span><span class="blast">'</span><span class="blast">m</span><span
+                            class="blast">&nbsp;S</span><span class="blast">i</span><span class="blast">d</span><span
+                            class="blast">,</span>
+                        <br><span class="blast">w</span><span class="blast">e</span><span class="blast">b</span><span
+                            class="blast">&nbsp;d</span><span class="blast">e</span><span class="blast">v</span><span
+                            class="blast">e</span><span class="blast">l</span><span class="blast">o</span><span
+                            class="blast">p</span><span class="blast">e</span><span class="blast">r</span>
+                    </h1>
+                    <i class="code">/h1</i>
+                    <br>
+                    <br>
+                    <br>
+                    <i class="code">p</i>
+                    <div class="text-capitalize mx-4 text-user-define my-2">Full Stack Web Devloper / Web Designer</div>
+                    <i class="code">/p</i>
+                </div>
+            </div>
+
+        </div>
+        <div class="container" id="MyJourney">
+            <div class="row pt-5">
+                <div class="col-12">
+
+                    <i class="code">h2</i>
+                    <h2 class="mx-4 introText h2 my-2 text-capitalize" data-aos="fade-out">
+                        <span class="blast">h</span><span class="blast">o</span><span class="blast">w</span>
+                        <span class="blast">I </span>
+                        <span class="blast">s</span><span class="blast">t</span><span class="blast">a</span><span
+                            class="blast">r</span><span class="blast">t</span>
+                    </h2>
+                    <i class="code mb-lg-5">/h2</i>
+
+                    <i class="code mt-lg-5">p</i>
+                    <p class="my-2  mx-4 text-justify" id="journey" data-aos="fade-zoom-out" data-aos-easing="linear"
+                        data-aos-duration="500">
+                        <small>My web development journey began two years ago when I was first introduced to <b>HTML</b>
+                            in
+                            college,
+                            and I wasn't much interested in developing something from it. In my final year, I was
+                            required
+                            to
+                            take an industrial training course.
+                            <br> During this training, we were told to join an IT company and
+                            study how it works. As I know html from my college, I chose to gain knowledge about web
+                            development
+                            at <a href="http://ekatta.in/" class="link">Ekatta Innovators</a>, as they picked me up as a
+                            full-time employee
+                            as soon as we started training.
+                            <br> After that, I started working on their live projects where
+                            someone
+                            who has no background in web development was assigned to build websites for clients.
+                            Initially I
+                            was
+                            scared but then I asked my mentors Shubam Sir and Jayant Sir, who helped me to gain the
+                            skills
+                            needed to develop websites.
+                            <br>Onwords, I began exploring various frameworks like <b>Bootstrap</b> for
+                            rapid responsive website development. Over the course of a month, I learned the basics of
+                            Dom.
+                            later
+                            I encountered <b>DJnago</b> and started studying it.
+                            <br>
+
+                            About a month later, I made my first web app using
+                            DJnago. From then on,<b> I had to learn on my own. Now, I've completed over 10 static sites
+                                and
+                                5
+                                web
+                                apps.
+                            </b>
+                        </small>
+                    </p>
+                    <i class="code">/p</i>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container" id="AboutMe">
+            <div class="row pt-5">
+                <div class="col-12">
+
+                    <i class="code">h2</i>
+                    <h2 class="mx-4 introText h2 my-2 text-capitalize" data-aos="fade-out">
+                        <span class="blast">A</span><span class="blast">B</span><span class="blast">o</span><span
+                            class="blast">u</span><span class="blast">t</span>
+                        <span class="blast">m</span><span class="blast">e</span><span class="blast">.</span>
+                    </h2>
+                    <i class="code mb-lg-5">/h2</i>
+                    <br>
+                    <i class="code mt-lg-5">p</i>
+                    <p class="my-2  mx-4 text-justify" id="journey" data-aos="fade-zoom-out" data-aos-easing="linear"
+                        data-aos-duration="500">
+                    <div class="row ">
+                        <div class="col-lg-7 col-12 text-lg-justify text-start  order-lg-0 order-1">
+                            <p class="mx-lg-4 mx-2"> <small>You can see me as a Social Introvert, who has given up on
+                                    making
+                                    connections, I am a little funny, a little crazy, a little weird.. My sarcasm and
+                                    optimism level is infinite.. I have a master degree in sarcasm.. I have the ability
+                                    to stay happy with my own company, I am someone who categorically prefers to spend
+                                    time alone. I will go out of my way to ensure that I have the amount of time to
+                                    Myself that I need. But if I do socialise, it will only be with a very close-knit
+                                    group of friends. I never give up and I like people who never gives up in life, no
+                                    matter what ever happens.. I feel really happy, when I am able to help and love my
+                                    close once, when I follow my heart and chase after my dreams, when I become the
+                                    reason for someone's strength and happiness, when I am able to inspire, motivate and
+                                    uplift others.</small></p>
+                        </div>
+                        <div class="col-lg-3  col-12 mx-auto order-lg-1 order-0">
+                            <figure class="figure">
+                                <img src={{data.my_image.url}} class="img-fluid rounded " alt={{data.mine_name}} />
+                                <figcaption class="figure-caption text-center">My Self</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    </p>
+                    <i class="code">/p</i>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container" id="skills" data-aos="fade-zoom-out" data-aos-easing="linear" data-aos-duration="500">
+            <br>
+            <br>
+            <i class="code ">h2</i>
+            <h2 class="mx-4 introText h2 my-2 text-capitalize">
+                <span class="blast">M</span><span class="blast">y</span><span class="blast"></span>
+                <span class="blast">K</span><span class="blast">n</span><span class="blast">o</span><span
+                    class="blast">w</span><span class="blast">l</span><span class="blast">e</span><span
+                    class="blast">d</span><span class="blast">g</span><span class="blast">e</span><span
+                    class="blast">.</span>
+            </h2>
+
+            <div class="row  py-lg-5">
+                <i class="code ">table</i>
+                <div class="col-12 mx-4  py-lg-2 ">
+                    <div class="row">
+                        <span class="col-md-4  border-lg-right py-2 py-lg-0">
+                            Front end development
+                            <ul class="skills">
+                                <li>
+                                    HTML/Css <span class="badge bg-danger">Expert</span>
+                                </li>
+                                <li>
+                                    Java Script <span class="badge  bg-success">intermediate</span>
+                                </li>
+                                <li>
+                                    React <span class="badge  bg-primary">Beginner</span>
+                                </li>
+                                <li>
+                                    Bootstrap(framework) <span class="badge  bg-success">intermediate</span>
+                                </li>
+                            </ul>
+
+                        </span>
+                        <span class="col-md-4 border-lg-right py-2 py-lg-0">
+                            Back end development
+                            <ul class="skills">
+                                <li>
+                                    Ajax <span class="badge  bg-success">intermediate</span>
+                                </li>
+                                <li>
+                                    Djnago <span class="badge  bg-success">intermediate</span>
+                                </li>
+                            </ul>
+
+                        </span>
+                        <span class="col-md-4 py-2 py-lg-0">
+                            Ui/Ux
+                            <ul class="skills">
+                                <li>
+                                    Canva <span class="badge  bg-success">intermediate</span>
+                                </li>
+                                <li>
+                                    Figma <span class="badge  bg-primary">Beginner</span>
+                                </li>
+                            </ul>
+
+                        </span>
+                    </div>
+                </div>
+                <i class="code">/table</i>
+            </div>
+            <i class="code">/h2</i>
+        </div>
+        <div class="container" id="projects" data-aos="fade-zoom-out" data-aos-easing="linear" data-aos-duration="500">
+            <br>
+            <br>
+            <i class="code mt-lg-4">h2</i>
+            <h2 class="mx-4 introText h2 my-2 text-capitalize">
+                <span class="blast">P</span><span class="blast">r</span><span class="blast"></span><span
+                    class="blast">o</span><span class="blast">j</span><span class="blast">e</span><span
+                    class="blast">c</span><span class="blast">t</span><span class="blast">s</span><span
+                    class="blast">.</span>
+            </h2>
+            <br>
+            <div class="row py-lg-3">
+                <i class="code ">Cards </i>
+                {%for project in projects.all%}
+                <div class="col-lg-6  col-12 my-auto">
+                    <div class="card card-user my-auto  " style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 my-auto">
+                                <img src={{project.logo.url}} alt={{project.name}} class="img-fluid">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="{{project.link}}"
+                                            class="link px-2">{{project.name}}</a></h5>
+                                    <p class="card-text"><small>{{project.summary}}</small></p>
+                                </div>
+                                <div class="card-footer bg-transparent">
+
+                                    <p class="card-text text-end"><small
+                                            class="text-secondary">{{project.doneOn}}</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+
+                <i class="code pb-lg-4">/Cards</i>
+            </div>
+            <i class="code ">/h2</i>
+
+        </div>
+        <div class="container" id="Contact" data-aos="fade-zoom-out" data-aos-easing="linear" data-aos-duration="500">
+            <br>
+            <br>
+            <i class="code mt-lg-4">h2</i>
+            <h2 class="mx-4 introText h2 my-2 text-capitalize">
+                <span class="blast">C</span><span class="blast">o</span><span class="blast">n</span><span
+                    class="blast">t</span><span class="blast">a</span><span class="blast">c</span><span
+                    class="blast">t</span><span class="blast">&nbsp;</span><span class="blast">m</span><span
+                    class="blast">e</span><span class="blast">.</span>
+            </h2>
+            <i class="code ">/h2</i>
+            <br>
+            <br>
+            <div class="row py-5 py-lg-0">
+                <div class="col-lg-6 col-12">
+                    <i class="code ">form</i>
+                    <form action="" method="post" class="input-group text-dark py-3">
+                        {% csrf_token %}
+                        <div class="form-floating mb-3 col-12">
+                            <input type="text"
+                                class="form-control bg-transparent text-white border-0 border-bottom m-0 " id="name"
+                                name='name' placeholder="Jhon Smith">
+                            <label for="name" class="mx-0 text-white-50">Your Name</label>
+                        </div>
+                        <div class="form-floating mb-3 col-12">
+                            <input type="email"
+                                class="form-control bg-transparent text-white border-0 border-bottom m-0" id="email"
+                                name='email' placeholder="example@gmail.com">
+                            <label for="email" class="mx-0 text-white-50">Email address</label>
+                        </div>
+                        <div class="form-floating col-12">
+                            <textarea class="form-control bg-transparent text-white border-0 border-bottom m-0"
+                                placeholder="Leave a Message here" id="message" name="message"
+                                style="height: 100px"></textarea>
+                            <label for="message" class="mx-0 text-white-50">Message</label>
+                        </div>
+                        <div class="mx-auto">
+                            <button class="btn btn-light px-4 py-1 my-lg-3 my-2  text-capitalize " type="submit">submit
+                                <i class="bi bi-chat-dots"></i>
+                                <button class="btn btn-light  px-4 py-1 my-lg-3 mx-lg-4 mx-3 text-capitalize "
+                                    type="reset" title="Clear Entered Data.">Clear <i class="bi bi-x-octagon"></i>
+                        </div>
+                    </form>
+                    <i class="code ">/form</i>
+                </div>
+                <div class="col-lg-6 col-12 my-auto">
+                    <h2 class="text-center h4  py-3 text-capitalize text-light opacity-75">social media</h2>
+                    <div class="h1 d-flex justify-content-between w-75 mx-auto social-buttons">
+                        <a href="https://instagram.com/sudarshan_kakde_" data-bs-toggle="tooltip" data-bs-html="true"
+                            title="Instagram" data-bs-placement="bottom"><i class="bi bi-instagram "></i></a>
+                        <a href="https://github.com/sudarshankakde" data-bs-toggle="tooltip" data-bs-html="true"
+                            title="Github" data-bs-placement="bottom"><i class="bi bi-github "></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=919021767520" data-bs-toggle="tooltip"
+                            data-bs-html="true" title="Whatsapp" data-bs-placement="bottom"><i
+                                class="bi bi-whatsapp "></i></a>
+                        <a href="https://www.snapchat.com/add/sid-op7?share_id=nWqdL3Z9ZcY&locale=en-US"
+                            data-bs-toggle="tooltip" data-bs-html="true" title="Snapchat" data-bs-placement="bottom"><i
+                                class="bi bi-snapchat "></i></a>
+                        <a href="https://www.linkedin.com/in/sudarshan-kakde-510b15194" data-bs-toggle="tooltip"
+                            data-bs-html="true" title="LinkedIn" data-bs-placement="bottom"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="mailto:sudarshankakde1111@gmail.com" data-bs-toggle="tooltip" data-bs-html="true"
+                            title="Gmail" data-bs-placement="bottom"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i class="code position-absolute " style="bottom: 13vh;left:3vh;">/body</i>
+        <script>
+            AOS.init();
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+            var loader = document.getElementById('loader');
+            window.addEventListener('load', loaded);
+            function loaded() {
+                loader.style.display = "none";
+                document.body.style.overflow = "visible";
+            }
+        </script>
+</body>
+
+</html>

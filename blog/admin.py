@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Blog,tag,webData,BlogComment
-from .models import MailMessage,Subscribers
+from .models import MailMessage,Subscribers,ContactMe,Projects
 
 
 @admin.register(Blog)
@@ -22,3 +22,6 @@ admin.site.register(MailMessage)
 admin.site.register(Subscribers)
 
 
+#Contact Me
+admin.site.register(ContactMe)
+admin.site.register(Projects)

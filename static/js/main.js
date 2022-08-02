@@ -1,5 +1,3 @@
-
-
 var theme = document.getElementById('theme').value;
 var ThemeIcon = document.getElementById('ThemeIcon');
 console.log('theme =' + theme)
@@ -54,7 +52,6 @@ else if (localStorageTheme == 'light') {
 else {
     setLight();
 }
-
 
 
 

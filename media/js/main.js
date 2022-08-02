@@ -1,75 +1,60 @@
 
-//  theme
-window.localStorage
-var theme = document.getElementById('theme');
-var body = document.getElementById('body');
-var currentTheme = 0;
-var localtheme = localStorage.getItem("theme");
-var btnColor = localStorage.getItem("btnColor");
-var TextColor = localStorage.getItem("TextColor");
-if (localtheme == 0) {
-    theme.classList = 'bi bi-cloud-sun-fill';
-    document.documentElement.style.setProperty('--primary-text', TextColor);
-    document.documentElement.style.setProperty('--secondary-text', 'rgb(20, 20, 20)');
-    document.documentElement.style.setProperty('--primary-theme', btnColor);
-    document.documentElement.style.setProperty('--secondary-theme', '#4285f4');
-    body.classList = 'bg-dark';
-    currentTheme = 1;
-    localStorage.setItem("theme", 0);
+
+
+var theme = document.getElementById('theme').value;
+var ThemeIcon = document.getElementById('ThemeIcon');
+console.log('theme =' + theme)
+var DocStyle = document.documentElement.style;
+var localStorageTheme = localStorage.getItem('theme');
+// change theme
+// set dark theme function
+function setDark() {
+    DocStyle.setProperty('--primary-text', 'white');
+    DocStyle.setProperty('--primary-bg', '#1c2331');
+    DocStyle.setProperty('--card-bg', '#37474f');
+    DocStyle.setProperty('--primary-theme', '#a6c');
+    ThemeIcon.classList='bi bi-cloud-sun-fill';
+    theme = 'dark';
+    localStorage.setItem('theme',theme);
+    console.log('theme:-' + theme);
 }
-
-else if (currentTheme == 1) {
-    document.documentElement.style.setProperty('--primary-text', TextColor);
-    document.documentElement.style.setProperty('--secondary-text', '#ffffff');
-    document.documentElement.style.setProperty('--primary-theme', btnColor);
-    document.documentElement.style.setProperty('--secondary-theme', '#a6c');
-    theme.classList = 'bi bi-moon-stars-fill';
-    body.classList = 'bg-light';
-    currentTheme = 0;
-    localStorage.setItem("theme", 1);
-
+// set light theme function
+function setLight() {
+    DocStyle.setProperty('--primary-text', 'black');
+    DocStyle.setProperty('--primary-bg', 'white');
+    DocStyle.setProperty('--card-bg', 'white');
+    DocStyle.setProperty('--primary-theme', '#4285f4');
+    ThemeIcon.classList='bi bi-moon-stars-fill'
+    theme = 'light';
+    localStorage.setItem('theme',theme);
+    console.log('theme:-' + theme);
 }
-
-
-// changing on click
+// changetheme conditions
 function changeTheme() {
-    body.style.transitionDelay = '0.2s';
-    if (currentTheme == 0) {
-        theme.classList = 'bi bi-cloud-sun-fill';
-        document.documentElement.style.setProperty('--primary-text', '#ffffff');
-        document.documentElement.style.setProperty('--secondary-text', 'rgb(20, 20, 20)');
-        document.documentElement.style.setProperty('--primary-theme', '#a6c');
-        document.documentElement.style.setProperty('--secondary-theme', '#4285f4');
-        body.classList = 'bg-dark';
-        currentTheme = 1;
-        localStorage.setItem("theme", 0);
-        localStorage.setItem("btnColor","#a6c")
-        localStorage.setItem("TextColor","#ffffff")
+    DocStyle.transition='all 1s';
+    if (theme == 'dark') {
+        setLight();
     }
-    else if (currentTheme == 1) {
-        document.documentElement.style.setProperty('--primary-text', 'rgb(20, 20, 20)');
-        document.documentElement.style.setProperty('--secondary-text', '#ffffff');
-        document.documentElement.style.setProperty('--primary-theme', '#4285f4');
-        document.documentElement.style.setProperty('--secondary-theme', '#a6c');
-        theme.classList = 'bi bi-moon-stars-fill';
-        body.classList = 'bg-light';
-        currentTheme = 0;
-        localStorage.setItem("theme", 1);
-        localStorage.setItem("btnColor","#4285f4")
-        localStorage.setItem("TextColor","rgb(20, 20, 20)")
-
+    else if (theme == 'light') {
+        setDark();
     }
     else {
-        document.documentElement.style.setProperty('--primary-text', 'rgb(20, 20, 20)');
-        document.documentElement.style.setProperty('--secondary-text', '#ffffff');
-        document.documentElement.style.setProperty('--primary-theme', '#4285f4');
-        document.documentElement.style.setProperty('--secondary-theme', '#a6c');
-        theme.classList = 'bi bi-moon-stars-fill';
-        body.classList = 'bg-light';
-        currentTheme = 0;
-        localStorage.setItem("theme", 1);
-        localStorage.setItem("btnColor","#4285f4")
-        localStorage.setItem("TextColor","rgb(20, 20, 20)")
+        setDark();
     }
 }
+
+
+// local theme set
+
+if (localStorageTheme == 'dark') {
+    setDark();
+}
+else if (localStorageTheme == 'light') {
+    setLight();
+}
+else {
+    setLight();
+}
+
+
 

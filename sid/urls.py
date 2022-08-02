@@ -32,6 +32,9 @@ urlpatterns = [
     #contact page
     path('contact', views.contact, name='contact'),
 
+    path('aboutme', views.aboutme, name='aboutme'),
+
+   
 
     # search in blogs
     path('search', views.search, name='search'),
@@ -58,7 +61,10 @@ urlpatterns = [
     #blogs in detail
     path('<str:slug>', views.detail, name='detail'),
 
-    
+    path('GetMoreBlog/<int:number>',views.GetMoreBlog,name='GetMoreBlog')
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'sid.views.error_404_view'
+handler500 = 'sid.views.handler500'

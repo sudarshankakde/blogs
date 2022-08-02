@@ -9,14 +9,6 @@
 
 } */
 
-:root {
-  --primary-text: white;
-  --elegance: rgb(39 39 39);
-  --primary-theme: #a6c;
-  --card-bg:#37474f;
-  /* --card-bg: #ffffff; */
-}
-
 .carousel-item {
   position: relative;
 

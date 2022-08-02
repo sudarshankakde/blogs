@@ -1,15 +1,3 @@
-/* 
-:root{
-    --primary-text:rgb(28, 35, 49);
-    --elegance: rgb(39 39 39);
-    --primary-bg:white;
-    --secondary-bg:#1c2331;
-    --card-bg:#37474f;
-    --card-bg:white;
-    --secondary-text:#ffffff;
-    --primary-theme:#4285f4;
-    --secondary-theme: #a6c;
-} */
 :root {
     --primary-text: white;
     --elegance: rgb(39 39 39);
@@ -148,18 +136,11 @@ h2 {
 .footer-icons {
     font-size: 4vh;
     border-radius: 100%;
-    color: white;
+    color: var(--primary-text) !important;
     padding: 2vh;
     margin: 0 1vh;
 }
 
-.footer-icons>.bi-instagram {
-    background-color: #dd292985;
-}
-
-.footer-icons>.bi-github {
-    background-color: #363333;
-}
 
 #mail {
     font-size: 4vh;
@@ -169,6 +150,14 @@ h2 {
     margin: 0 1vh;
     background-color: #3b5998;
 
+}
+
+.nav-link {
+    color: var(--primary-text) !important;
+}
+
+.btn-close-primary, .text-user-primarytext {
+    color: var(--primary-text) !important;
 }
 
 p>a {
@@ -184,51 +173,20 @@ p>a {
     height: 75vh;
 }
 
-/* contact page css */
-/* reset */
-#fs-frm input,
-#fs-frm select,
-#fs-frm textarea,
-#fs-frm fieldset,
-#fs-frm optgroup,
-#fs-frm label,
-#fs-frm #card-element:disabled {
-    font-family: inherit;
-    font-size: 100%;
-    color: inherit;
-    border: none;
-    border-radius: 0;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-#fs-frm label,
-#fs-frm legend,
-#fs-frm ::placeholder {
-    font-size: 0.825rem;
-    margin-bottom: 0.5rem;
-    padding-top: 0.2rem;
-    display: flex;
-    align-items: baseline;
-}
 
 #AlertMessage {
     position: fixed;
-    width: 100vw;
-    z-index: 75;
-    top: 1vh;
-    animation: messageEntery 0.5s steps(10);
-    transition: cubic-bezier(.09, .31, .94, .8);
-
+    width: 50%;
+    z-index: 110;
+    top: 2px;
+    right: 2px;
+    animation: messageEntery;
+    animation-duration: 0.5s;
 }
 
 @keyframes messageEntery {
     from {
-        transform: translateY(-10vw);
+        transform: translateX(10vw);
     }
 }
 
@@ -238,12 +196,20 @@ p>a {
 }
 
 .modal-dialog {
-    width: 90%;!important;
+    width: 90% !important;
+}
+
+.offcanvas {
+    z-index: 100 !important;
 }
 
 @media (max-width:550px) {
     .blog-image>img {
         height: 50vh;
+    }
+
+    .offcanvas {
+        z-index: 1045 !important;
     }
 
     #AlertMessage {
@@ -258,8 +224,7 @@ p>a {
     }
 
     #slider-img {
-        height: 90vh;
-         !important;
+        height: 90vh !important;
     }
 
 }
@@ -277,3 +242,183 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.badge {
+    color: var(--primary-text) !important;
+}
+
+whr {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--primary-text);
+    border: thin solid var(--primary-text);
+    opacity: 0.5;
+}
+
+.badge-Theme-Primary {
+    background-color: var(--primary-theme);
+    color: white !important;
+
+}
+
+.btn-user-primary {
+    background-color: var(--primary-theme);
+    color: white !important;
+}
+
+.text-user-primary {
+    color: var(--primary-theme);
+    background-color: transparent;
+    opacity: 0.5;
+
+}
+
+.text-user-primary-100 {
+    color: var(--primary-theme);
+    background-color: transparent;
+    opacity: 1;
+}
+
+.text-user-primary-100:hover {
+    color: var(--primary-theme);
+    background-color: transparent;
+}
+
+.text-user-primary:hover {
+    color: var(--primary-theme);
+    background-color: transparent;
+    opacity: 1;
+    user-select: none;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+label {
+    color: var(--primary-text);
+}
+
+.text-user {
+    color: rgba(var(--primary-text), 0.65);
+
+}
+
+.Hover2 {
+    color: var(--primary-text);
+    font: 12px Montserrat;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 600;
+    max-width: max-content;
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+    position: relative;
+    padding-right: 13%;
+    width: max-content;
+    border-radius: 0.5vh;
+}
+
+.Hover2:before {
+    content: ">>";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+    color: var(--primary-text);
+    font-size: 20px;
+    width: 40px;
+    height: 100%;
+    line-height: 31px;
+    text-align: center;
+    font-family: consolas;
+    padding-right: 15px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.Hover2:hover:before {
+    padding-right: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.Hover2:hover {
+    text-decoration: underline;
+    text-decoration-color: var;
+    color: var(--primary-text);
+}
+
+body::selection {
+    background-color: rgba(var(--primary-theme), 0.8) !important;
+    color: var(--primary-text) !important;
+}
+
+.form-control-plaintext::placeholder {
+    color: var(--primary-text);
+    opacity: 0.8;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-control-plaintext {
+    border-bottom: thin solid var(--primary-theme);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary-text);
+}
+
+.form-control-plaintext:focus {
+    outline: none;
+}
+
+.form-group>label {
+    color: var(--primary-theme);
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.form-floating>label {
+    color: var(--primary-theme) !important;
+}
+
+.form-control:placeholder {
+    color: var(--primary-theme) !important;
+}
+
+#eye>.bi {
+    transition-delay: 1ms;
+    transition-duration: 3ms;
+}
+
+.logo-part1,
+.logo-part2 {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.3vh;
+    font-weight: 400;
+    font-size: 3vh;
+    width: auto;
+    padding: 0 2px;
+    user-select: none;
+}
+
+.logo-part1 {
+    /* color: var(--primary-text) !important; */
+    margin-left: 1vh;
+}
+
+.logo-part2 {
+    background-color: var(--primary-text);
+    color: var(--card-bg);
+    margin-right: 1vh;
+}
+
+.not-visible {
+    visibility: hidden;
+}
+

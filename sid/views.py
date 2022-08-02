@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage
+from django.utils.html import strip_tags
+from django.conf import settings
+from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects
 from django.template import RequestContext
 # from django.shortcuts import render_to_response
 # from blog.froms import SubscibersForm
@@ -12,14 +14,9 @@ from django.core.mail import send_mail
 from django_pandas.io import read_frame
 import re
 from django.template.loader import render_to_string
-
-# data = {
-#     'site_name': "SID's blogs",
-#     'About_me': """I am 19 year old Collage Student,A programmer 💻, and A Web Developer 🕸️
-#         living at Aurangabad, India. I am a Information Technology Student,
-#         currently Studying at GOVERMENT POLY AMBAD.""",
-#     'mine_name': 'Sudarshan kakde',
-# }
+from django.http import HttpResponse, JsonResponse
+import json
+from django.core.serializers import serialize
 
 data = webData.objects.first()
 
@@ -39,14 +36,43 @@ def home(request):
             Subscriber.email = mail
             Subscriber.save()
             messages.success(
-                request, f"<h5 class='text-capitalize'>congrats <i class='bi bi-stars'></i>, {mail} has been Subscribe to NewsLetter </h5>")
+                request, f"<span class='text-capitalize'>congrats <i class='bi bi-stars'></i>, {mail} has been Subscribe to NewsLetter </span>")
 
+            subject = f'Welcome To Newsletter!'
+            html_message = render_to_string(
+                'MailTempletes/Subscribe.html')
+            plain_message = strip_tags(html_message)
+            Mail_From = settings.EMAIL_HOST_USER
+            Mail_To = [mail, ]
+            send_mail(subject, plain_message, Mail_From, Mail_To,
+                      html_message=html_message, fail_silently=True)
+        return redirect(request.META.get('HTTP_REFERER', 'home'))
     post = Blog.objects.order_by('-publish_date')[0:3]
     PopularPosts = Blog.objects.order_by('-views')[0:3]
     return render(request, 'home.html', {'posts': post, 'PopularPosts': PopularPosts, 'data': data, 'index': ' Home'})
 
 
 def contact(request):
+    if request.method == "POST":
+        Name = request.POST['name']
+        Email = request.POST['email']
+        Message = request.POST['message']
+        contactMe = ContactMe()
+        contactMe.Full_Name = Name
+        contactMe.Email_Id = Email
+        contactMe.Message_To_Me = Message
+        contactMe.save()
+        subject = f'Greetings From Sudarshan'
+        html_message = render_to_string(
+            'MailTempletes/Contact.html', {'name': Name})
+        plain_message = strip_tags(html_message)
+        Mail_From = settings.EMAIL_HOST_USER
+        Mail_To = [Email, ]
+        send_mail(subject, plain_message, Mail_From, Mail_To,
+                  html_message=html_message, fail_silently=True)
+        messages.success(
+            request, f"<b class='text-capitalize'>Your Response has been saved. I Will Contact You Shortly</b>")
+
     return render(request, 'contact.html', {'data': data, 'index': ' Contact me'})
 
 
@@ -67,8 +93,9 @@ def detail(request, slug):
 
 
 def AllBlogs(request):
-    posts = Blog.objects.order_by('-publish_date')
+    posts = Blog.objects.order_by('-publish_date')[0:6]
     return render(request, 'all blogs.html', {'posts': posts, 'data': data, 'index': 'All Blogs'})
+
 
 # api search
 
@@ -76,13 +103,19 @@ def AllBlogs(request):
 def search(request):
     query = request.GET['query']
     if len(query) > 20:
-        allposts = []
+        allPosts = []
     else:
         allPostsBody = Blog.objects.filter(body__icontains=query)
         allPostsTitle = Blog.objects.filter(title__icontains=query)
-        allPosts = allPostsBody.union(allPostsTitle)
-
-    # posts ={'allposts':allPosts}
+        try:
+            tagId = tag.objects.only('id').get(tag=query).id
+            allTags = Blog.objects.filter(tags=tagId)
+            Posts = allPostsBody.union(allPostsTitle)
+            allPosts = allPostsBody.union(allTags)
+        except:
+            allPosts = allPostsBody.union(allPostsTitle)
+        print(allPosts)
+        # posts ={'allposts':allPosts}
     return render(request, 'search.html', {'data': data, 'index': 'All Blogs', 'posts': allPosts, 'query': query})
 
 
@@ -99,22 +132,22 @@ def handleSingup(request):
         # check for error input
         if len(username) > 10:
             messages.error(request, 'Username must under 10 character')
-            return redirect('home')
+            return redirect(request.META.get('HTTP_REFERER', 'home'))
 
         if not username.isalnum():
             messages.error(
                 request, 'username should not have specail character')
-            return redirect('home')
+            return redirect(request.META.get('HTTP_REFERER', 'home'))
         if password1 != password2:
             messages.error(request, 'Passwords do not match. please try again')
-            return redirect('home')
+            return redirect(request.META.get('HTTP_REFERER', 'home'))
 
         if User.objects.filter(username=username).exists():
             messages.error(request, 'username Allready taken')
-            return redirect('home')
+            return redirect(request.META.get('HTTP_REFERER', 'home'))
         elif User.objects.filter(email=email).exists():
             messages.error(request, 'this email has been registerd.')
-            return redirect('home')
+            return redirect(request.META.get('HTTP_REFERER', 'home'))
         # work with model
         # create user
         else:
@@ -124,11 +157,9 @@ def handleSingup(request):
             myuser.save()
             messages.success(
                 request, 'Your account has been successfully creater')
+        return redirect('handleLogin')
 
-        return redirect('home')
-
-    else:
-        return render(request, 'search.html', {'data': data, 'index': '404 not found'})
+    return render(request, 'Singup.html')
 
 
 def handleLogin(request):
@@ -143,13 +174,14 @@ def handleLogin(request):
             return redirect('home')
         else:
             messages.error(request, 'Invalid Credentials, Please try again')
-            return redirect('home')
+            return redirect(request.META.get('HTTP_REFERER', 'home'))
+    return render(request, 'Login.html')
 
 
 def handelLogout(request):
     auth.logout(request)
     messages.success(request, "Successfully logged out")
-    return redirect('home')
+    return redirect(request.META.get('HTTP_REFERER', 'home'))
 
 
 # api for post comment
@@ -175,7 +207,7 @@ def postComment(request):
                 request, 'your reply has been posted  successfully')
         comment.save()
 
-    return redirect(f"/{PostSlug}")
+    return redirect(f"/{PostSlug}#commentes")
 
 
 # api for send mail news letter
@@ -196,16 +228,47 @@ def newsletter(request):
                   )
         mail = MailMessage(message=mail_message, title=mail_title)
         mail.save()
-
     return render(request, 'newsletter.html', {'data': data})
 
 
+# api for loading more blogs
+def GetMoreBlog(request, number):
+    alreadyAvalable = int(number)
+    toSend = alreadyAvalable+6
+    reponse_data = Blog.objects.order_by(
+        '-publish_date')[alreadyAvalable:toSend]
+    permission_serialize = json.loads(serialize('json', reponse_data))
+
+    Tags = tag.objects.order_by('-id')
+    return JsonResponse({'data': permission_serialize, 'tags': list(Tags.values())})
+
+
 def error_404_view(request, exception):
-    return render(request, '404.html')
+    return render(request, '404Page.html')
 
 
 def handler500(request, *args, **argv):
-    response = render_to_response('500.html', {},
-                                  context_instance=RequestContext(request))
-    response.status_code = 500
-    return response
+    context_instance = RequestContext(request)
+    return render(request, '404Page.html', context_instance)
+
+
+def aboutme(request):
+    projects = Projects.objects.order_by('-id')
+    if request.method == "POST":
+        Name = request.POST['name']
+        Email = request.POST['email']
+        Message = request.POST['message']
+        contactMe = ContactMe()
+        contactMe.Full_Name = Name
+        contactMe.Email_Id = Email
+        contactMe.Message_To_Me = Message
+        contactMe.save()
+        subject = f'Greetings From Sudarshan'
+        html_message = render_to_string(
+            'MailTempletes/Contact.html', {'name': Name})
+        plain_message = strip_tags(html_message)
+        Mail_From = settings.EMAIL_HOST_USER
+        Mail_To = [Email, ]
+        send_mail(subject, plain_message, Mail_From, Mail_To,
+                  html_message=html_message, fail_silently=True)
+    return render(request, 'aboutMe.html', {'projects': projects,'data':data})

@@ -1,6 +1,6 @@
 {% extends 'base_layout.html' %}
 {% block index %}
-    <title>{{data.site_name}}  Newsletter</title>
+<title>{{data.site_name}} Newsletter</title>
 {% endblock index %}
 {% block content %}
 {% load static %}
@@ -14,18 +14,18 @@
                     {% csrf_token %}
                     <div class="">
                         <h5>title</h5>
-                        <input class="form-control" type="text" name="title" id="title" >
+                        <input class="form-control" type="text" name="title" id="title">
                         <h5>message</h5>
                         <textarea class="form-control" name="message" id="id_body" cols="30" rows="10"></textarea>
                         <br>
                     </div>
-                    <button type="submit" class="btn-1 btn-info">send newsletter</button>
+                    <button type="submit" class="btn btn-user-primary">send newsletter</button>
                 </form>
             </div>
             {%else%}
             <div class="container" id="Subscribe">
                 <div class="row">
-                    <div class="col-12 mx-auto w-100 text-center p-lg-5 p-sm-5 px-2 card">
+                    <div class="col-12 mx-auto w-100 text-center p-lg-5 p-sm-5 py-5 card">
                         <h3>Subscribe to my newsletter !</h3>
                         <h6>So that you never miss any update.</h6>
                         <form action="/home#Subscribe" method="post">
@@ -34,7 +34,8 @@
                                 <input type="email" class="form-control " placeholder="Your Email"
                                     aria-label="Your Email" aria-describedby="basic-addon2" name="SubscriptionEmail">
                                 <div class="input-group-append">
-                                    <button class="btn  btn-success" type="submit">Subscribe <i class="bi bi-bell"></i></button>
+                                    <button class="btn  btn-user-primary" type="submit">Subscribe <i
+                                            class="bi bi-bell"></i></button>
                                 </div>
                             </div>
 
@@ -45,10 +46,12 @@
             {%endif%}
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 text-center mt-5 card p-4">
-            <h1>What is Newsletter ?</h1>
-            <h5>An email newsletter is basically an email used in a marketing campaign. It contains important news and updates to make you subscribes aware of your brand or products and other significant information.</h5>
+    <div class="row mx-auto">
+        <div class="col-12 text-center mt-5 card p-4 ">
+            <h3 class="">Why to Subscribe Newsletter ?</h3>
+            <b>Subscribing to newsletters will ensure you never miss any interesting posts on blogs. By subscribing to
+                our newsletter, you are ahead of the game.
+            </b>
         </div>
     </div>
 </div>

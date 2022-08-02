@@ -1,10 +1,18 @@
-:root{
+/* :root{
     --primary-text:rgb(20, 20, 20);
     --elegance: rgb(39 39 39);
     --secondary-text:#ffffff;
     --primary-theme:#4285f4;
     --secondary-theme: #a6c;
+} */
+:root{
+    --primary-text: white;
+    --elegance: rgb(39 39 39);
+    --primary-theme: #98D7C2;
+    --card-bg: #167D7F;
+    --primary-bg: #1c2331;
 }
+
 /* scollbar */
 ::-webkit-scrollbar{
     background-color: var(--elegance);
@@ -32,10 +40,11 @@ body{
 }
 .btn-1:hover{
     color: white;
-    transition: 0.5s;
-    box-shadow: 8px 10px 6px -1px rgba(0,0,0,0.7);
-    -webkit-box-shadow: 8px 10px 6px -1px rgba(0,0,0,0.7);
-    -moz-box-shadow: 8px 10px 6px -1px rgba(0,0,0,0.7);
+    transition: 0.1s;
+    background-color: var(--primary-theme);
+    box-shadow: 8px 11px 9px 2px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 8px 11px 9px 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 8px 11px 9px 2px rgba(0,0,0,0.6);
 }
 #theme{
     font-size: larger;

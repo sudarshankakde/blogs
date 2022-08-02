@@ -29,7 +29,6 @@ class webData(models.Model):
 
 class tag(models.Model):
     tag = models.CharField(max_length=50)
-    
     def __str__(self):
         return self.tag
     
@@ -38,12 +37,12 @@ class Blog(models.Model):
     id = models.BigAutoField(primary_key=True)
     slug = models.SlugField(null=False)
     image = models.ImageField(upload_to='images/',null=True)
-    title = models.CharField(max_length=20)
-    summary = models.TextField(max_length=50,null=True)
+    title = models.CharField(max_length=150)
+    summary = models.TextField(max_length=250,null=True)
     publish_date = models.DateTimeField()
     body = models.TextField()
     author = models.CharField(max_length=100)
-    tags = models.ManyToManyField(tag,null=True)
+    tags = models.ManyToManyField(tag)
     views = models.IntegerField(default=0)
     def __str__(self):
         return self.title+' | '+ str(self.author)
@@ -77,7 +76,26 @@ class MailMessage(models.Model):
     def __str__(self):
         return self.title
 
+
+class ContactMe(models.Model):
+    Full_Name = models.CharField(max_length=25,null=False)
+    Email_Id = models.EmailField(null=False)
+    Message_To_Me =models.TextField(null=False)
+    Contacted_On = models.DateTimeField(default=now)
+    
+    def __str__(self):
+        return self.Full_Name + "|" + str(self.Contacted_On)
     
 
 
 
+class Projects(models.Model):
+    name = models.CharField(max_length=50)
+    summary = models.TextField()
+    doneOn = models.CharField(max_length=50)
+    logo = models.ImageField(upload_to='Projects/logo')
+    link = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.name
+    

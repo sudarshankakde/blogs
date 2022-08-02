@@ -1,5 +1,10 @@
-const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
+try {
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+  
+} catch (error) {
+  console.error('class not found');
+}
 
 const textArray = ["A Student .", "A Programmer .", "A Proud INDIAN.","A Influencer .","A Web Devloper ."];
 const typingDelay = 200;
