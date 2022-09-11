@@ -1,0 +1,30 @@
+{% load extras_filter %}
+{%load static%}
+<div class="reply w-100  my-3 ">
+    <div class="row my-1">
+        <div class="col-lg-1 col-2 float-right">
+            {% if reply.sno|divisibleby:2 %}
+            <img src="{%static 'images/user (3).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+            {% elif reply.sno|divisibleby:3 %}
+            <img src="{%static 'images/user (1).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+            {% elif reply.sno|divisibleby:5 %}
+            <img src="{%static 'images/user (5).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+            {% else %}
+            <img src="{%static 'images/user.png'%}" alt="User" class="img-fluid rounded rounded-circle">
+            {% endif %}
+        </div>
+        <div class="col-lg-11 col-10 float-left">
+            <span class="text-capitalize font-weight-bold my-auto ">{{reply.user}}
+            </span>
+            <span class="small text-center px-1 my-auto cursor-pointer"
+                title="{{reply.timeStamp|date:'g : i A'}}" data-toggle="tooltip" data-placement="top"><span
+                    class="my-auto small" style="font-size: 1.5vh;">
+                    {{reply.timeStamp|date:'d M Y'}}
+                </span>
+            </span>
+            <br>
+            <small class="text-capitalize"><i class="bi bi-arrow-return-right"></i>
+                {{reply.comment}}</small>
+        </div>
+    </div>
+</div>

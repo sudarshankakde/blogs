@@ -6,29 +6,35 @@ var localStorageTheme = localStorage.getItem('theme');
 // change theme
 // set dark theme function
 function setDark() {
-    DocStyle.setProperty('--primary-text', 'white');
-    DocStyle.setProperty('--primary-bg', '#1c2331');
-    DocStyle.setProperty('--card-bg', '#37474f');
-    DocStyle.setProperty('--primary-theme', '#a6c');
-    ThemeIcon.classList='bi bi-cloud-sun-fill';
+    if(window.document.body.classList.contains('light-mode')){
+        window.document.body.classList.replace('light-mode', 'dark-mode');
+    }
+    else{
+        window.document.body.classList.add('dark-mode');
+    }
+    ThemeIcon.classList = 'bi bi-cloud-sun-fill';
     theme = 'dark';
-    localStorage.setItem('theme',theme);
+    localStorage.setItem('theme', theme);
     console.log('theme:-' + theme);
 }
 // set light theme function
 function setLight() {
-    DocStyle.setProperty('--primary-text', 'black');
-    DocStyle.setProperty('--primary-bg', 'white');
-    DocStyle.setProperty('--card-bg', 'white');
-    DocStyle.setProperty('--primary-theme', '#4285f4');
-    ThemeIcon.classList='bi bi-moon-stars-fill'
+    if(window.document.body.classList.contains('dark-mode')){
+        window.document.body.classList.replace('dark-mode', 'light-mode');
+    }
+    else{
+        window.document.body.classList.add('light-mode');
+    }
+    window.document.body.classList.replace('dark-mode', 'light-mode');
+    ThemeIcon.classList = 'bi bi-moon-stars-fill';
     theme = 'light';
-    localStorage.setItem('theme',theme);
+    localStorage.setItem('theme', theme);
     console.log('theme:-' + theme);
 }
 // changetheme conditions
 function changeTheme() {
-    DocStyle.transition='all 1s';
+    DocStyle.transition = 'all 1s';
+
     if (theme == 'dark') {
         setLight();
     }
@@ -50,7 +56,28 @@ else if (localStorageTheme == 'light') {
     setLight();
 }
 else {
-    setLight();
+    if (window.matchMedia) {
+        // Check if the dark-mode Media-Query matches
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            window.document.body.classList.add('dark-mode');
+            console.log('set dark mode by system');
+            ThemeIcon.classList = 'bi bi-cloud-sun-fill';
+            theme = 'dark';
+
+            // Dark
+        } else {
+            window.document.body.classList.add('light-mode');
+            console.log('set light mode by system');
+            ThemeIcon.classList = 'bi bi-moon-stars-fill';
+            theme = 'light';
+
+
+            // Light
+            // console.log('system light')
+        }
+    } else {
+        // Default (when Media-Queries are not supported)
+    }
 }
 
 

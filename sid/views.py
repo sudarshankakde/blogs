@@ -17,28 +17,22 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse, JsonResponse
 import json
 from django.core.serializers import serialize
-
+import random
 data = webData.objects.first()
 
 
 # html pages
-
-
-def home(request):
-    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+def subscription(request):
     Subscriber = Subscribers()
     if request.method == "POST":
         mail = request.POST['SubscriptionEmail']
         if Subscribers.objects.filter(email=mail).exists():
-            messages.success(
-                request, f"{mail} had already Subscribed to NewsLetter")
+
+            return HttpResponse(f"{mail} had already Subscribed to NewsLetter")
         else:
             Subscriber.email = mail
             Subscriber.save()
-            messages.success(
-                request, f"<span class='text-capitalize'>congrats <i class='bi bi-stars'></i>, {mail} has been Subscribe to NewsLetter </span>")
-
-            subject = f'Welcome To Newsletter!'
+            subject = f'Subscribed To Sids BLOG Newsletter!'
             html_message = render_to_string(
                 'MailTempletes/Subscribe.html')
             plain_message = strip_tags(html_message)
@@ -46,7 +40,11 @@ def home(request):
             Mail_To = [mail, ]
             send_mail(subject, plain_message, Mail_From, Mail_To,
                       html_message=html_message, fail_silently=True)
-        return redirect(request.META.get('HTTP_REFERER', 'home'))
+            return HttpResponse(f"<span class='text-capitalize'>congrats <i class='bi bi-stars'></i>, {mail} has been Subscribe to NewsLetter </span>")
+        return HttpResponse("please fill the field.")
+
+
+def home(request):
     post = Blog.objects.order_by('-publish_date')[0:3]
     PopularPosts = Blog.objects.order_by('-views')[0:3]
     return render(request, 'home.html', {'posts': post, 'PopularPosts': PopularPosts, 'data': data, 'index': ' Home'})
@@ -77,6 +75,7 @@ def contact(request):
 
 
 def detail(request, slug):
+    PopularPosts = Blog.objects.order_by('-views')[0:5]
     blogdetails = get_object_or_404(Blog, slug=slug)
     comments = BlogComment.objects.filter(post=blogdetails, parent=None)
     comments = comments.order_by('-sno')
@@ -89,7 +88,7 @@ def detail(request, slug):
             replyDict[reply.parent.sno].append(reply)
     blogdetails.views = blogdetails.views + 1
     blogdetails.save()
-    return render(request, 'detail.html', {'blog': blogdetails, 'data': data, 'comments': comments, 'replyDict': replyDict})
+    return render(request, 'detail.html', {'blog': blogdetails, 'data': data, 'comments': comments, 'replyDict': replyDict, 'moreBlogs': PopularPosts})
 
 
 def AllBlogs(request):
@@ -121,9 +120,10 @@ def search(request):
 
 # apis for user autantication
 def handleSingup(request):
+    Subscriber = Subscribers()
     if (request.method == 'POST'):
         # get peramenters
-        username = request.POST['username']
+        username = request.POST['username'].lower()
         fname = request.POST['fname']
         lname = request.POST['lname']
         email = request.POST['email']
@@ -151,10 +151,13 @@ def handleSingup(request):
         # work with model
         # create user
         else:
+            
             myuser = User.objects.create_user(username, email, password1)
             myuser.first_name = fname
             myuser.last_name = lname
             myuser.save()
+            Subscriber.email = email
+            Subscriber.save()
             messages.success(
                 request, 'Your account has been successfully creater')
         return redirect('handleLogin')
@@ -162,10 +165,41 @@ def handleSingup(request):
     return render(request, 'Singup.html')
 
 
+def checkForUserName(request):
+    if (request.method == "GET"):
+        username = request.GET['username'].lower()
+        if len(username) < 1:
+            return HttpResponse('<span class="text-user-primary-100 float-end">enter username</span>')
+
+        if len(username) > 10:
+            return HttpResponse('<span class="text-danger float-end">Username must under 10 character</span>')
+
+        if not username.isalnum():
+            return HttpResponse('<span class="text-danger float-end">Username should not have specail character</span>')
+
+        if User.objects.filter(username=username).exists():
+            return HttpResponse('<span class="text-danger float-end">Username Allready taken</span>')
+        else:
+            return HttpResponse('<span class="text-user-primary-100 float-end">Username Available</span>')
+
+
+def checkForUserMail(request):
+    if (request.method == "GET"):
+        email = request.GET['email']
+        if User.objects.filter(email=email).exists():
+            return HttpResponse('<span class="text-danger float-end">Email Adress Allready In Use</span>')
+        else:
+            return HttpResponse('')
+
+
+def Privacy_Policy(request):
+    return render(request, 'Extra/Privacy_Policy.html', {'data': data, 'index': 'Privacy Policy'})
+
+
 def handleLogin(request):
     if (request.method == 'POST'):
         # get peramenters
-        username = request.POST['loginusername']
+        username = request.POST['loginusername'].lower()
         password = request.POST['loginpassword']
         user = auth.authenticate(username=username, password=password)
         if user is not None:
@@ -184,30 +218,40 @@ def handelLogout(request):
     return redirect(request.META.get('HTTP_REFERER', 'home'))
 
 
+
 # api for post comment
 def postComment(request):
     if (request.method == 'POST'):
         comment = request.POST['Postcomment']
         user = request.user
-        postSno = request.POST.get("PostSno")
-        PostSlug = request.POST.get("PostSlug")
+        postSno = request.POST['PostSno']
+        PostSlug = request.POST['PostSlug']
         post = Blog.objects.get(id=postSno)
-        parentSno = request.POST.get('parentSno')
+        parentSno = request.POST['parentSno']
+        blogdetails = get_object_or_404(Blog, slug=PostSlug)
+        comments = BlogComment.objects.filter(post=blogdetails, parent=None)
+        comments = comments.order_by('-sno')
+        replies = BlogComment.objects.filter(
+            post=blogdetails).exclude(parent=None)
+        replyDict = {}
+        for reply in replies:
+            if reply.parent.sno not in replyDict.keys():
+                replyDict[reply.parent.sno] = [reply]
+            else:
+                replyDict[reply.parent.sno].append(reply)
 
         if parentSno == "":
             comment = BlogComment(comment=comment, user=user, post=post)
-            messages.success(
-                request, 'your comment has been posted  successfully')
+            comment.save()
+            return render(request, 'blog/comment.html', {'comments': comments, 'replyDict': replyDict})
 
         else:
             parent = BlogComment.objects.get(sno=parentSno)
             comment = BlogComment(
                 comment=comment, user=user, post=post, parent=parent)
-            messages.success(
-                request, 'your reply has been posted  successfully')
-        comment.save()
-
-    return redirect(f"/{PostSlug}#commentes")
+            comment.save()
+            print(parent.sno)
+            return render(request, 'blog/reply.html', {'reply': comment})
 
 
 # api for send mail news letter
@@ -271,4 +315,4 @@ def aboutme(request):
         Mail_To = [Email, ]
         send_mail(subject, plain_message, Mail_From, Mail_To,
                   html_message=html_message, fail_silently=True)
-    return render(request, 'aboutMe.html', {'projects': projects,'data':data})
+    return render(request, 'aboutMe.html', {'projects': projects, 'data': data})

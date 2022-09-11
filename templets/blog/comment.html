@@ -1,0 +1,107 @@
+{% load extras_filter %}
+{%load static%}
+{%for comment in comments.all%}
+<div class="row overflow-hidden py-4 border-bottom mx-0 py-0">
+    <div class="col-lg-1 col-2 col-sm-2 float-right ">
+        {% if comment.sno|divisibleby:2 %}
+        <img src="{%static 'images/user (3).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+        {% elif comment.sno|divisibleby:3 %}
+        <img src="{%static 'images/user (1).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+        {% elif comment.sno|divisibleby:5 %}
+        <img src="{%static 'images/user (5).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+        {% else %}
+        <img src="{%static 'images/user.png'%}" alt="User" class="img-fluid rounded rounded-circle">
+        {% endif %}
+    </div>
+    <div class="col-lg-11 col-10 col-sm-10 ">
+        <div class="comment my-lg-1 d-flex justify-content-between align-items-center">
+            <div class="">
+                <strong class="text-capitalize fw-bold my-auto" style="font-size: 3vh;">{{comment.user}}
+                </strong>
+                <span class="small text-center px-1 fw-bold my-auto " title="{{comment.timeStamp|date:'g : i A'}}"
+                    data-toggle="tooltip" data-placement="top">
+                    <span class="my-auto  cursor-pointer" style="font-size: 1.5vh;">{{comment.timeStamp|date:'d M Y'}}
+                    </span>
+                </span>
+
+                <br>
+                <span class=" py-1"><i class="bi bi-arrow-return-right font-weight-bolder"></i>
+                    {{comment.comment}}</span>
+            </div>
+            <!-- reply -->
+            <div class="reply ">
+                <p>
+                    {% if request.user.is_authenticated %}
+                    <b class="text-decoration-none text-user-primary text-capitalize" data-toggle="collapse"
+                        href="#replyComment{{comment.sno}}" role="button" aria-expanded="false"
+                        aria-controls="replyComment{{comment.sno}}">
+                        <i class="bi bi-reply-all-fill"></i> reply
+                    </b>
+                    {% else %}
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="collapse" id="replyComment{{comment.sno}}" >
+            <div class="card card-body">
+                <!-- reply form  -->
+                <form hx-post="/postComment" hx-trigger="submit " hx-target="#reply_container_{{comment.sno}}"
+                    hx-swap="afterbegin" id="replyForm_{{comment.sno}}">
+                    {% csrf_token %}
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave Your comment here" name="Postcomment"
+                            id="commandBox_{{Comment.sno}}" required style="height: 100px"></textarea>
+                        <label for="commandBox_{{blog.id}}">Your Reply</label>
+                    </div>
+                    <input type="hidden" name="PostSno" value="{{blog.id}}">
+                    <input type="hidden" name="PostSlug" value="{{blog.slug}}">
+                    <input type="hidden" name="parentSno" value="{{comment.sno}}">
+                    <button type="submit" class=" btn btn-sm btn-user-primary my-2">Reply</button>
+                    <button type="reset" class=" btn btn-sm btn-user-primary my-2" data-toggle="collapse"
+                        href="#replyComment{{comment.sno}}" role="button" aria-expanded="false"
+                        aria-controls="replyComment{{comment.sno}}">Close</button>
+                </form>
+            </div>
+        </div>
+        {%if replyDict|get_val:comment.sno|length > 0%}
+        <small class="font-weight-normal mt-3">Reply's <i class="bi bi-arrow-right"></i></small>
+        {%else%}
+        {%endif%}
+        <div class="max-h-200px" id="reply_container_{{comment.sno}}" >
+            {% for reply in replyDict|get_val:comment.sno reversed %}
+            <div class="reply w-100  my-3 ">
+                <div class="row my-1">
+                    <div class="col-lg-1 col-sm-2 d-none d-lg-block d-sm-block float-right">
+                        {% if reply.sno|divisibleby:2 %}
+                        <img src="{%static 'images/user (3).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+                        {% elif reply.sno|divisibleby:3 %}
+                        <img src="{%static 'images/user (1).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+                        {% elif reply.sno|divisibleby:5 %}
+                        <img src="{%static 'images/user (5).png'%}" alt="User" class="img-fluid rounded rounded-circle">
+                        {% else %}
+                        <img src="{%static 'images/user.png'%}" alt="User" class="img-fluid rounded rounded-circle">
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-11 col-sm-10 col-11  ms-auto float-end">
+                        <span class="text-capitalize font-weight-bold my-auto ">{{reply.user}}
+                        </span>
+                        <span class="small text-center px-1 my-auto cursor-pointer"
+                            title="{{reply.timeStamp|date:'g : i A'}}" data-toggle="tooltip" data-placement="top"><span
+                                class="my-auto small" style="font-size: 1.5vh;">
+                                {{reply.timeStamp|date:'d M Y'}}
+                            </span>
+                        </span>
+                        <br>
+                        <small class="text-capitalize"><i class="bi bi-arrow-return-right"></i>
+                            {{reply.comment}}</small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endfor%}
+<script>
+
+</script>

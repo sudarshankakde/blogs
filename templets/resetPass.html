@@ -1,0 +1,39 @@
+<form>
+    {% csrf_token %}
+    <!-- username -->
+    <div class="form-group ">
+        <label for="loginUsername" class="small">User Name Or Gmail</label>
+        <input type="text" class="form-control-plaintext ps-2 w-100" id="loginUsername" name="loginusername"
+            value="{{username}}" required autofocus placeholder="Jhone Smith / JhoneSmith@gmail.com"
+            style="color: var(--primary-text);">
+        
+    </div>
+    <div class="form-group">
+        <label for="password">New Password</label>
+        <div class="span d-flex">
+            <input type="password" class="form-control-plaintext ps-2 w-100" id="newPassword" name="newPassword"
+                required placeholder="Enter New Password" style="color: var(--primary-text);">
+            <span id="eye" onclick="PassVisiblity()" class="py-2 my-auto"
+                style="border-bottom:thin solid;border-color: var(--primary-theme);">
+                <i class="bi bi-eye  px-2 h5 cursor-pointer "></i>
+            </span>
+        </div>
+
+    </div>
+    <div class="form-group pt-2 ">
+        <div class="span d-flex">
+            <input type="text" class="form-control-plaintext ps-2 w-50"   name="OTP"
+                required placeholder="Enter OTP" style="color: var(--primary-text);" maxlength="4">
+            <span  class="py-2 my-auto small cursor-pointer" hx-post="/RequestOTP" hx-target="#outputOTP" hx-swap="innerHTML" hx-trigger="click"
+                style="border-bottom:thin solid;border-color: var(--primary-theme);">
+                Request OTP
+            </span>
+        </div>
+        <div id="outputOTP" class="small"></div>
+    </div>
+
+
+    <button type="submit" class="btn btn-user-primary my-3 px-4">Reset Password</button>
+
+
+</form>

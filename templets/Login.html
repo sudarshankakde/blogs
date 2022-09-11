@@ -332,36 +332,42 @@
                 </g>
             </svg>
         </div>
-        <div class="col-lg-6 col-10 my-auto mx-auto">
-            <form action='/login' method="post">
+        <div class="col-lg-6 col-10 my-auto mx-auto" id="loginForm"> 
+            <form  method="post" >
                 {% csrf_token %}
                 <!-- username -->
                 <div class="form-group ">
                     <label for="loginUsername">User Name </label>
-                    <input type="text" class="form-control-plaintext ps-2 w-100" id="loginUsername" name="loginusername"
+                    <input type="text" class="form-control-plaintext ps-2 w-100" id="loginUsername" name="loginusername" autocomplete="username"
                         required autofocus placeholder="Jhone Smith" style="color: var(--primary-text);">
                 </div>
                 <!-- password -->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <div class="span d-flex">
-                        <input type="password" class="form-control-plaintext ps-2 w-100" id="passwordLogin"
+                        <input type="password" class="form-control-plaintext ps-2 w-100" id="passwordLogin" autocomplete="current-password"
                             name="loginpassword" required placeholder="Enter your Password"
                             style="color: var(--primary-text);">
                         <span id="eye" onclick="PassVisiblity()" class="py-2 my-auto" style="border-bottom:thin solid;border-color: var(--primary-theme);">
                             <i class="bi bi-eye  px-2 h5 cursor-pointer "></i>
                         </span>
                     </div>
+                    <a href="{% url 'reset_password' %}" class="small float-end my-1 font-italic">Forgot Password?</a>
+                    
                 </div>
                 <button type="submit" class="btn btn-user-primary my-3 px-4">Login </button>
             </form>
+
             <hr>
             <h6 class="text-center">Don't Have An Account! <a href="{%url 'singup'%}" class="text-user-primary-100 text-decoration-underline">Sing UP</a></h6>
         </div>
     </div>
 </div>
 <script>
+
     window.document.title = "Sid's Blog | Log In";
+
+   
     var password = document.getElementById('passwordLogin');
     var eye = document.getElementById('eye');
     function PassVisiblity() {

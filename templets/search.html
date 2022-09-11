@@ -2,11 +2,10 @@
 {% block content %}
 {% load static %}
 
-{%if posts|length < 1 %} 
-<div class="container my-3">
+{%if posts|length < 1 %} <div class="container my-3">
     <div class="alert alert-info alert-dismissible fade show text-center w-100 mx-auto text-capitalize" role="alert">
         no search results for
-        <strong> {{query}}</strong>
+        <strong class="opacity-90 text-capitalize"> " {{query}} "</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -33,13 +32,15 @@
                 </path>
                 <path
                     d="M204.39 151l-.95-.32a87.68 87.68 0 016.18-14.05l.87.48a86.93 86.93 0 00-6.1 13.89zm12.14-23.34l-.81-.59a86.7 86.7 0 0131.37-26.21l.45.9a85.74 85.74 0 00-31.01 25.93zm109.59-24.53A83.6 83.6 0 00316 98.54l.36-.94a85.62 85.62 0 0110.22 4.68z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 265.01px 124.3px;"></path>
+                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 265.01px 124.3px;">
+                </path>
                 <path
                     d="M204.39 151l-.95-.32a87.68 87.68 0 016.18-14.05l.87.48a86.93 86.93 0 00-6.1 13.89zm12.14-23.34l-.81-.59a86.7 86.7 0 0131.37-26.21l.45.9a85.74 85.74 0 00-31.01 25.93zm109.59-24.53A83.6 83.6 0 00316 98.54l.36-.94a85.62 85.62 0 0110.22 4.68z"
                     opacity=".3" class="empty_svg__animable" style="transform-origin: 265.01px 124.3px;"></path>
                 <path
                     d="M359.87 141.74a83 83 0 00-152.65 64.73c-6.68 2.34-13.28 4.85-19.84 7.44q-14.19 5.63-28.12 11.76c-9.28 4.11-18.52 8.3-27.67 12.68-4.59 2.15-9.12 4.42-13.69 6.62a19.79 19.79 0 00-6.34 4.35 19.15 19.15 0 00-2.57 3.37 17.25 17.25 0 00-2 4.63 12.72 12.72 0 007.33 14.85 17.56 17.56 0 004.86 1.26 18.88 18.88 0 004.25 0 19.76 19.76 0 007.3-2.39c4.53-2.29 9.09-4.5 13.59-6.85 9-4.59 18-9.38 26.89-14.24S189 240 197.68 234.78c6-3.63 12.06-7.34 18-11.22a83 83 0 00144.21-81.82zm-45.46 95.53a65.53 65.53 0 1129.75-87.78 65.53 65.53 0 01-29.75 87.78z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 237.695px 184.169px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 237.695px 184.169px;">
                 </path>
                 <path
                     d="M359.87 141.74a83 83 0 00-152.65 64.73c-6.68 2.34-13.28 4.85-19.84 7.44q-14.19 5.63-28.12 11.76c-9.28 4.11-18.52 8.3-27.67 12.68-4.59 2.15-9.12 4.42-13.69 6.62a19.79 19.79 0 00-6.34 4.35 19.15 19.15 0 00-2.57 3.37 17.25 17.25 0 00-2 4.63 12.72 12.72 0 007.33 14.85 17.56 17.56 0 004.86 1.26 18.88 18.88 0 004.25 0 19.76 19.76 0 007.3-2.39c4.53-2.29 9.09-4.5 13.59-6.85 9-4.59 18-9.38 26.89-14.24S189 240 197.68 234.78c6-3.63 12.06-7.34 18-11.22a83 83 0 00144.21-81.82zm-45.46 95.53a65.53 65.53 0 1129.75-87.78 65.53 65.53 0 01-29.75 87.78z"
@@ -56,25 +57,30 @@
                     d="M137.8 163c1 5.37 2.1 15.22-1.66 18.81 0 0 1.47 5.45 11.46 5.45 11 0 5.24-5.45 5.24-5.45-6-1.44-5.83-5.88-4.79-10.06z"
                     fill="#e4897b" class="empty_svg__animable" style="transform-origin: 145.244px 175.13px;"></path>
                 <path d="M131.65 184.64c1.19-1.85-.81-6.34-.81-6.34s17.68-4.45 24.91 2.38c1.5 1.41-.16 3.49-.16 3.49z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 143.609px 180.758px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 143.609px 180.758px;">
                 </path>
                 <path d="M131.65 184.64c1.19-1.85-.81-6.34-.81-6.34s17.68-4.45 24.91 2.38c1.5 1.41-.16 3.49-.16 3.49z"
                     opacity=".1" class="empty_svg__animable" style="transform-origin: 143.609px 180.758px;"></path>
                 <path
                     d="M102.4 388.67c-.93 0-2.42-1.55-2.86-2.13a.17.17 0 010-.19.18.18 0 01.16-.09c.11 0 2.56.22 3.23 1.09a.81.81 0 01.16.66.72.72 0 01-.52.65zm-2.32-2c.73.84 1.9 1.79 2.4 1.67 0 0 .2-.05.26-.37a.45.45 0 00-.1-.38 4.67 4.67 0 00-2.56-.94z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 101.308px 387.465px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 101.308px 387.465px;">
                 </path>
                 <path
                     d="M100.19 386.65a2.68 2.68 0 01-.54 0 .16.16 0 01-.14-.11.2.2 0 010-.18c.07-.06 1.54-1.59 2.65-1.59a.94.94 0 01.71.3.57.57 0 01.14.7c-.29.56-1.82.88-2.82.88zm-.13-.35c1 0 2.45-.31 2.69-.75 0 0 .07-.13-.09-.29a.59.59 0 00-.46-.19 4.23 4.23 0 00-2.14 1.23z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 101.281px 385.717px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 101.281px 385.717px;">
                 </path>
                 <path
                     d="M168.39 411.37a13.25 13.25 0 01-2.26-.21.16.16 0 01-.13-.16.18.18 0 01.08-.18c.11-.06 2.67-1.53 3.9-1.19a.86.86 0 01.55.4.66.66 0 010 .76c-.29.45-1.2.58-2.14.58zm-1.69-.47c1.36.2 3.22.19 3.56-.29.05-.06.09-.17 0-.38a.56.56 0 00-.34-.25c-.78-.2-2.33.46-3.22.92z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 168.324px 410.475px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 168.324px 410.475px;">
                 </path>
                 <path
                     d="M166.17 411.17a.18.18 0 01-.1 0 .16.16 0 01-.07-.17 4.88 4.88 0 011.14-2.83 1.25 1.25 0 011-.29c.48 0 .62.29.65.48.13.83-1.62 2.42-2.51 2.82zm1.79-3a.91.91 0 00-.6.22 4 4 0 00-1 2.27c.9-.55 2.1-1.79 2-2.29 0 0 0-.17-.34-.2z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 167.396px 409.523px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 167.396px 409.523px;">
                 </path>
                 <path fill="#e4897b" d="M158.09 410.99h7.35l.73-17.01h-7.35l-.73 17.01z" class="empty_svg__animable"
                     style="transform-origin: 162.13px 402.485px;"></path>
@@ -131,14 +137,16 @@
                 </path>
                 <path
                     d="M150.64 247.36s7.16 51.85 1.52 72.63c-8.94 32.9-43.12 60.67-43.12 60.67l-11.59-7.6s29.11-23.45 32.67-51c3.2-24.73-4.83-54.64-4.83-74.71z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 125.888px 314.005px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 125.888px 314.005px;">
                 </path>
                 <path
                     d="M150.64 247.36s7.16 51.85 1.52 72.63c-8.94 32.9-43.12 60.67-43.12 60.67l-11.59-7.6s29.11-23.45 32.67-51c3.2-24.73-4.83-54.64-4.83-74.71z"
                     opacity=".1" class="empty_svg__animable" style="transform-origin: 125.888px 314.005px;"></path>
                 <path
                     d="M153.6 277a48.4 48.4 0 00-6.27-6c1.22 16.83 2.22 41.76 1.11 59.47a76.41 76.41 0 003.72-10.47c2.75-10.15 2.46-27.68 1.44-43z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 150.829px 300.735px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 150.829px 300.735px;">
                 </path>
                 <path
                     d="M153.6 277a48.4 48.4 0 00-6.27-6c1.22 16.83 2.22 41.76 1.11 59.47a76.41 76.41 0 003.72-10.47c2.75-10.15 2.46-27.68 1.44-43z"
@@ -149,7 +157,8 @@
                     style="transform-origin: 105.135px 375.265px;"></path>
                 <path
                     d="M164.58 247.36s11.06 46.9 11.84 69.31c.88 25.12-7.89 84.38-7.89 84.38h-12.45s-1.53-59.72-2.08-82.6c-.61-24.95-15.25-71.09-15.25-71.09z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 157.616px 324.205px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 157.616px 324.205px;">
                 </path>
                 <path
                     d="M164.58 247.36s11.06 46.9 11.84 69.31c.88 25.12-7.89 84.38-7.89 84.38h-12.45s-1.53-59.72-2.08-82.6c-.61-24.95-15.25-71.09-15.25-71.09z"
@@ -169,18 +178,22 @@
                     class="empty_svg__animable" style="transform-origin: 349.085px 243.535px;"></path>
                 <path
                     d="M357 411.28a2.15 2.15 0 01-1.43-.39 1 1 0 01-.29-.94.59.59 0 01.35-.5c.87-.39 3.15 1.07 3.41 1.24a.16.16 0 01.07.18.16.16 0 01-.13.14 8.85 8.85 0 01-1.98.27zm-1-1.55a.72.72 0 00-.22 0 .26.26 0 00-.15.23.67.67 0 00.18.63c.38.34 1.36.39 2.67.13a6.59 6.59 0 00-2.48-.99z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 357.187px 410.336px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 357.187px 410.336px;">
                 </path>
                 <path
                     d="M359 411h-.09c-.71-.41-2.08-2-1.91-2.87a.65.65 0 01.6-.5.9.9 0 01.75.24c.82.72.83 2.88.83 3a.19.19 0 01-.09.15zm-1.28-3h-.08c-.22 0-.27.12-.29.21-.1.51.75 1.73 1.46 2.3a4.09 4.09 0 00-.69-2.36.57.57 0 00-.45-.15z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 358.083px 409.32px;"></path>
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 358.083px 409.32px;"></path>
                 <path
                     d="M322.92 411.28a2.77 2.77 0 01-1.81-.46 1 1 0 01-.33-.86.58.58 0 01.3-.47c.93-.52 3.91 1 4.25 1.19a.2.2 0 01.09.19.17.17 0 01-.14.14 12.47 12.47 0 01-2.36.27zm-1.33-1.55a.62.62 0 00-.33.07.21.21 0 00-.12.19.65.65 0 00.2.57c.46.41 1.69.48 3.35.2a9.73 9.73 0 00-3.1-1.03z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 323.097px 410.337px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 323.097px 410.337px;">
                 </path>
                 <path
                     d="M325.25 411h-.08c-.89-.4-2.66-2-2.52-2.87 0-.2.18-.45.67-.5a1.32 1.32 0 011 .31c.94.78 1.12 2.8 1.12 2.89a.17.17 0 01-.07.16.19.19 0 01-.12.01zm-1.79-3h-.11c-.32 0-.34.16-.35.2-.08.51 1.12 1.78 2 2.33a4.16 4.16 0 00-1-2.31.93.93 0 00-.54-.22z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 324.042px 409.314px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 324.042px 409.314px;">
                 </path>
                 <path
                     d="M337.07 179.3c-.29 4.52-1.07 13.7 2.4 16.24 0 0-.63 4.63-8.82 5.71-9 1.17-4.89-3.91-4.89-3.91 4.77-1.82 4.16-5.45 2.86-8.77z"
@@ -234,20 +247,22 @@
                     d="M322.87 245.26s-8.42 54.61-7.93 77.46c.51 23.77 9.22 78 9.22 78h10.13s-1.6-52.82-.71-76.16c1-25.45 11.39-82.17 11.39-82.17z"
                     fill="#263238" class="empty_svg__animable" style="transform-origin: 329.945px 321.555px;">
                 </path>
-                <path fill="var(--primary-theme)" d="M368.77 401.18h-13.59l-1.06-4.56 14.55.1.1 4.46z" class="empty_svg__animable"
-                    style="transform-origin: 361.445px 398.9px;"></path>
+                <path fill="var(--primary-theme)" d="M368.77 401.18h-13.59l-1.06-4.56 14.55.1.1 4.46z"
+                    class="empty_svg__animable" style="transform-origin: 361.445px 398.9px;"></path>
                 <path opacity=".2" d="M368.77 401.18h-13.59l-1.06-4.56 14.55.1.1 4.46z" class="empty_svg__animable"
                     style="transform-origin: 361.445px 398.9px;"></path>
                 <path
                     d="M352.5 195.55c3.91.38 9.85 11.49 9.85 11.49l-9.87 7.57s-8.17-7.17-7.2-11.2c1.01-4.19 3.47-8.21 7.22-7.86z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 353.775px 205.069px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 353.775px 205.069px;">
                 </path>
                 <path
                     d="M352.5 195.55c3.91.38 9.85 11.49 9.85 11.49l-9.87 7.57s-8.17-7.17-7.2-11.2c1.01-4.19 3.47-8.21 7.22-7.86z"
                     opacity=".1" class="empty_svg__animable" style="transform-origin: 353.775px 205.069px;"></path>
                 <path
                     d="M349.55 200.33a10.13 10.13 0 00-3.06-.34 16.91 16.91 0 00-1.21 3.42c-1 4 7.2 11.2 7.2 11.2l.73-.56z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 349.203px 207.296px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 349.203px 207.296px;">
                 </path>
                 <path
                     d="M349.55 200.33a10.13 10.13 0 00-3.06-.34 16.91 16.91 0 00-1.21 3.42c-1 4 7.2 11.2 7.2 11.2l.73-.56z"
@@ -257,14 +272,16 @@
                     fill="#e4897b" class="empty_svg__animable" style="transform-origin: 313.215px 228.1px;"></path>
                 <path
                     d="M313.45 200.88s-3.38 1.71 9.42 44.38l30.18-3.94c-2.12-12.22-3.12-19.79-.55-45.77a91 91 0 00-13 0 95.5 95.5 0 00-13.71 1.8c-5.79 1.29-12.34 3.53-12.34 3.53z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 333.048px 220.289px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 333.048px 220.289px;">
                 </path>
                 <path
                     d="M313.45 200.88s-3.38 1.71 9.42 44.38l30.18-3.94c-2.12-12.22-3.12-19.79-.55-45.77a91 91 0 00-13 0 95.5 95.5 0 00-13.71 1.8c-5.79 1.29-12.34 3.53-12.34 3.53z"
                     opacity=".1" class="empty_svg__animable" style="transform-origin: 333.048px 220.289px;"></path>
                 <path
                     d="M353.27 239.49L355 242c.13.2-.09.44-.43.49l-31.65 4.14c-.27 0-.52-.07-.56-.24l-.62-2.67c-.05-.18.17-.37.47-.41l30.56-4a.55.55 0 01.5.18z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 338.385px 242.967px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 338.385px 242.967px;">
                 </path>
                 <path
                     d="M353.27 239.49L355 242c.13.2-.09.44-.43.49l-31.65 4.14c-.27 0-.52-.07-.56-.24l-.62-2.67c-.05-.18.17-.37.47-.41l30.56-4a.55.55 0 01.5.18z"
@@ -282,12 +299,13 @@
                 <path d="M314.86 215.36c.83 3.86 2 8.75 3.71 14.94l.37-15.69z" opacity=".3" class="empty_svg__animable"
                     style="transform-origin: 316.9px 222.455px;"></path>
                 <path d="M313.45 200.88c-3.75 1.51-7 14.34-7 14.34l12.9 6.28s6.23-15.69 3.44-18.75-5.02-3.6-9.34-1.87z"
-                    fill="var(--primary-theme)" class="empty_svg__animable" style="transform-origin: 314.979px 210.702px;">
+                    fill="var(--primary-theme)" class="empty_svg__animable"
+                    style="transform-origin: 314.979px 210.702px;">
                 </path>
                 <path d="M313.45 200.88c-3.75 1.51-7 14.34-7 14.34l12.9 6.28s6.23-15.69 3.44-18.75-5.02-3.6-9.34-1.87z"
                     opacity=".1" class="empty_svg__animable" style="transform-origin: 314.979px 210.702px;"></path>
-                <path fill="var(--primary-theme)" d="M336.02 401.18h-13.59l-1.06-4.56 15.13.1-.48 4.46z" class="empty_svg__animable"
-                    style="transform-origin: 328.935px 398.9px;"></path>
+                <path fill="var(--primary-theme)" d="M336.02 401.18h-13.59l-1.06-4.56 15.13.1-.48 4.46z"
+                    class="empty_svg__animable" style="transform-origin: 328.935px 398.9px;"></path>
                 <path opacity=".2" d="M336.02 401.18h-13.59l-1.06-4.56 15.13.1-.48 4.46z" class="empty_svg__animable"
                     style="transform-origin: 328.935px 398.9px;"></path>
                 <path
@@ -325,43 +343,11 @@
     </div>
     {%else%}
     <div class="container my-3">
-        <h3>Search results for <b class="text-user-primary">{{query}}</b></h3>
+        <h3>Search results for "<b class="text-user-primary-100  text-capitalize">{{query}}</b>"</h3>
         <hr>
         <div class="row">
             {% for post in posts.all%}
-            <div class="col-lg-6 col-sm-6 col-12 mb-4 ">
-                <div class="card-deck ">
-                    <div class="card">
-                        <img class="card-img-top" src={{post.image.url}} alt={{post.title|safe}} style="max-height: 250px;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{post.title|safe}}</h5>
-                            <whr />
-                            <p class="card-text">{{post.summary|truncatewords:40|safe}}</p>
-                            <span class="tags my-2 d-flex  flex-wrap  justify-content-start ">
-                                {%for tag in post.tags.all%}
-                                <a href="search?query={{tag}}"
-                                    class="badge badge-Theme-Primary bi bi-tag-fill w-auto my-1 mr-2"> {{tag}}</a>
-                                {%endfor%}
-                            </span>
-                            <span class="my-auto d-flex justify-content-between pt-2">
-                                <span class="bi bi-eye-fill  my-auto"
-                                    style="font-size: medium;opacity: 0.9; cursor: default;"
-                                    title='{{post.views}} views' data-toggle="tooltip"
-                                    data-placement="bottom">&nbsp;{{post.views}}</span>
-                                <!-- Link -->
-                                <a href={{post.slug}} class="Hover2">
-                                    Read more
-                                </a>
-                            </span>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between">
-                            <small class="text-user">Last updated {{post.publish_date|date:'d M Y'}}</small>
-                            <small class="text-user"><i class="bi bi-person-fill"></i> Author -
-                                {{post.author}}</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {%include 'card2.html'%}
             {%endfor%}
         </div>
     </div>

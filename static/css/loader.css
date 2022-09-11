@@ -1,35 +1,23 @@
-/* page loader */
-
-:root{
-    --peace: white;
-    /* motivated by peace */
-    --elegance: rgb(39 39 39);
-    --loyality:#1de1ff;
-    /* intimacy , loyality ,confidance */
-    --power:red;
-    /* motivated by power */
-    --intimacy:blue;
-    /* motivated by intimacy , loyality ,confidance */
-    --youth:#9a9ad6;
-    /* youth */
-}
-body{
+body {
     overflow: hidden;
 }
-#loader{
-    background-color: var(--elegance);
+
+#loader {
+    background-color: var(--primary-bg);
     height: 100vh;
     width: 100%;
     position: fixed;
     z-index: 1500;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
-#wrapper>span{
+
+#wrapper>span {
     margin: 4vh 0;
 }
-#wrapper{
+
+#wrapper {
     cursor: pointer;
     font-size: larger;
     position: relative;
@@ -40,11 +28,13 @@ body{
     user-select: none;
 
 }
-#logo-part1{
-    color: white;
+
+#logo-part1 {
+    color: var(--primary-text);
 }
-#small-loader{
-    border: thin solid white;
+
+#small-loader {
+    border: thin solid var(--primary-text);
     width: 25%;
     position: absolute;
     bottom: 0;
@@ -56,16 +46,23 @@ body{
     animation-fill-mode: forwards;
 
 }
+
 @keyframes small-loader {
-    0%{
+    0% {
         left: 0%;
 
     }
-    50%{
+
+    50% {
         left: 75%;
     }
-    100%{
+
+    100% {
         left: 0%;
     }
-    
+
+
 }
+
+
+

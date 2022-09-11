@@ -1,11 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap');
 :root {
-    --primary-text: white;
-    --elegance: rgb(39 39 39);
-    --primary-theme: #a6c;
-    --card-bg: #37474f;
-    --primary-bg: #1c2331;
-    /* --card-bg: #ffffff; */
-    --hover-color: #05fdd8;
+    --hover-color: var(--primary-theme);
+    --headText:'Montserrat', sans-serif;
+    --allText:'Roboto Condensed', sans-serif;
 }
 
 body {
@@ -14,6 +12,8 @@ body {
     position: relative;
     scroll-behavior: smooth;
     overflow-x: hidden!important;
+    font-family: var(--allText);
+    letter-spacing: .2px;
 
 }
 
@@ -52,40 +52,17 @@ body {
 }
 
 
-.nav-item {
-    padding: 5px 0;
-    text-transform: capitalize;
-    font-family: 'Lato', sans-serif;
-
-}
-
-.nav-link {
-    text-transform: lowercase;
-    text-transform: capitalize !important;
-}
-
-.nav-link:hover {
-    background-color: var(--card-bg);
-    transition: all;
-    transition-delay: 0.1s;
-    transition-duration: 0.3s;
-    transform-style: preserve-3d;
-}
-
 #main {
     position: relative;
     scroll-behavior: smooth;
     overflow-y: auto;
 }
 
-.vertical-navlink:hover {
-    text-decoration: none;
-    color: var(--hover-color);
-}
 
-.container {
+.container-100 {
     scroll-snap-align: center;
-    min-height: 100vh;
+    min-height:auto;
+    padding: 5vh 0;
 }
 
 .code {
@@ -121,6 +98,9 @@ body {
     cursor: text;
 }
 
+b{
+    font-weight: bold;
+}
 
 @keyframes RubberBand {
     0% {
@@ -129,7 +109,7 @@ body {
 
     25% {
         transform: scale(1.3, 0.6);
-        color: var(--hover-color);
+        color: var(--primary-theme);
 
     }
 
@@ -139,7 +119,7 @@ body {
 
     100% {
         transform: scale(1, 1);
-        color: var(--hover-color);
+        color: var(--primary-theme);
 
     }
 }
@@ -213,9 +193,6 @@ body {
     margin: 0 1px;
 }
 
-#journey {
-    word-spacing: 2px;
-}
 
 #intro {
     background-image: url("../images/log-in-girl.svg");
@@ -226,55 +203,37 @@ body {
     background-position-x: 85%;
 }
 
-#projects {
-    background-image: url("../images/Bg/work.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position-y: top;
-}
-
-#skills {
-    background-image: url('../images/Bg/Skills.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position-y: top;
-}
-
-#MyJourney {
-    background-image: url('../images/Bg/journey.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20%;
-    background-position-y: top;
-}
-#AboutMe {
-    background-image: url('../images/Bg/Me\ In\ Nutshell.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position-y: top;
-}
-
-#Contact {
-    background-image: url('../images/Bg/contact_.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position-y: top;
-  
-}
-
 .social-buttons>a>.bi {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--primary-text);
+    opacity: .5;
 }
 
 .social-buttons>a>.bi:hover {
-    color: rgba(255, 255, 255, 0.9);
+    opacity: 1;
 }
-
+.headerText{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: var();
+}
+.bg-blur{
+    backdrop-filter: blur(3px);
+    background-color: var(--card-bg);
+    color: var(--primary-text);
+}
+.project-card{
+    cursor:pointer;
+}
+.bg-clear{
+    backdrop-filter: unset;
+    background-color: unset;
+}
+.card-img-overlay{
+    transition:all;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+}
 @media (max-width:425px) {
     .blast {
         font-size: 3rem;

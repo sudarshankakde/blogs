@@ -7,35 +7,74 @@
 <div class="container py-4 pb-0">
     <div class="text-center text-capitalize my-5 ">
         <h1 class="heading">Contact Me</h1>
-        <p class="">Do you have any questions ? Please do not hesitate to contact Me directly. I will come back to you
+        <p class=" mx-auto">Do you have any questions ? Please do not hesitate to contact Me directly. I will come back to you
             within a
             matter of hours to help you.</p>
     </div>
     <div class="row">
-        <div class="col-lg-8 col-12 col-sm-10 mx-auto ">
+        <div class="col-lg-8 col-12 col-sm-10 mx-auto pb-5">
             <form action="contact" method="post" class="input-group text-dark">
                 {% csrf_token %}
                 <div class="form-floating mb-3 col-12">
                     <input type="text" class="form-control " id="name" name='name' placeholder="Jhon Smith">
-                    <label for="name" class="mx-3">Your Name</label>
+                    <label for="name" class="mx-3 bi bi-person-fill"> Your Name</label>
                 </div>
                 <div class="form-floating mb-3 col-12">
                     <input type="email" class="form-control" id="email" name='email' placeholder="example@gmail.com">
-                    <label for="email" class="mx-3">Email address</label>
+                    <label for="email" class="mx-3 bi bi-envelope-fill"> Email address</label>
                 </div>
                 <div class="form-floating col-12">
                     <textarea class="form-control " placeholder="Leave a Message here" id="message" name="message"
                         style="height: 100px"></textarea>
-                    <label for="message" class="mx-3">Message</label>
+                    <label for="message" class="mx-3 bi bi-chat-right-text-fill"> Message</label>
                 </div>
                 <div class="mx-auto my-2">
                     <button class="btn btn-user-primary px-4 py-1 my-lg-3 my-2  text-capitalize " type="submit">submit
-                        <i class="bi bi-chat-dots"></i>
+                        <i class="bi bi-check-lg"></i>
                         <button class="btn btn-user-primary  px-4 py-1 my-lg-3 mx-lg-4 mx-3 text-capitalize "
-                            type="reset" title="Clear Entered Data.">Clear <i class="bi bi-x-octagon"></i>
+                            type="reset" title="Clear Entered Data.">Clear <i class="bi bi-x-lg"></i>
                 </div>
             </form>
-
+            <hr>
+            <div class=" text-center py-4 pb-5 mb-5 mb-lg-0 mb-sm-0 ">
+                <a href="https://instagram.com/sudarshan_kakde_" target="_blank" rel="noopener noreferrer"
+                            class="p-2  mt-2 mb-0  text-capitalize icon-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-instagram">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                <a href="https://www.linkedin.com/in/sudarshan-kakde-510b15194" target="_blank" rel="noopener noreferrer"
+                    class=" p-2  mt-2 mb-0  text-capitalize icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg></a>
+                <a href="https://github.com/sudarshankakde" target="_blank" rel="noopener noreferrer"
+                    class=" p-2  mt-2 mb-0  text-capitalize icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="mailto:sudarshankakde1111@gmail.com" target="_blank" rel="noopener noreferrer"
+                    class=" p-2  mt-2 mb-0  text-capitalize icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-mail">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                        </path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                        
+                    </svg></a>
+                <a href="{{data.Socail}}" target="_blank" rel="noopener noreferrer"
+                    class="p-2  mt-2 mb-0  text-capitalize icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+            </div>
         </div>
     </div>
 

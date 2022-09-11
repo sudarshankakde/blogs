@@ -381,7 +381,7 @@
             </svg>
         </div>
         <div class="col-lg-6 col-10 my-auto mx-auto pt-5 pt-lg-0">
-            
+
             <form action='/singup' method="post">
                 {% csrf_token %}
                 <div class="row mb-2">
@@ -398,27 +398,36 @@
                 </div>
                 <div class="form-group">
                     <label for="username">User Name</label>
-                    <input type="text" class="form-control-plaintext" id="username" name="username" required
-                        placeholder="lower case and numbric only ">
+                    <input type="text" class="form-control-plaintext text-lowercase" id="username" name="username" required
+                        placeholder="lower case and numbric only" hx-get="/checkForUserName" hx-trigger="keyup" 
+                        hx-target="#output_userName" hx-swap="innerHTML">
+                    <p id="output_userName" class="small" ></p>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Email address</label>
                     <input type="email" class="form-control-plaintext" id="exampleFormControlInput1" name="email"
-                        required placeholder="name@example.com">
+                        required placeholder="name@example.com" autocomplete="email" hx-get="/checkForUserMail" hx-trigger="keyup"
+                        hx-target="#output_mail" hx-swap="innerHTML">
+                    <p id="output_mail" class="small"></p>
                 </div>
                 <div class="form-group">
-                    <label for="password1">Password <small class="text-white-50" ><i data-toggle="tooltip"
-                        data-placement="top" style="font-size: medium; color:var(--primary-theme);"
-                                class="bi bi-info-circle-fill" title="password lenght should be more then 5"></i></small></label>
-                    <input type="password" class="form-control-plaintext" id="password1" name="password1" required
+                    <label for="password1">Password <small class="text-white-50"><i data-toggle="tooltip"
+                                data-placement="top" style="font-size: medium; color:var(--primary-theme);" 
+                                class="bi bi-info-circle-fill"
+                                title="password lenght should be more then 5"></i></small></label>
+                    <input type="password" class="form-control-plaintext" id="password1" name="password1" required autocomplete="new-password"
                         placeholder="password " minlength="5">
                 </div>
                 <div class="form-group">
                     <label for="password2">Comfirm password</label>
-                    <input type="password" class="form-control-plaintext" id="password2" name="password2"
-                        placeholder="ReEnter Password" minlength="">
+                    <input type="password" class="form-control-plaintext" id="password2" name="password2" autocomplete="new-password"
+                        placeholder="reenter Password" minlength="">
                 </div>
-                <button type="submit" class="btn btn-user-primary my-3 px-4">Submit</button>
+                <span class="small">
+                    <small> By clicking Sign Up, you agree to our <a href="{%url 'Privacy_Policy'%}" target="_blank" rel="noopener noreferrer" class="link">Terms, Privacy Policy and Cookies Policy </a> . You may receive Email updates from us and can opt out at any time.</small>
+                </span>
+                <br>
+                <button type="submit" class="btn btn-user-primary my-3 px-4">Sign Up</button>
             </form>
             <hr>
             <h6 class="text-center">Already Have An Account! <a href="{%url 'handleLogin'%}"

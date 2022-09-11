@@ -6,12 +6,20 @@
 
 <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="keywords"
+        content="sids blog , sudarshan kakde blog , learn with sudarshan , learn with sid , sudarshan , sudarshan_kakde_ ">
+    <meta name="base" content="sudharshankakde.pythonanywhere.com">
+
     {% block index %}
     <title>{{data.site_name}} | {{index}}</title>
     {% endblock index %}
-    <link rel="shortcut icon" href={%static 'images/logo.png' %} type="image/x-icon">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#C4D7E0">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#252627">
+    <link rel="shortcut icon" href={%static 'images/sid.jpeg' %} type="image/x-icon" sizes="60*60">
     <!-- cdn's -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
@@ -21,7 +29,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href={% static 'bootstrap-4.6.1-dist/css/bootstrap.min.css' %}>
     <link rel="stylesheet" href={% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css' %}>
-    
+
     <link rel="stylesheet" href={% static 'css/style.css' %}>
     <link rel="stylesheet" href={% static 'css/loader.css' %}>
     {%block csslinks%}
@@ -33,8 +41,8 @@
         crossorigin="anonymous"></script>
     <script src={%static 'bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js' %}></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
     <script src={%static 'bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js' %}></script>
     <!-- aso -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -46,313 +54,206 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <meta name="description" content="Sudarshan Kakde Blogs , learn about python , web development and many more with me . 
     ">
-    <meta name="keywords" content="sids blog , sudarshan kakde blog , learn with sudarshan , learn with sid , sudarshan , sudarshan_kakde_ ">
-    <meta name="base" content="http://sudharshankakde.pythonanywhere.com/"> 
-    <style>
-        body {
-            overflow-x: hidden;
-        }
-        /* border, padding, margin, width */
-        #fs-frm input{
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            background-color: white;
-            padding: 0.75em 1rem;
-            margin-bottom: 1.5rem;
-            color: black;
-        }
-        
-        #fs-frm input:focus,
-        #fs-frm select:focus,
-        #fs-frm textarea:focus {
-            background-color: white;
-            outline-style: solid;
-            outline-width: thin;
-            outline-color: gray;
-            outline-offset: -1px;
-        }
+    <script src="https://unpkg.com/htmx.org@1.8.0"></script>
 
-        #fs-frm [type="text"],
-        #fs-frm [type="email"] {
-            width: 100%;
-        }
-        
-    </style>
 </head>
 
-<body id="body">
+<body id="body" class="">
     <!-- #loading screen -->
-    <div id="loader" >
+    <div id="loader">
         <div id="wrapper">
-            <span class="logo-part1">Sid's</span> <span class="logo-part2">Blog</span>
+
+            {%include 'Extra/logo.html'%}
             <i id="small-loader"></i>
+
         </div>
     </div>
-    <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg " style="background-color: var(--card-bg);">
-        <a class="navbar-brand text-uppercase" href="home">
-            <span class="logo-part1">Sid's</span> <span class="logo-part2">Blog</span></a>
 
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg card-bg position-sticky top-0  z-10 ">
+        <a class="navbar-brand text-uppercase" href="{%url 'home'%}">
+
+            {%include 'Extra/logo.html'%}
+
+        </a>
         <span class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#manubar" aria-controls="manubar">
-            <i class="bi bi-list text-user-primarytext"></i>
+            <i class="bi bi-list text-user-primarytext font-weight-bolder"></i>
         </span>
-        <div class="offcanvas offcanvas-end z-1" tabindex="-1" id="manubar" aria-labelledby="offcanvasNavbarLabel"
-            style="background-color: var(--card-bg);">
-            <div class="offcanvas-header">
-                <a class="navbar-brand" href="#">
+        <div class="offcanvas offcanvas-end z-1 " tabindex="-1" id="manubar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header card-bg">
+                <a class="navbar-brand " href="#">
                     <a class="navbar-brand text-uppercase" href="home">
-                        <span class="logo-part1">Sid's</span> <span class="logo-part2">Blog</span></a>
+                        {%include 'Extra/logo.html'%}
+
+                    </a>
                 </a>
                 <i class="bi bi-x-lg btn-close-primary opacity-100 px-3 " data-bs-dismiss="offcanvas"
                     aria-label="Close"></i>
             </div>
-            <div class="offcanvas-body ">
+            <div class="offcanvas-body card-bg justify-content-between">
                 <!-- links -->
-                <ul class="navbar-nav mr-auto mt-2">
+                {% with request.resolver_match.url_name as url_name %}
+                <ul class="navbar-nav align-items-center  gap-2 gap-lg-0 gap-sm-2">
                     <li class="nav-item ">
-                        <a class="nav-link" href="{%url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link  Navlink {% if url_name == 'home' %}active{% endif %}"
+                            href="{%url 'home' %}">Home </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{%url 'AllBlogs' %}">Blog Post</a>
+                        <a class="nav-link Navlink {% if url_name == 'AllBlogs' %}active{% endif %}"
+                            href="{%url 'AllBlogs' %}">Blog Post</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{%url 'contact' %}">Contact me</a>
+                        <a class="nav-link Navlink {% if url_name == 'contact' %}active{% endif %}"
+                            href="{%url 'contact' %}">Contact me</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{%url 'aboutme'%}">About me</a>
+                        <a class="nav-link Navlink {% if url_name == 'aboutme' %}active{% endif %}"
+                            href="{%url 'aboutme'%}">About me</a>
+                    </li>
+                    {% if user.is_superuser %}
+                    <li class="nav-item ">
+                        <a class="nav-link Navlink" href="AdminPanel/">Admin Panel</a>
+                    </li>
+                    {%else%}
+                    {%endif%}
+                </ul>
+                {% endwith %}
+                <ul class="navbar-nav my-3 my-sm-3 my-lg-0  align-items-center ">
+                    <li class="nav-item my-auto mx-1">
+                        <form class="form-inline position-relative ms-auto" method="get" action="{% url 'search'%}"
+                            id="searchForm">
+                            <input type="text" class="form-control-plaintext ps-1 " id="" name="query"
+                                placeholder="Search " aria-label="Search">
+                            <span class=" my-auto position-absolute end-0 card-bg ps-1" onclick="submitForm()">
+                                <i class="bi bi-search  pe-2 h6 cursor-pointer "></i>
+                            </span>
+                        </form>
                     </li>
                 </ul>
-                <ul class="navbar-nav mt-lg-0 mx-lg-2  ">
-                    <form class="form-inline d-flex justify-content-center " style="width: max-content;" method="get"
-                        action="/search">
-                        <input class="form-control form-control-sm mr-3 my-auto" type="text" placeholder="Search"
-                            style="color: inherit;" type="search" placeholder="Search In Blogs" aria-label="Search"
-                            name="query" id="query" style="color: var(--primary-text);">
+                <ul class="navbar-nav justify-content-center d-flex  flex-row  ">
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item my-auto mx-1">
 
-                        <button class="btn btn-secondary btn-sm my-auto text-white  w-25 h-75 " type="submit"
-                            style="background-color: var(--primary-text);">
-                            <i class="fas fa-search" aria-hidden="true" style="color: var(--primary-theme);"></i>
-                        </button>
+                        <a href="/logout"><button class="btn btn-user-primary nav-link px-3 mx-0" type="submit">Logout
+                                <i class="bi bi-door-open-fill"></i> </button></a>
+                    <li class="nav-item my-auto mx-1">
 
-
-                    </form>
-
-                    <div class="userlogin d-flex ml-lg-3 pt-2 pt-lg-0 ">
-                        {% if request.user.is_authenticated %}
-                        <div class="userlogo  my-auto nav-item mx-1">
-                            <a href="/logout"><button class="btn btn-user-primary nav-link px-3 mx-0" type="submit"><i
-                                        class="bi bi-door-open-fill"></i> Logout</button></a>
-                        </div>
                         {% else %}
-                        <li class="nav-item my-auto mx-1">
+                    <li class="nav-item my-auto mx-1">
+                        <a href="{%url 'handleLogin'%}"><button class="btn btn-user-primary nav-link px-2 px-lg-3 mx-0"
+                                type="submit"> Login <i class="bi bi-box-arrow-in-right"></i></button></a>
+                    </li>
+                    <li class="nav-item  my-auto mx-1">
+                        <a href="{%url 'singup'%}"><button class="btn btn-user-primary nav-link px-lg-3 px-2 mx-0"
+                                type="submit"> Sing Up <i class="bi bi-person-plus-fill"></i></button></a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item my-auto mx-2">
 
-                            <div class="userlogo  my-auto nav-item mx-0 mx-lg-1">
-                                <a href="{%url 'handleLogin'%}"><button
-                                        class="btn btn-user-primary nav-link px-2 px-lg-3 mx-0" type="submit"> Login <i
-                                            class="bi bi-box-arrow-in-right"></i></button></a>
-                            </div>
+                        <i class="bi bi-moon-stars-fill my-auto" id="ThemeIcon" onclick="changeTheme()"
+                            style="cursor:pointer; font-size:x-large;"></i>
+                        <input type="hidden" value="dark" id="theme">
+                    </li>
 
-                        </li>
-                        <li class="nav-item  my-auto mx-1">
-                            <div class="userlogo  my-auto nav-item mx-0 mx-lg-1">
-                                <a href="{%url 'singup'%}"><button
-                                        class="btn btn-user-primary nav-link px-lg-3 px-2 mx-0" type="submit"> Singup <i
-                                            class="bi bi-person-plus-fill"></i></button></a>
-                            </div>
-                        </li>
-                        {% endif %}
-                        <li class="my-auto  mx-1 h-100 ">
-                            <a href="/newsletter" title="Newsletter" class="nav-link mx-0 px-0 ">
-                                <button class="btn btn-user-primary my-auto  py-auto " type="button">
-                                    <i class="bi bi-envelope-plus-fill" style="font-size:large;"></i>
-                                </button></a>
-                        </li>
 
-                        <li class="nav-item my-auto mx-2">
-                            <i class="bi bi-moon-stars-fill" id="ThemeIcon" onclick="changeTheme()"
-                                style="cursor:pointer; font-size:x-large;"></i>
-                            <input type="hidden" value="dark" id="theme">
-                        </li>
-                    </div>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- message  -->
-    <div class="message" id="AlertMessage">
-        {%for message in messages %}
-        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-            <strong>Message: </strong>{{message|safe}}
-            <button type="button" class="close my-auto" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        {%endfor%}
-    </div>
 
+    <div id="AlertMessage-1 ">
+        {%for message in messages %}
+        {%if message.tags == "error"%}
+        <div class="container-fluid alert bg-warning  fade show mx-auto" role="alert" id="AlertMessage1">
+            {%elif message.tags == "success"%}
+            <div class="container-fluid alert bg-primary-theme  fade show mx-auto" role="alert" id="AlertMessage1">
+                {%else%}
+                <div class="container-fluid alert  bg-danger fade show mx-auto" role="alert" id="AlertMessage1">
+                    {%endif%}
+                    <span>Message <i class="bi bi-bell-fill"></i></span>
+                    <span class="float-end cursor-pointer" data-dismiss="alert" aria-label="Close">
+                        <i class="bi bi-x-lg"></i>
+                    </span>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 text-capitalize">
+                            {{message|safe}}
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+
+            </div>
+        </div>
+    </div>
     {%block content%}
     {%endblock%}
     <!-- footer -->
-    <footer style="padding-top: 35px; position: relative;" class="mt-5">
-        <div class="container-fluid pt-5 position-absolute " style="bottom: 10px;">
-            <div class="row text-center pt-5">
-                <div class="col-12">
-                    <a href="https://www.instagram.com/sudarshan_kakde_/" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-instagram  footer-icons"></i>
-                    </a>
-                    <a href="/contact">
-                        <i class="bi bi-envelope footer-icons" id="mail"></i>
-                    </a>
-                    <a href="https://github.com/sudarshankakde" target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-github footer-icons"></i>
-                    </a>
+    <footer class="mt-5 text-light ">
+        <div class="container-fluid py-3" style="background-color: var(--primary-theme);">
+            <div class="container d-none d-lg-block d-sm-block">
+                <div class="row py-2 ">
+                    <div class="col-lg-4 col-sm-4 col-0  ms-auto   my-3  my-lg-0 order-lg-1 order-0 order-sm-1">
+                        <div class="d-flex flex-lg-nowrap flex-wrap gap-4 justify-content-center
+                        justify-content-lg-end justify-content-sm-end">
+                            <a href="https://github.com/sudarshankakde" class="socails" target="_blank"
+                                rel="noopener noreferrer"><i
+                                    class="bi bi-github p-2 rounded rounded-circle border "></i></a>
+                            <a href="https://instagram.com/sudarshan_kakde_" class="socails" target="_blank"
+                                rel="noopener noreferrer"><i
+                                    class="bi bi-instagram p-2 rounded rounded-circle border"></i></a>
+                            <a href="mailto:{{data.email}}" class="socails" target="_blank"><i
+                                    class="bi bi-envelope p-2 rounded rounded-circle border"></i></a>
+
+                            <a href="https://www.linkedin.com/in/sudarshan-kakde-510b15194" class="socails"><i
+                                    class="bi bi-linkedin p-2 rounded rounded-circle border"></i></a>
+                            <a href="{{data.Socail}}" class="socails"><i
+                                    class="bi bi-link-45deg p-2 rounded rounded-circle border"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-12  text-start my-2 my-lg-0 order-lg-0 order-1 order-sm-0">
+                        <div
+                            class="d-flex gap-3 flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-start justify-content-sm-start">
+                            <a href="{%url 'Privacy_Policy'%}" class="footer-link text-capitalize">privacy policy</a>
+                            <a href="{%url 'contact'%}" class="footer-link text-capitalize">Contact Me</a>
+                            <a href="{%url 'aboutme'%}" class="footer-link text-capitalize">About me</a>
+                            <a href="https://www.buymeacoffee.com/sudarshankakde" class="footer-link text-capitalize"
+                                target="_blank">support me</a>
+                            <a href="https://bio.link/sudarshan_kakde" class="footer-link text-capitalize"
+                                target="_blank">Hire me</a>
+
+                        </div>
+                    </div>
                 </div>
+                <hr>
             </div>
-            <div class="row mt-2 ">
-                <div class="col-12">
-                    <div class="col-12 py-3 text-center ">
-                        Copyright &COPY; {%now 'Y'%}  : <a href="https://sudarshankakde.github.io/sudarshan-kakde/"
-                            target="_blank" class="font-weight-bold">Sudarshan Kakde</a>
+            <div class="container">
+
+                <div class="row text-center py-2 font-weight-light">
+                    <div class="col-lg-8  col-sm-8 col-12 order-last order-lg-first order-sm-first">
+                        <b class="float-lg-start  float-sm-start float-none font-weight-normal">
+                            Copyright © {%now 'Y'%} {{data.site_name}}. <span class="font-weight-light">All rights
+                                reserved.</span>
+
+                        </b>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-12 pb-3 pt-sm-0 pt-lg-0 order-first order-lg-last order-sm-last">
+                        <b class="float-lg-end float-sm-end float-none font-weight-light">
+                            Made with ❤️ by <a href="{{data.Socail}}" target="_blank"
+                                class="font-weight-normal link">Sudarshan Kakde.</a>
+
+                        </b>
                     </div>
                 </div>
             </div>
+
+
         </div>
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg"
-            class="transition duration-300 ease-in-out delay-150">
-            <style>
-                .path-0 {
-                    animation: pathAnim-0 4s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                }
-
-                @keyframes pathAnim-0 {
-                    0% {
-                        d: path("M 0,400 C 0,400 0,80 0,80 C 72.93779904306217,82.70813397129187 145.87559808612434,85.41626794258374 234,91 C 322.12440191387566,96.58373205741626 425.43540669856463,105.04306220095694 548,98 C 670.5645933014354,90.95693779904306 812.3827751196171,68.41148325358853 916,65 C 1019.6172248803829,61.58851674641148 1085.0334928229665,77.311004784689 1166,83 C 1246.9665071770335,88.688995215311 1343.4832535885166,84.3444976076555 1440,80 C 1440,80 1440,400 1440,400 Z");
-                    }
-
-                    25% {
-                        d: path("M 0,400 C 0,400 0,80 0,80 C 113.4354066985646,72.60287081339713 226.8708133971292,65.20574162679426 319,71 C 411.1291866028708,76.79425837320574 481.9521531100478,95.7799043062201 566,95 C 650.0478468899522,94.2200956937799 747.3205741626793,73.67464114832536 838,69 C 928.6794258373207,64.32535885167464 1012.7655502392345,75.52153110047847 1112,80 C 1211.2344497607655,84.47846889952153 1325.6172248803828,82.23923444976077 1440,80 C 1440,80 1440,400 1440,400 Z");
-                    }
-
-                    50% {
-                        d: path("M 0,400 C 0,400 0,80 0,80 C 89.46411483253587,88.16267942583733 178.92822966507174,96.32535885167464 266,105 C 353.07177033492826,113.67464114832536 437.7511961722488,122.86124401913877 546,109 C 654.2488038277512,95.13875598086123 786.0669856459331,58.22966507177033 887,57 C 987.9330143540669,55.77033492822967 1057.9808612440193,90.22009569377991 1145,100 C 1232.0191387559807,109.77990430622009 1336.0095693779904,94.88995215311004 1440,80 C 1440,80 1440,400 1440,400 Z");
-                    }
-
-                    75% {
-                        d: path("M 0,400 C 0,400 0,80 0,80 C 64.14354066985646,94.7177033492823 128.28708133971293,109.4354066985646 235,101 C 341.7129186602871,92.5645933014354 490.9952153110048,60.976076555023916 614,56 C 737.0047846889952,51.023923444976084 833.7320574162678,72.6602870813397 908,78 C 982.2679425837322,83.3397129186603 1034.0765550239234,72.38277511961722 1119,70 C 1203.9234449760766,67.61722488038278 1321.9617224880383,73.80861244019138 1440,80 C 1440,80 1440,400 1440,400 Z");
-                    }
-
-                    100% {
-                        d: path("M 0,400 C 0,400 0,80 0,80 C 72.93779904306217,82.70813397129187 145.87559808612434,85.41626794258374 234,91 C 322.12440191387566,96.58373205741626 425.43540669856463,105.04306220095694 548,98 C 670.5645933014354,90.95693779904306 812.3827751196171,68.41148325358853 916,65 C 1019.6172248803829,61.58851674641148 1085.0334928229665,77.311004784689 1166,83 C 1246.9665071770335,88.688995215311 1343.4832535885166,84.3444976076555 1440,80 C 1440,80 1440,400 1440,400 Z");
-                    }
-                }
-            </style>
-            <path
-                d="M 0,400 C 0,400 0,80 0,80 C 72.93779904306217,82.70813397129187 145.87559808612434,85.41626794258374 234,91 C 322.12440191387566,96.58373205741626 425.43540669856463,105.04306220095694 548,98 C 670.5645933014354,90.95693779904306 812.3827751196171,68.41148325358853 916,65 C 1019.6172248803829,61.58851674641148 1085.0334928229665,77.311004784689 1166,83 C 1246.9665071770335,88.688995215311 1343.4832535885166,84.3444976076555 1440,80 C 1440,80 1440,400 1440,400 Z"
-                stroke="none" stroke-width="0" fill="#aa66cc44"
-                class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-            <style>
-                .path-1 {
-                    animation: pathAnim-1 4s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                }
-
-                @keyframes pathAnim-1 {
-                    0% {
-                        d: path("M 0,400 C 0,400 0,160 0,160 C 110.14354066985646,152.2488038277512 220.28708133971293,144.49760765550238 323,145 C 425.7129186602871,145.50239234449762 520.9952153110049,154.25837320574166 604,153 C 687.0047846889951,151.74162679425834 757.7320574162679,140.4688995215311 853,138 C 948.2679425837321,135.5311004784689 1068.0765550239234,141.86602870813397 1170,147 C 1271.9234449760766,152.13397129186603 1355.9617224880383,156.06698564593302 1440,160 C 1440,160 1440,400 1440,400 Z");
-                    }
-
-                    25% {
-                        d: path("M 0,400 C 0,400 0,160 0,160 C 121.78947368421049,173.37799043062202 243.57894736842098,186.75598086124404 337,182 C 430.421052631579,177.24401913875596 495.47368421052647,154.35406698564594 568,145 C 640.5263157894735,135.64593301435406 720.5263157894735,139.82775119617224 820,147 C 919.4736842105265,154.17224880382776 1038.421052631579,164.33492822966508 1145,167 C 1251.578947368421,169.66507177033492 1345.7894736842104,164.83253588516746 1440,160 C 1440,160 1440,400 1440,400 Z");
-                    }
-
-                    50% {
-                        d: path("M 0,400 C 0,400 0,160 0,160 C 110.88995215311004,166.29665071770336 221.7799043062201,172.5933014354067 306,175 C 390.2200956937799,177.4066985645933 447.77033492822966,175.92344497607655 541,166 C 634.2296650717703,156.07655502392345 763.1387559808612,137.71291866028707 874,141 C 984.8612440191388,144.28708133971293 1077.6746411483255,169.22488038277513 1169,176 C 1260.3253588516745,182.77511961722487 1350.1626794258373,171.38755980861242 1440,160 C 1440,160 1440,400 1440,400 Z");
-                    }
-
-                    75% {
-                        d: path("M 0,400 C 0,400 0,160 0,160 C 112.72727272727272,154.755980861244 225.45454545454544,149.51196172248802 312,143 C 398.54545454545456,136.48803827751198 458.9090909090909,128.70813397129186 550,132 C 641.0909090909091,135.29186602870814 762.9090909090911,149.65550239234452 874,162 C 985.0909090909089,174.34449760765548 1085.4545454545453,184.66985645933013 1178,184 C 1270.5454545454547,183.33014354066987 1355.2727272727275,171.66507177033492 1440,160 C 1440,160 1440,400 1440,400 Z");
-                    }
-
-                    100% {
-                        d: path("M 0,400 C 0,400 0,160 0,160 C 110.14354066985646,152.2488038277512 220.28708133971293,144.49760765550238 323,145 C 425.7129186602871,145.50239234449762 520.9952153110049,154.25837320574166 604,153 C 687.0047846889951,151.74162679425834 757.7320574162679,140.4688995215311 853,138 C 948.2679425837321,135.5311004784689 1068.0765550239234,141.86602870813397 1170,147 C 1271.9234449760766,152.13397129186603 1355.9617224880383,156.06698564593302 1440,160 C 1440,160 1440,400 1440,400 Z");
-                    }
-                }
-            </style>
-            <path
-                d="M 0,400 C 0,400 0,160 0,160 C 110.14354066985646,152.2488038277512 220.28708133971293,144.49760765550238 323,145 C 425.7129186602871,145.50239234449762 520.9952153110049,154.25837320574166 604,153 C 687.0047846889951,151.74162679425834 757.7320574162679,140.4688995215311 853,138 C 948.2679425837321,135.5311004784689 1068.0765550239234,141.86602870813397 1170,147 C 1271.9234449760766,152.13397129186603 1355.9617224880383,156.06698564593302 1440,160 C 1440,160 1440,400 1440,400 Z"
-                stroke="none" stroke-width="0" fill="#aa66cc66"
-                class="transition-all duration-300 ease-in-out delay-150 path-1"></path>
-            <style>
-                .path-2 {
-                    animation: pathAnim-2 4s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                }
-
-                @keyframes pathAnim-2 {
-                    0% {
-                        d: path("M 0,400 C 0,400 0,240 0,240 C 74.47846889952152,251.7511961722488 148.95693779904303,263.5023923444976 247,256 C 345.04306220095697,248.49760765550238 466.6507177033493,221.74162679425834 576,221 C 685.3492822966507,220.25837320574166 782.4401913875597,245.5311004784689 883,256 C 983.5598086124403,266.4688995215311 1087.5885167464116,262.13397129186603 1181,257 C 1274.4114832535884,251.86602870813397 1357.2057416267942,245.93301435406698 1440,240 C 1440,240 1440,400 1440,400 Z");
-                    }
-
-                    25% {
-                        d: path("M 0,400 C 0,400 0,240 0,240 C 64.00956937799043,239.244019138756 128.01913875598086,238.48803827751198 236,240 C 343.98086124401914,241.51196172248802 495.93301435406704,245.29186602870814 606,244 C 716.066985645933,242.70813397129186 784.2488038277511,236.34449760765548 859,242 C 933.7511961722489,247.65550239234452 1015.0717703349283,265.33014354066984 1113,267 C 1210.9282296650717,268.66985645933016 1325.4641148325359,254.33492822966508 1440,240 C 1440,240 1440,400 1440,400 Z");
-                    }
-
-                    50% {
-                        d: path("M 0,400 C 0,400 0,240 0,240 C 92.62200956937801,243.13875598086125 185.24401913875602,246.2775119617225 270,239 C 354.755980861244,231.7224880382775 431.645933014354,214.02870813397126 542,218 C 652.354066985646,221.97129186602874 796.1722488038278,247.60765550239233 908,248 C 1019.8277511961722,248.39234449760767 1099.6650717703349,223.54066985645935 1183,218 C 1266.3349282296651,212.45933014354065 1353.1674641148325,226.22966507177034 1440,240 C 1440,240 1440,400 1440,400 Z");
-                    }
-
-                    75% {
-                        d: path("M 0,400 C 0,400 0,240 0,240 C 83.74162679425837,235.13875598086122 167.48325358851673,230.27751196172247 278,237 C 388.51674641148327,243.72248803827753 525.8086124401914,262.0287081339713 629,261 C 732.1913875598086,259.9712918660287 801.2822966507179,239.60765550239233 894,236 C 986.7177033492821,232.39234449760767 1103.0622009569379,245.54066985645935 1198,249 C 1292.9377990430621,252.45933014354065 1366.468899521531,246.22966507177034 1440,240 C 1440,240 1440,400 1440,400 Z");
-                    }
-
-                    100% {
-                        d: path("M 0,400 C 0,400 0,240 0,240 C 74.47846889952152,251.7511961722488 148.95693779904303,263.5023923444976 247,256 C 345.04306220095697,248.49760765550238 466.6507177033493,221.74162679425834 576,221 C 685.3492822966507,220.25837320574166 782.4401913875597,245.5311004784689 883,256 C 983.5598086124403,266.4688995215311 1087.5885167464116,262.13397129186603 1181,257 C 1274.4114832535884,251.86602870813397 1357.2057416267942,245.93301435406698 1440,240 C 1440,240 1440,400 1440,400 Z");
-                    }
-                }
-            </style>
-            <path
-                d="M 0,400 C 0,400 0,240 0,240 C 74.47846889952152,251.7511961722488 148.95693779904303,263.5023923444976 247,256 C 345.04306220095697,248.49760765550238 466.6507177033493,221.74162679425834 576,221 C 685.3492822966507,220.25837320574166 782.4401913875597,245.5311004784689 883,256 C 983.5598086124403,266.4688995215311 1087.5885167464116,262.13397129186603 1181,257 C 1274.4114832535884,251.86602870813397 1357.2057416267942,245.93301435406698 1440,240 C 1440,240 1440,400 1440,400 Z"
-                stroke="none" stroke-width="0" fill="#aa66cc88"
-                class="transition-all duration-300 ease-in-out delay-150 path-2"></path>
-            <style>
-                .path-3 {
-                    animation: pathAnim-3 4s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                }
-
-                @keyframes pathAnim-3 {
-                    0% {
-                        d: path("M 0,400 C 0,400 0,320 0,320 C 64.51674641148324,324.8038277511962 129.03349282296648,329.60765550239233 238,325 C 346.9665071770335,320.39234449760767 500.3827751196171,306.3732057416268 614,299 C 727.6172248803829,291.6267942583732 801.4354066985646,290.8995215311005 885,299 C 968.5645933014354,307.1004784688995 1061.8755980861245,324.0287081339713 1156,329 C 1250.1244019138755,333.9712918660287 1345.0622009569379,326.9856459330143 1440,320 C 1440,320 1440,400 1440,400 Z");
-                    }
-
-                    25% {
-                        d: path("M 0,400 C 0,400 0,320 0,320 C 115.29186602870817,314.7368421052631 230.58373205741634,309.4736842105263 328,319 C 425.41626794258366,328.5263157894737 504.956937799043,352.8421052631579 591,344 C 677.043062200957,335.1578947368421 769.5885167464115,293.1578947368421 852,290 C 934.4114832535885,286.8421052631579 1006.688995215311,322.5263157894737 1103,334 C 1199.311004784689,345.4736842105263 1319.6555023923445,332.7368421052631 1440,320 C 1440,320 1440,400 1440,400 Z");
-                    }
-
-                    50% {
-                        d: path("M 0,400 C 0,400 0,320 0,320 C 112.98564593301438,308.81339712918657 225.97129186602876,297.6267942583732 326,294 C 426.02870813397124,290.3732057416268 513.1004784688995,294.3062200956938 598,300 C 682.8995215311005,305.6937799043062 765.6267942583733,313.14832535885176 862,314 C 958.3732057416267,314.85167464114824 1068.3923444976076,309.1004784688995 1167,309 C 1265.6076555023924,308.8995215311005 1352.8038277511962,314.44976076555025 1440,320 C 1440,320 1440,400 1440,400 Z");
-                    }
-
-                    75% {
-                        d: path("M 0,400 C 0,400 0,320 0,320 C 92.06698564593302,327.4066985645933 184.13397129186603,334.8133971291866 289,334 C 393.86602870813397,333.1866028708134 511.53110047846894,324.1531100478469 609,327 C 706.4688995215311,329.8468899521531 783.7416267942583,344.57416267942585 867,338 C 950.2583732057417,331.42583732057415 1039.5023923444976,303.55023923444975 1136,297 C 1232.4976076555024,290.44976076555025 1336.248803827751,305.22488038277515 1440,320 C 1440,320 1440,400 1440,400 Z");
-                    }
-
-                    100% {
-                        d: path("M 0,400 C 0,400 0,320 0,320 C 64.51674641148324,324.8038277511962 129.03349282296648,329.60765550239233 238,325 C 346.9665071770335,320.39234449760767 500.3827751196171,306.3732057416268 614,299 C 727.6172248803829,291.6267942583732 801.4354066985646,290.8995215311005 885,299 C 968.5645933014354,307.1004784688995 1061.8755980861245,324.0287081339713 1156,329 C 1250.1244019138755,333.9712918660287 1345.0622009569379,326.9856459330143 1440,320 C 1440,320 1440,400 1440,400 Z");
-                    }
-                }
-            </style>
-            <path
-                d="M 0,400 C 0,400 0,320 0,320 C 64.51674641148324,324.8038277511962 129.03349282296648,329.60765550239233 238,325 C 346.9665071770335,320.39234449760767 500.3827751196171,306.3732057416268 614,299 C 727.6172248803829,291.6267942583732 801.4354066985646,290.8995215311005 885,299 C 968.5645933014354,307.1004784688995 1061.8755980861245,324.0287081339713 1156,329 C 1250.1244019138755,333.9712918660287 1345.0622009569379,326.9856459330143 1440,320 C 1440,320 1440,400 1440,400 Z"
-                stroke="none" stroke-width="0" fill="#aa66ccff"
-                class="transition-all duration-300 ease-in-out delay-150 path-3"></path>
-        </svg>
     </footer>
+
     <!-- js -->
     <script src={% static 'js/loader.js' %}></script>
     <script src={% static 'js/typed.js' %}></script>
@@ -368,6 +269,9 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
+        function submitForm() {
+            document.getElementById('searchForm').submit();
+        }
     </script>
 
 
