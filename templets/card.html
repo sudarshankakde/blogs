@@ -24,7 +24,7 @@
                     <small class="pt-3 mb-4 ">
                         <span class="tags mt-0 mb-2 d-flex  flex-wrap  justify-content-start h6">
                             {%for tag in post.tags.all%}
-                            <a href="search?query={{tag}}"
+                            <a href="{%url 'search'%}?query={{tag}}"
                                 class="badge badge-Theme-Primary bi bi-tag-fill w-auto my-1 mr-2 text-capitalize">
                                 {{tag}}</a>
                             {%endfor%}
@@ -33,8 +33,9 @@
                         <br>
                     </small>
                 </span>
+                <!-- Link -->
 
-                <a href={{post.slug}} class="button-arrow float-right ">
+                <a href="{% url 'blog:detail' slug=post.slug %}" class="button-arrow float-right ">
                     Read more
                 </a>
             </div>

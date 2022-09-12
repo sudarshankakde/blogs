@@ -55,7 +55,7 @@
         {%for blog in moreBlogs %}
         <div class="col-lg-4 col-5 col-sm-5 my-3">
 
-            <a href={{blog.slug}} class="position-relative">
+            <a href="{% url 'blog:detail' slug=blog.slug %}" class="position-relative">
                 <img src="{{blog.image.url}}" class="img-bordered img-fluid img-thumbnail w-100 h-100"
                     alt="{{blog.title}}" title="{{blog.title}}" data-toggle="tooltip" data-placement="auto">
             </a>
@@ -80,8 +80,7 @@
 
         <div class="col-lg-10 col-sm-10 col-9 mx-auto text-capitalize">
 
-            <!-- <form action="/postComment" method="post"> -->
-            <form hx-post="/postComment" hx-trigger="submit " hx-target="#comment_container" hx-swap="innerHTML">
+            <form hx-post="{%url 'postComment'%}" hx-trigger="submit " hx-target="#comment_container" hx-swap="innerHTML" hx-indicator=".progress">
                 {% csrf_token %}
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" name="Postcomment" id="commandBox"

@@ -23,6 +23,7 @@
     background-color: var(--elegance);
     width: 8px;
 }
+
 ::-webkit-scrollbar:horizontal {
     background-color: var(--primary-text);
     height: 8px;
@@ -45,7 +46,7 @@ body {
     font-family: Segoe UI;
     background-color: var(--primary-bg);
     transition: all 1s;
-    scroll-behavior: smooth!important;
+    scroll-behavior: smooth !important;
 }
 
 
@@ -110,19 +111,22 @@ h2 {
 
 }
 
-.Navlink{
+.Navlink {
     color: var(--primary-text) !important;
     opacity: .6;
     font-weight: 400;
 
 }
-.Navlink.active{
-    opacity: 1!important;
+
+.Navlink.active {
+    opacity: 1 !important;
     font-weight: 500;
 }
-.Navlink:hover{
+
+.Navlink:hover {
     opacity: .8;
 }
+
 .btn-close-primary, .text-user-primarytext {
     color: var(--primary-text) !important;
 }
@@ -153,7 +157,7 @@ p>a {
     height: 75vh;
 }
 
-#AlertMessage1{
+#AlertMessage1 {
     width: 35%;
     position: fixed;
     bottom: 0px;
@@ -163,6 +167,7 @@ p>a {
     animation: messageEntery;
     animation-duration: 0.5s;
 }
+
 #AlertMessage {
     position: fixed;
     width: 50%;
@@ -211,11 +216,13 @@ p>a {
         animation: messageEntery 0.5s steps(10);
         transition: cubic-bezier(.09, .31, .94, .8);
     }
-    #AlertMessage1{
-        width: 100vw!important;
+
+    #AlertMessage1 {
+        width: 100vw !important;
         animation: messageEntery 0.5s steps(10);
         transition: cubic-bezier(.09, .31, .94, .8);
     }
+
     #slider-img {
         height: 90vh !important;
     }
@@ -299,13 +306,13 @@ body::selection {
 .form-control-plaintext::placeholder {
     color: var(--primary-text);
     opacity: 0.8;
-    
+
 }
 
 .form-control-plaintext {
     border-bottom: thin solid var(--primary-theme);
     color: var(--primary-text);
-    
+
 }
 
 .form-control-plaintext:focus {
@@ -433,29 +440,151 @@ body::selection {
 .card-bg {
     background-color: var(--card-bg) !important;
 }
+
 .z-10 {
-    z-index: 10!important;
-}
-.bg-primary-theme{
-    background-color: var(--primary-theme)!important;
-    color:var(--primary-text)!important;
+    z-index: 10 !important;
 }
 
-.offcanvas-backdrop{
-    z-index: unset!important;
+.bg-primary-theme {
+    background-color: var(--primary-theme) !important;
+    color: var(--primary-text) !important;
 }
-.footer-link{
+
+.offcanvas-backdrop {
+    z-index: unset !important;
+}
+
+.footer-link {
     opacity: .6;
 }
-.footer-link:hover{
+
+.footer-link:hover {
     opacity: 1;
 }
-.socails{
+
+.socails {
     opacity: 0.6;
 }
-.socails:hover{
+
+.socails:hover {
     opacity: 1;
     border-width: thick;
     transform: scale(1.1);
     transition-duration: 100ms;
+}
+
+.progress {
+    position: fixed;
+    z-index: 1000;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-clip: padding-box;
+    overflow: hidden;
+}
+
+.progress .indeterminate:before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.progress .indeterminate:after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+}
+
+.progress {
+    display: none;
+}
+
+.htmx-request .progress {
+    display: inline;
+}
+
+.htmx-request.progress {
+    display: inline;
+}
+
+@-webkit-keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes indeterminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@-webkit-keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+@keyframes indeterminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+
+    100% {
+        left: 107%;
+        right: -8%;
+    }
 }

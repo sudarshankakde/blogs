@@ -59,6 +59,7 @@
 </head>
 
 <body id="body" class="">
+    
     <!-- #loading screen -->
     <div id="loader">
         <div id="wrapper">
@@ -99,8 +100,8 @@
                             href="{%url 'home' %}">Home </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link Navlink {% if url_name == 'AllBlogs' %}active{% endif %}"
-                            href="{%url 'AllBlogs' %}">Blog Post</a>
+                        <a class="nav-link Navlink {% if url_name == 'blog' %}active{% endif %}"
+                            href="{%url 'blog:AllBlogs' %}">Blog Post</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link Navlink {% if url_name == 'contact' %}active{% endif %}"
@@ -160,6 +161,10 @@
             </div>
         </div>
     </nav>
+    <div class="progress" style="height: 3px; background-color: white;">
+        <div class="indeterminate" style="background-color: var(--primary-theme);"></div>
+    </div>
+    
 
 
     <div id="AlertMessage-1 ">

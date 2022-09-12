@@ -3,23 +3,16 @@ from django.utils.html import strip_tags
 from django.conf import settings
 from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects
 from django.template import RequestContext
-# from django.shortcuts import render_to_response
-# from blog.froms import SubscibersForm
 from django.contrib.auth.models import User
-from quote import quote
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
-from blog.templatetags import extras_filter
 from django.core.mail import send_mail
 from django_pandas.io import read_frame
-import re
 from django.template.loader import render_to_string
 from django.http import HttpResponse, JsonResponse
 import json
-from django.core.serializers import serialize
 import random
 data = webData.objects.first()
-
 
 # html pages
 def subscription(request):
@@ -74,26 +67,40 @@ def contact(request):
     return render(request, 'contact.html', {'data': data, 'index': ' Contact me'})
 
 
-def detail(request, slug):
-    PopularPosts = Blog.objects.order_by('-views')[0:5]
-    blogdetails = get_object_or_404(Blog, slug=slug)
-    comments = BlogComment.objects.filter(post=blogdetails, parent=None)
-    comments = comments.order_by('-sno')
-    replies = BlogComment.objects.filter(post=blogdetails).exclude(parent=None)
-    replyDict = {}
-    for reply in replies:
-        if reply.parent.sno not in replyDict.keys():
-            replyDict[reply.parent.sno] = [reply]
+# comment and reply on blog
+def postComment(request):
+    if (request.method == 'POST'):
+        comment = request.POST['Postcomment']
+        user = request.user
+        postSno = request.POST['PostSno']
+        PostSlug = request.POST['PostSlug']
+        post = Blog.objects.get(id=postSno)
+        parentSno = request.POST['parentSno']
+        blogdetails = get_object_or_404(Blog, slug=PostSlug)
+        comments = BlogComment.objects.filter(post=blogdetails, parent=None)
+        comments = comments.order_by('-sno')
+        replies = BlogComment.objects.filter(
+            post=blogdetails).exclude(parent=None)
+        replyDict = {}
+        for reply in replies:
+            if reply.parent.sno not in replyDict.keys():
+                replyDict[reply.parent.sno] = [reply]
+            else:
+                replyDict[reply.parent.sno].append(reply)
+
+        if parentSno == "":
+            comment = BlogComment(comment=comment, user=user, post=post)
+            comment.save()
+            return render(request, 'blog/comment.html', {'comments': comments, 'replyDict': replyDict,'blog':post})
+
         else:
-            replyDict[reply.parent.sno].append(reply)
-    blogdetails.views = blogdetails.views + 1
-    blogdetails.save()
-    return render(request, 'detail.html', {'blog': blogdetails, 'data': data, 'comments': comments, 'replyDict': replyDict, 'moreBlogs': PopularPosts})
+            parent = BlogComment.objects.get(sno=parentSno)
+            comment = BlogComment(
+                comment=comment, user=user, post=post, parent=parent)
+            comment.save()
+            print(parent.sno)
+            return render(request, 'blog/reply.html', {'reply': comment})
 
-
-def AllBlogs(request):
-    posts = Blog.objects.order_by('-publish_date')[0:6]
-    return render(request, 'all blogs.html', {'posts': posts, 'data': data, 'index': 'All Blogs'})
 
 
 # api search
@@ -113,9 +120,9 @@ def search(request):
             allPosts = allPostsBody.union(allTags)
         except:
             allPosts = allPostsBody.union(allPostsTitle)
-        print(allPosts)
+    
         # posts ={'allposts':allPosts}
-    return render(request, 'search.html', {'data': data, 'index': 'All Blogs', 'posts': allPosts, 'query': query})
+    return render(request, 'search.html', {'data': data, 'index': 'All Blogs', 'posts': allPosts.order_by('-publish_date'), 'query': query})
 
 
 # apis for user autantication
@@ -169,25 +176,25 @@ def checkForUserName(request):
     if (request.method == "GET"):
         username = request.GET['username'].lower()
         if len(username) < 1:
-            return HttpResponse('<span class="text-user-primary-100 float-end">enter username</span>')
+            return HttpResponse('<span class="text-user-primary-100 float-end text-lowercase">enter username</span>')
 
         if len(username) > 10:
-            return HttpResponse('<span class="text-danger float-end">Username must under 10 character</span>')
+            return HttpResponse('<span class="text-danger float-end text-lowercase">Username must under 10 character</span>')
 
         if not username.isalnum():
-            return HttpResponse('<span class="text-danger float-end">Username should not have specail character</span>')
+            return HttpResponse('<span class="text-danger float-end text-lowercase">Username should not have specail character</span>')
 
         if User.objects.filter(username=username).exists():
-            return HttpResponse('<span class="text-danger float-end">Username Allready taken</span>')
+            return HttpResponse('<span class="text-danger float-end text-lowercase">Username Allready taken</span>')
         else:
-            return HttpResponse('<span class="text-user-primary-100 float-end">Username Available</span>')
+            return HttpResponse('<span class="text-user-primary-100 float-end text-lowercase">Username Available</span>')
 
 
 def checkForUserMail(request):
     if (request.method == "GET"):
         email = request.GET['email']
         if User.objects.filter(email=email).exists():
-            return HttpResponse('<span class="text-danger float-end">Email Adress Allready In Use</span>')
+            return HttpResponse('<span class="text-danger float-end text-lowercase">Email Allready In Use</span>')
         else:
             return HttpResponse('')
 
@@ -219,40 +226,6 @@ def handelLogout(request):
 
 
 
-# api for post comment
-def postComment(request):
-    if (request.method == 'POST'):
-        comment = request.POST['Postcomment']
-        user = request.user
-        postSno = request.POST['PostSno']
-        PostSlug = request.POST['PostSlug']
-        post = Blog.objects.get(id=postSno)
-        parentSno = request.POST['parentSno']
-        blogdetails = get_object_or_404(Blog, slug=PostSlug)
-        comments = BlogComment.objects.filter(post=blogdetails, parent=None)
-        comments = comments.order_by('-sno')
-        replies = BlogComment.objects.filter(
-            post=blogdetails).exclude(parent=None)
-        replyDict = {}
-        for reply in replies:
-            if reply.parent.sno not in replyDict.keys():
-                replyDict[reply.parent.sno] = [reply]
-            else:
-                replyDict[reply.parent.sno].append(reply)
-
-        if parentSno == "":
-            comment = BlogComment(comment=comment, user=user, post=post)
-            comment.save()
-            return render(request, 'blog/comment.html', {'comments': comments, 'replyDict': replyDict})
-
-        else:
-            parent = BlogComment.objects.get(sno=parentSno)
-            comment = BlogComment(
-                comment=comment, user=user, post=post, parent=parent)
-            comment.save()
-            print(parent.sno)
-            return render(request, 'blog/reply.html', {'reply': comment})
-
 
 # api for send mail news letter
 
@@ -274,17 +247,6 @@ def newsletter(request):
         mail.save()
     return render(request, 'newsletter.html', {'data': data})
 
-
-# api for loading more blogs
-def GetMoreBlog(request, number):
-    alreadyAvalable = int(number)
-    toSend = alreadyAvalable+6
-    reponse_data = Blog.objects.order_by(
-        '-publish_date')[alreadyAvalable:toSend]
-    permission_serialize = json.loads(serialize('json', reponse_data))
-
-    Tags = tag.objects.order_by('-id')
-    return JsonResponse({'data': permission_serialize, 'tags': list(Tags.values())})
 
 
 def error_404_view(request, exception):
@@ -316,3 +278,4 @@ def aboutme(request):
         send_mail(subject, plain_message, Mail_From, Mail_To,
                   html_message=html_message, fail_silently=True)
     return render(request, 'aboutMe.html', {'projects': projects, 'data': data})
+

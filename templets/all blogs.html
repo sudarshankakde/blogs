@@ -4,28 +4,22 @@
 <div class="container my-3">
     <h3 class="py-3">All Blog Posts <i class="bi bi-folder2-open"></i></h3>
     <div class="row d-flex align-items-stretch" id="Blogs">
-        {% for post in posts%}
         {%include 'card2.html'%}
-        {%endfor%}
     </div>
-    <div class="row">
-        <div class="col-12 text-center mt-5 my-auto">
-            <button class=" btn btn-user-primary" id="loadMoreBtn">Load More</button>
-            <div class="col-12">
-                <div id="spinner" class="spinner-grow spinner-grow-lg not-visible mb-4" role="status"
-                    style="color: var(--primary-theme);">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
-            <div class="alert alert-primary text-center not-visible" role="alert" id="noMoreAlert">
-                All Done ✔. No More Blogs To Load!
-            </div>
 
-        </div>
-    </div>
 </div>
+
 {%endblock%}
 {% block scripts %}
-<script src={% static 'js/AllBlogs.js' %}></script>
-
+<!-- <script src={% static 'js/AllBlogs.js' %}></script> -->
+<script>
+    document.getElementById('loadMoreBtn').onsubmit = () => {
+        document.getElementById('loadMoreBtn_Span').innerHTML = `
+<div class="row w-100 my-3 mx-auto">
+    <div class="spinner-border text-user-primary-100" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>`;
+    }
+</script>
 {% endblock scripts %}

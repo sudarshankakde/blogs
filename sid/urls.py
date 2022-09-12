@@ -20,7 +20,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
-
 from django.views.static import serve
 
 
@@ -31,14 +30,15 @@ admin.site.index_title = "Welcome to Sid's Admin Panel"
 urlpatterns = [
     # admin panel
     path('AdminPanel/', admin.site.urls),
-
-
+    path('blog/',include('blog.urls')),
     # contact page
     path('contact', views.contact, name='contact'),
 
     path('aboutme', views.aboutme, name='aboutme'),
 
-
+    
+    # comment and reply on blog
+    path('postComment', views.postComment, name='postComment'),
 
     # search in blogs
     path('search', views.search, name='search'),
@@ -61,11 +61,9 @@ urlpatterns = [
         template_name='Extra/Reset_password_done.html'), name='password_reset_complete'),
 
 
-
     # privacy_policy
     path('Privacy_Policy', views.Privacy_Policy, name='Privacy_Policy'),
-    # blog post comment
-    path('postComment', views.postComment, name='postComment'),
+   
 
     # email updates newsletter
     path('newsletter', views.newsletter, name='newsletter'),
@@ -76,13 +74,8 @@ urlpatterns = [
     path('subscription', views.subscription, name='subscription'),
 
 
-    #blogs and etc
-    path('AllBlogs', views.AllBlogs, name='AllBlogs'),
+   
 
-    #blogs in detail
-    path('<str:slug>', views.detail, name='detail'),
-
-    path('GetMoreBlog/<int:number>', views.GetMoreBlog, name='GetMoreBlog'),
     re_path(r'^DataBase/(?P<path>.*)$', serve,
             {'document_root': settings.MEDIA_ROOT}),
 

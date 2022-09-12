@@ -48,7 +48,7 @@
                             web
                             development, computer science, mathematics, and life. As well as sports, food, nature, and
                             tech, I am passionate about writing about these topics as well. </p>
-                        <a href="{%url 'AllBlogs'%}" class="button-primary   text-capitalize">Browse all posts</a>
+                        <a href="{%url 'blog:AllBlogs'%}" class="button-primary   text-capitalize">Browse all posts</a>
 
                     </div>
                 </div>
@@ -155,11 +155,10 @@
 <div class="container mx-auto card mt-4" id="Subscribe" data-aos="flip-right">
     <div class="row ">
         <div class="col-11 mx-auto w-100 text-center p-lg-5 p-sm-5 py-5 ">
-
             <h3>Subscribe to my newsletter! </h3>
             <h6 class="mb-4">So that you never miss any update <i class="bi bi-envelope"></i></h6>
 
-            <form hx-post="/subscription" hx-trigger="submit" hx-target="#parent-div" hx-swap="innerHTML"
+            <form hx-post="/subscription" hx-trigger="submit" hx-target="#parent-div" hx-swap="innerHTML" hx-indicator=".progress"
                 id="subscriptionForm">
                 {% csrf_token %}
                 <div class="input-group mb-3">
