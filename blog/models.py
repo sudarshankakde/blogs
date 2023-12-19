@@ -3,6 +3,7 @@ from django.utils.timezone import now
 from django.contrib.auth.models import User
 
 from autoslug import AutoSlugField
+from django.core.validators import FileExtensionValidator
 
 # Create your models here.
 
@@ -22,9 +23,7 @@ class webData(models.Model):
     def __str__(self):
         return self.mine_name
 
-
-# blog table
-
+# many to many fieleds
 class tag(models.Model):
     created_on = models.DateField(auto_now=True, editable=False)
     tag = models.CharField(max_length=50)
@@ -32,6 +31,13 @@ class tag(models.Model):
     def __str__(self):
         return self.tag
 
+class ProjectTools(models.Model):
+    created_on = models.DateField(auto_now=True, editable=False)
+    toolName = models.CharField(max_length=50)
+    logo = models.ImageField(upload_to='Images/Tools', null=True,validators=[FileExtensionValidator(['svg'])])
+    def __str__(self):
+        return self.tag
+    
 
 class Blog(models.Model):
     image = models.ImageField(upload_to='Images/BlogImages', null=True)
@@ -91,8 +97,10 @@ class Projects(models.Model):
     name = models.CharField(max_length=50)
     summary = models.TextField()
     doneOn = models.CharField(max_length=50)
-    logo = models.ImageField(upload_to='Images/Projects/logo')
+    Thumbnail = models.ImageField(upload_to='Images/Projects/Thumbnail')
     link = models.URLField(max_length=200)
-
+    tools = models.ManyToManyField(ProjectTools)
     def __str__(self):
         return self.name
+
+

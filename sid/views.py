@@ -36,7 +36,6 @@ def subscription(request):
             return HttpResponse(f"<span class='text-capitalize'>congrats <i class='bi bi-stars'></i>, {mail} has been Subscribe to NewsLetter </span>")
         return HttpResponse("please fill the field.")
 
-
 def home(request):
     post = Blog.objects.order_by('-publish_date')[0:3]
     PopularPosts = Blog.objects.order_by('-views')[0:3]
@@ -277,3 +276,48 @@ def aboutme(request):
                   html_message=html_message, fail_silently=True)
     return render(request, 'aboutMe.html', {'projects': projects, 'data': data})
 
+def projectsApi(request):
+    projects = Projects.objects.order_by('-id').values()
+    response = {'data':list(projects)}
+    return JsonResponse(response,safe=False)
+
+@csrf_exempt
+def newsletterSubscription(request):
+    Subscriber = Subscribers()
+    if request.method == "POST":
+        mail = request.POST['email']
+        if Subscribers.objects.filter(email=mail).exists():
+            return JsonResponse({'data':f"{mail} had already Subscribed to NewsLetter"},safe=False)
+        else:
+            Subscriber.email = mail
+            Subscriber.save()
+            subject = f'Subscribed To Sids BLOG Newsletter!'
+            html_message = render_to_string(
+                'MailTempletes/Subscribe.html')
+            plain_message = strip_tags(html_message)
+            Mail_From = settings.EMAIL_HOST_USER
+            Mail_To = [mail, ]
+            send_mail(subject, plain_message, Mail_From, Mail_To,
+                      html_message=html_message, fail_silently=True)
+            return JsonResponse({'data':f"congrats , {mail} has been Subscribe to NewsLetter"},safe=False)
+        
+@csrf_exempt
+def contactApi(request):
+    if request.method == "POST":
+        Name = request.POST['name']
+        Email = request.POST['email']
+        Message = request.POST['message']
+        contactMe = ContactMe()
+        contactMe.Full_Name = Name
+        contactMe.Email_Id = Email
+        contactMe.Message_To_Me = Message
+        contactMe.save()
+        subject = f'Greetings From Sudarshan'
+        html_message = render_to_string(
+            'MailTempletes/Contact.html', {'name': Name})
+        plain_message = strip_tags(html_message)
+        Mail_From = settings.EMAIL_HOST_USER
+        Mail_To = [Email,'sudarshankakde1111@gmail.com' ]
+        send_mail(subject, plain_message, Mail_From, Mail_To,
+                  html_message=html_message, fail_silently=True)
+        return JsonResponse(f"Your response is saved. I will contact you shortly!",safe=False)

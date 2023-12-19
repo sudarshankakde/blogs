@@ -31,6 +31,7 @@ urlpatterns = [
     # admin panel
     path('AdminPanel/', admin.site.urls),
     path('blog/',include('blog.urls')),
+    path('api/',include('sid.apiUrls')),
     # contact page
     path('contact', views.contact, name='contact'),
 
@@ -81,6 +82,10 @@ urlpatterns = [
 
     re_path(r'^static/(?P<path>.*)$', serve,
             {'document_root': settings.STATIC_ROOT}),
+
+
+
+   
 
 ]
 

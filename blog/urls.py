@@ -7,5 +7,6 @@ urlpatterns = [
 
     #blogs in detail
     path('<str:slug>', views.detail, name='detail'),
-    # load 6 more blogs
+
+
 ]
