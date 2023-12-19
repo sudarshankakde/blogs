@@ -6,6 +6,9 @@
 
 3.api/projects - GET
 
-4.api/newsletter - POST
+4.api/stack - GET
 
-5.api/contact - POST
+5.api/newsletter - POST
+
+6.api/contact - POST
+

@@ -34,7 +34,6 @@ def subscription(request):
             send_mail(subject, plain_message, Mail_From, Mail_To,
                       html_message=html_message, fail_silently=True)
             return HttpResponse(f"<span class='text-capitalize'>congrats <i class='bi bi-stars'></i>, {mail} has been Subscribe to NewsLetter </span>")
-        return HttpResponse("please fill the field.")
 
 def home(request):
     post = Blog.objects.order_by('-publish_date')[0:3]
