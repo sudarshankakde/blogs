@@ -33,10 +33,12 @@ script.onload = function () {
             { text: 'PHP', value: 'php' },
             { text: 'Ruby', value: 'ruby' },
             { text: 'Python', value: 'python' },
+            { text: 'Bash', value: 'bash' },
+            { text: 'Dart', value: 'dart' },
             { text: 'Java', value: 'java' },
             { text: 'C', value: 'c' },
             { text: 'C#', value: 'csharp' },
-            { text: 'C++', value: 'cpp' }
+            { text: 'C++', value: 'cpp' },
         ],
         force_br_newlines: true,
         force_p_newlines: false,

@@ -52,14 +52,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <meta name="description" content="Sudarshan Kakde Blogs , learn about python , web development and many more with me . 
+    <meta name="description" content="Sudarshan Kakde Blogs , learn about python , web development and many more with me .
     ">
     <script src="https://unpkg.com/htmx.org@1.8.0"></script>
 
 </head>
 
 <body id="body" class="">
-    
     <!-- #loading screen -->
     <div id="loader">
         <div id="wrapper">
@@ -113,7 +112,7 @@
                     </li>
                     {% if user.is_superuser %}
                     <li class="nav-item ">
-                        <a class="nav-link Navlink" href="AdminPanel/">Admin Panel</a>
+                        <a class="nav-link Navlink" href="{%url 'admin:index'%}">Admin Panel</a>
                     </li>
                     {%else%}
                     {%endif%}
@@ -164,7 +163,7 @@
     <div class="progress" style="height: 3px; background-color: white;">
         <div class="indeterminate" style="background-color: var(--primary-theme);"></div>
     </div>
-    
+
 
 
     <div id="AlertMessage-1 ">

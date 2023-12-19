@@ -25,15 +25,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--wjan*1y5vu!)gp1gcapv*++6cdsa59w%=@l6)&c-79cuxu88z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
-
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGIN_REGEXES = [
+r"^https://\w+\.domain\.com$",
+]
 # Application definition
 
 INSTALLED_APPS = [
     'jazzmin',
+    'corsheaders',
     "django_htmx",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -62,7 +68,7 @@ ROOT_URLCONF = 'sid.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, 'templets'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,11 +82,13 @@ TEMPLATES = [
         },
     },
 ]
+print(os.path.join(BASE_DIR, 'templates'))
 
 WSGI_APPLICATION = 'sid.wsgi.application'
 
 
 # Database
+# adf
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {

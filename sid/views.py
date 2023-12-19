@@ -42,7 +42,8 @@ def home(request):
     PopularPosts = Blog.objects.order_by('-views')[0:3]
     return render(request, 'home.html', {'posts': post, 'PopularPosts': PopularPosts, 'data': data, 'index': ' Home'})
 
-
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt
 def contact(request):
     if request.method == "POST":
         Name = request.POST['name']
@@ -58,12 +59,12 @@ def contact(request):
             'MailTempletes/Contact.html', {'name': Name})
         plain_message = strip_tags(html_message)
         Mail_From = settings.EMAIL_HOST_USER
-        Mail_To = [Email, ]
+        Mail_To = [Email,'sudarshankakde1111@gmail.com' ]
         send_mail(subject, plain_message, Mail_From, Mail_To,
                   html_message=html_message, fail_silently=True)
         messages.success(
             request, f"<b class='text-capitalize'>Your Response has been saved. I Will Contact You Shortly</b>")
-
+        return HttpResponse(f"""Your response is saved. I will contact you shortly!""")
     return render(request, 'contact.html', {'data': data, 'index': ' Contact me'})
 
 
@@ -120,7 +121,7 @@ def search(request):
             allPosts = allPostsBody.union(allTags)
         except:
             allPosts = allPostsBody.union(allPostsTitle)
-    
+
         # posts ={'allposts':allPosts}
     return render(request, 'search.html', {'data': data, 'index': 'All Blogs', 'posts': allPosts.order_by('-publish_date'), 'query': query})
 
@@ -158,7 +159,7 @@ def handleSingup(request):
         # work with model
         # create user
         else:
-            
+
             myuser = User.objects.create_user(username, email, password1)
             myuser.first_name = fname
             myuser.last_name = lname
@@ -253,9 +254,6 @@ def error_404_view(request, exception):
     return render(request, '404Page.html')
 
 
-def handler500(request, *args, **argv):
-    context_instance = RequestContext(request)
-    return render(request, '404Page.html', context_instance)
 
 
 def aboutme(request):

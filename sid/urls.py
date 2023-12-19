@@ -36,7 +36,7 @@ urlpatterns = [
 
     path('aboutme', views.aboutme, name='aboutme'),
 
-    
+
     # comment and reply on blog
     path('postComment', views.postComment, name='postComment'),
 
@@ -63,7 +63,7 @@ urlpatterns = [
 
     # privacy_policy
     path('Privacy_Policy', views.Privacy_Policy, name='Privacy_Policy'),
-   
+
 
     # email updates newsletter
     path('newsletter', views.newsletter, name='newsletter'),
@@ -74,7 +74,7 @@ urlpatterns = [
     path('subscription', views.subscription, name='subscription'),
 
 
-   
+
 
     re_path(r'^DataBase/(?P<path>.*)$', serve,
             {'document_root': settings.MEDIA_ROOT}),
@@ -85,4 +85,4 @@ urlpatterns = [
 ]
 
 handler404 = 'sid.views.error_404_view'
-handler500 = 'sid.views.handler500'
+

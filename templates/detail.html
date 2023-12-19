@@ -35,7 +35,7 @@
         <br>
         <div class="col-12">
             {%for tag in blog.tags.all%}
-            <a href="search?query={{tag}}" class="badge badge-Theme-Primary bi bi-tag-fill w-auto my-1 mr-2">
+            <a href="{%url 'search'%}?query={{tag}}" class="badge badge-Theme-Primary bi bi-tag-fill w-auto my-1 mr-2">
                 {{tag}}</a>
             {%endfor%}
         </div>
@@ -121,7 +121,7 @@
         {% endif %}
     </div>
 
-    
+
     </div>
 <div class="container-lg  container-fluid " id="comment_container">
     <!-- comments made before -->
