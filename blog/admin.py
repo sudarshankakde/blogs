@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Blog,tag,webData,BlogComment
-from .models import MailMessage,Subscribers,ContactMe,Projects
+from .models import MailMessage,Subscribers,ContactMe,Projects,ProjectTools
 
 
 @admin.register(Blog)
@@ -11,7 +11,7 @@ class BlogAdmin(admin.ModelAdmin):
         js= ('js/tinyInject.js',)
 
 
-# Register your models here.
+# blogs
 admin.site.register(tag)
 admin.site.register(BlogComment)
 admin.site.register(webData)
@@ -24,4 +24,7 @@ admin.site.register(Subscribers)
 
 #Contact Me
 admin.site.register(ContactMe)
+
+# project
 admin.site.register(Projects)
+admin.site.register(ProjectTools)
