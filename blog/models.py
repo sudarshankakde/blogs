@@ -36,7 +36,7 @@ class ProjectTools(models.Model):
     toolName = models.CharField(max_length=50)
     logo = models.FileField(upload_to="Images/Tools", validators=[FileExtensionValidator(['svg'])])
     def __str__(self):
-        return self.tag
+        return self.toolName
     
 
 class Blog(models.Model):
@@ -49,7 +49,8 @@ class Blog(models.Model):
     tags = models.ManyToManyField(tag)
     author = models.ForeignKey(User,on_delete=models.PROTECT,default=5)
     views = models.IntegerField(default=0)
-    
+    publish = models.BooleanField(default=True)
+
     def __str__(self):
         return self.title+' | ' + self.author.first_name
 
@@ -96,6 +97,8 @@ class ContactMe(models.Model):
 class Projects(models.Model):
     name = models.CharField(max_length=50)
     summary = models.TextField()
+    projectType = models.CharField(max_length=50)
+    skills = models.CharField(max_length=50)
     doneOn = models.CharField(max_length=50)
     Thumbnail = models.ImageField(upload_to='Images/Projects/Thumbnail')
     link = models.URLField(max_length=200)

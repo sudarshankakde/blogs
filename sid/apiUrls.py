@@ -9,4 +9,5 @@ urlpatterns = [
     path('projects',views.projectsApi, name=''),
     path('newsletter',views.newsletterSubscription, name=''),
     path('contact',views.contactApi, name=''),
+    path('stack',views.stackApi, name=''),
 ]

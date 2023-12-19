@@ -14,7 +14,10 @@ data = webData.objects.first()
 
 
 def AllBlogs(request):
-    reponse_data = Blog.objects.order_by('-publish_date').all()
+    if request.user.is_superuser:
+        reponse_data = Blog.objects.order_by('-publish_date').all()
+    else:
+        reponse_data = Blog.objects.filter(publish=True).order_by('-publish_date')
     peginator = Paginator(reponse_data,2)
     page_number = request.GET.get('page',1)
     posts = peginator.get_page(page_number)
@@ -23,8 +26,8 @@ def AllBlogs(request):
     return render(request, 'all blogs.html', {'posts': posts, 'data': data, 'index': 'All Blogs'})
 
 def BlogsApi(request):
-    reponse_data = Blog.objects.order_by('-publish_date').all().values()
-    peginator = Paginator(reponse_data,4)
+    reponse_data = Blog.objects.filter(publish=True).order_by('-publish_date').all().values()
+    peginator = Paginator(reponse_data,6)
     page_number = request.GET.get('page',1)
     posts = peginator.get_page(page_number)
     response_data = {'data': list(posts)}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.html import strip_tags
 from django.conf import settings
-from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects
+from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects,ProjectTools
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -277,9 +277,17 @@ def aboutme(request):
     return render(request, 'aboutMe.html', {'projects': projects, 'data': data})
 
 def projectsApi(request):
-    projects = Projects.objects.order_by('-id').values()
-    response = {'data':list(projects)}
-    return JsonResponse(response,safe=False)
+    if request.method == "GET":
+        try:
+            limit = request.GET['size']
+        except:
+            limit = False
+        if limit:
+            projects = Projects.objects.order_by('-id')[:int(limit)].values()
+        else:
+            projects = Projects.objects.order_by('-id').all().values()
+        response = {'data':list(projects)}
+        return JsonResponse(response,safe=False)
 
 @csrf_exempt
 def newsletterSubscription(request):
@@ -321,3 +329,8 @@ def contactApi(request):
         send_mail(subject, plain_message, Mail_From, Mail_To,
                   html_message=html_message, fail_silently=True)
         return JsonResponse(f"Your response is saved. I will contact you shortly!",safe=False)
+
+def stackApi(request):
+    tools = ProjectTools.objects.all().values()
+    response = {'data':list(tools)}
+    return JsonResponse(response,safe=False)
