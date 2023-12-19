@@ -34,7 +34,7 @@ class tag(models.Model):
 class ProjectTools(models.Model):
     created_on = models.DateField(auto_now=True, editable=False)
     toolName = models.CharField(max_length=50)
-    logo = models.ImageField(upload_to='Images/Tools', null=True,validators=[FileExtensionValidator(['svg'])])
+    logo = models.FileField(upload_to="Images/Tools", validators=[FileExtensionValidator(['svg'])])
     def __str__(self):
         return self.tag
     
