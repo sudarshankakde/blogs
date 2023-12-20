@@ -31,10 +31,18 @@ class tag(models.Model):
     def __str__(self):
         return self.tag
 
+TYPE_CHOICES = (
+    ('tool','TOOL'),
+    ('framework', 'FRAMEWORK'),
+    ('library','LIBRARY'),
+    ('language ','LANGUAGE'),
+)
 class ProjectTools(models.Model):
     created_on = models.DateField(auto_now=True, editable=False)
     toolName = models.CharField(max_length=50)
     logo = models.FileField(upload_to="Images/Tools", validators=[FileExtensionValidator(['svg'])])
+    publish = models.BooleanField(default=True)
+    type = models.CharField(max_length=20, choices=TYPE_CHOICES, default='tool')
     def __str__(self):
         return self.toolName
     

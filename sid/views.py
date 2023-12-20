@@ -330,6 +330,6 @@ def contactApi(request):
         return JsonResponse(f"Your response is saved. I will contact you shortly!",safe=False)
 
 def stackApi(request):
-    tools = ProjectTools.objects.all().values()
+    tools = ProjectTools.objects.order_by('type').filter(publish=True).values()
     response = {'data':list(tools)}
     return JsonResponse(response,safe=False)
