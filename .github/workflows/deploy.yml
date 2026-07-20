@@ -2,6 +2,7 @@ name: Deploy Webapp
 on:
   push:
     branches:
+      - master
       - main
 
 jobs:
@@ -10,7 +11,7 @@ jobs:
     steps:
       - name: Trigger Webhook Deploy
         run: |
-          PAYLOAD='{"ref": "refs/heads/main"}'
+          PAYLOAD="{\"ref\": \"${{ github.ref }}\"}"
           SIGNATURE=$(echo -n "$PAYLOAD" | openssl dgst -sha256 -hmac "${{ secrets.DEPLOY_WEBHOOK_SECRET }}" | cut -d" " -f2)
           curl -X POST \
             -H "Content-Type: application/json" \
