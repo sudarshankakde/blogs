@@ -1,0 +1,17 @@
+name: Auto Renew PythonAnywhere Webapp
+
+on:
+  schedule:
+    - cron: '0 0 */15 * *' # Runs at midnight every 15 days
+  workflow_dispatch:      # Allows manual trigger for verification
+
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Auto-Renew Script
+        uses: tanishqmudaliar/PythonAnywhere-Auto-Renew@v1.2.2
+        with:
+          username: ${{ secrets.PA_USERNAME }}
+          password: ${{ secrets.PA_PASSWORD }}

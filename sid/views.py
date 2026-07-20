@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.html import strip_tags
 from django.conf import settings
-from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects,ProjectTools
+from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects, ProjectTools, Experience
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -12,7 +12,13 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse, JsonResponse
 import json
 import random
-data = webData.objects.first()
+data = None
+
+def get_web_data():
+    global data
+    if data is None:
+        data = webData.objects.first()
+    return data
 
 # html pages
 def subscription(request):
@@ -38,7 +44,7 @@ def subscription(request):
 def home(request):
     post = Blog.objects.order_by('-publish_date')[0:3]
     PopularPosts = Blog.objects.order_by('-views')[0:3]
-    return render(request, 'home.html', {'posts': post, 'PopularPosts': PopularPosts, 'data': data, 'index': ' Home'})
+    return render(request, 'home.html', {'posts': post, 'PopularPosts': PopularPosts, 'data': get_web_data(), 'index': ' Home'})
 
 from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
@@ -63,7 +69,7 @@ def contact(request):
         messages.success(
             request, f"<b class='text-capitalize'>Your Response has been saved. I Will Contact You Shortly</b>")
         return HttpResponse(f"""Your response is saved. I will contact you shortly!""")
-    return render(request, 'contact.html', {'data': data, 'index': ' Contact me'})
+    return render(request, 'contact.html', {'data': get_web_data(), 'index': ' Contact me'})
 
 
 # comment and reply on blog
@@ -121,7 +127,7 @@ def search(request):
             allPosts = allPostsBody.union(allPostsTitle)
 
         # posts ={'allposts':allPosts}
-    return render(request, 'search.html', {'data': data, 'index': 'All Blogs', 'posts': allPosts.order_by('-publish_date'), 'query': query})
+    return render(request, 'search.html', {'data': get_web_data(), 'index': 'All Blogs', 'posts': allPosts.order_by('-publish_date'), 'query': query})
 
 
 # apis for user autantication
@@ -199,7 +205,7 @@ def checkForUserMail(request):
 
 
 def Privacy_Policy(request):
-    return render(request, 'Extra/Privacy_Policy.html', {'data': data, 'index': 'Privacy Policy'})
+    return render(request, 'Extra/Privacy_Policy.html', {'data': get_web_data(), 'index': 'Privacy Policy'})
 
 
 def handleLogin(request):
@@ -244,7 +250,7 @@ def newsletter(request):
                   )
         mail = MailMessage(message=mail_message, title=mail_title)
         mail.save()
-    return render(request, 'newsletter.html', {'data': data})
+    return render(request, 'newsletter.html', {'data': get_web_data()})
 
 
 
@@ -273,7 +279,31 @@ def aboutme(request):
         Mail_To = [Email, ]
         send_mail(subject, plain_message, Mail_From, Mail_To,
                   html_message=html_message, fail_silently=True)
-    return render(request, 'aboutMe.html', {'projects': projects, 'data': data})
+    return render(request, 'aboutMe.html', {'projects': projects, 'data': get_web_data()})
+
+def serialize_project(request, project):
+    return {
+        'id': project.id,
+        'name': project.name,
+        'slug': project.slug,
+        'summary': project.summary,
+        'projectType': project.projectType,
+        'skills': project.skills,
+        'doneOn': project.doneOn,
+        'Thumbnail': request.build_absolute_uri(project.Thumbnail.url) if project.Thumbnail else None,
+        'link': project.link,
+        'github_link': project.github_link,
+        'has_case_study': bool(project.case_study),
+        'ranking': project.ranking,
+        'tools': [
+            {
+                'name': t.toolName,
+                'logo': request.build_absolute_uri(t.logo.url) if t.logo else None,
+                'type': t.type,
+            }
+            for t in project.tools.all()
+        ]
+    }
 
 def projectsApi(request):
     if request.method == "GET":
@@ -282,11 +312,20 @@ def projectsApi(request):
         except:
             limit = False
         if limit:
-            projects = Projects.objects.order_by('-id')[:int(limit)].values()
+            projects = Projects.objects.order_by('ranking', '-id')[:int(limit)]
         else:
-            projects = Projects.objects.order_by('-id').all().values()
-        response = {'data':list(projects)}
-        return JsonResponse(response,safe=False)
+            projects = Projects.objects.order_by('ranking', '-id').all()
+        serialized_projects = [serialize_project(request, proj) for proj in projects]
+        response = {'data': serialized_projects}
+        return JsonResponse(response, safe=False)
+
+def projectDetailApi(request, slug):
+    from django.shortcuts import get_object_or_404
+    project = get_object_or_404(Projects, slug=slug)
+    serialized = serialize_project(request, project)
+    # Include the full case_study field for the detail view
+    serialized['case_study'] = project.case_study or ""
+    return JsonResponse({'data': serialized}, safe=False)
 
 @csrf_exempt
 def newsletterSubscription(request):
@@ -329,7 +368,55 @@ def contactApi(request):
                   html_message=html_message, fail_silently=True)
         return JsonResponse(f"Your response is saved. I will contact you shortly!",safe=False)
 
+def serialize_tool(request, tool):
+    return {
+        'id': tool.id,
+        'toolName': tool.toolName,
+        'logo': request.build_absolute_uri(tool.logo.url) if tool.logo else None,
+        'publish': tool.publish,
+        'type': tool.type,
+    }
+
 def stackApi(request):
-    tools = ProjectTools.objects.order_by('type').filter(publish=True).values()
-    response = {'data':list(tools)}
+    tools = ProjectTools.objects.order_by('type').filter(publish=True)
+    serialized_tools = [serialize_tool(request, tool) for tool in tools]
+    response = {'data': serialized_tools}
     return JsonResponse(response,safe=False)
+
+
+def resumeApi(request):
+    if request.method == "GET":
+        site = webData.objects.first()
+        if site and site.resume_url:
+            return JsonResponse({'resume_url': site.resume_url})
+        return JsonResponse({'resume_url': ''}, status=404)
+
+
+def experienceApi(request):
+    if request.method == "GET":
+        experiences = Experience.objects.filter(publish=True).order_by('order', '-id')
+        serialized_experiences = []
+        for exp in experiences:
+            cert_url = request.build_absolute_uri(exp.certificate.url) if exp.certificate else exp.certificate_url
+            serialized_experiences.append({
+                'id': exp.id,
+                'company': exp.company,
+                'role': exp.role,
+                'period': exp.period,
+                'responsibilities': [r.strip() for r in exp.responsibilities.split('\n') if r.strip()],
+                'certificate_url': cert_url or "",
+            })
+        
+        internships_count = Experience.objects.filter(type='internship', publish=True).count()
+        offer_letters_count = Experience.objects.filter(type__in=['job', 'offer_letter'], publish=True).count()
+        projects_count = Projects.objects.count()
+        
+        response = {
+            'data': serialized_experiences,
+            'stats': {
+                'Offer Letters': offer_letters_count,
+                'Internships': internships_count,
+                'Projects': projects_count,
+            }
+        }
+        return JsonResponse(response, safe=False)

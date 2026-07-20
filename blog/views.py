@@ -3,14 +3,21 @@ from django.contrib.auth.models import User
 from blog.templatetags import extras_filter
 from django.core.mail import send_mail
 from django_pandas.io import read_frame
-from blog.models import Blog, webData, BlogComment,tag
+from blog.models import Blog, webData, BlogComment, tag
+from django.db import models
 from django.core.paginator import Paginator
-from django.http import  JsonResponse
+from django.http import JsonResponse
 import json
 from rest_framework import serializers
 from django.db.models import Count
 # Create your views here.
-data = webData.objects.first()
+data = None
+
+def get_web_data():
+    global data
+    if data is None:
+        data = webData.objects.first()
+    return data
 
 
 def AllBlogs(request):
@@ -23,15 +30,42 @@ def AllBlogs(request):
     posts = peginator.get_page(page_number)
     if(request.htmx):
         return render(request, 'card2.html',{'posts':posts})
-    return render(request, 'all blogs.html', {'posts': posts, 'data': data, 'index': 'All Blogs'})
+    return render(request, 'all blogs.html', {'posts': posts, 'data': get_web_data(), 'index': 'All Blogs'})
+
+def serialize_blog(request, blog):
+    return {
+        'id': blog.id,
+        'title': blog.title,
+        'slug': blog.slug,
+        'summary': blog.summary,
+        'publish_date': blog.publish_date.isoformat() if blog.publish_date else None,
+        'body': blog.body,
+        'views': blog.views,
+        'publish': blog.publish,
+        'pinned': blog.pinned,
+        'author_id': blog.author_id,
+        'author_name': blog.author.get_full_name() or blog.author.username,
+        'tags': [t.tag for t in blog.tags.all()],
+        'image': request.build_absolute_uri(blog.image.url) if blog.image else None,
+    }
 
 def BlogsApi(request):
-    reponse_data = Blog.objects.filter(publish=True).order_by('-publish_date').all().values()
-    peginator = Paginator(reponse_data,6)
-    page_number = request.GET.get('page',1)
+    search = request.GET.get('search', '').strip()
+    reponse_data = Blog.objects.filter(publish=True).order_by('-pinned', '-publish_date')
+    if search:
+        reponse_data = reponse_data.filter(
+            models.Q(title__icontains=search) | models.Q(summary__icontains=search)
+        )
+    peginator = Paginator(reponse_data, 5)
+    page_number = request.GET.get('page', 1)
     posts = peginator.get_page(page_number)
-    response_data = {'data': list(posts)}
-    return JsonResponse(response_data,safe=False)
+    serialized_posts = [serialize_blog(request, post) for post in posts]
+    response_data = {
+        'data': serialized_posts,
+        'has_next': posts.has_next(),
+        'total_pages': peginator.num_pages,
+    }
+    return JsonResponse(response_data, safe=False)
 
 
 def detail(request, slug):
@@ -48,10 +82,9 @@ def detail(request, slug):
             replyDict[reply.parent.sno].append(reply)
     blogdetails.views = blogdetails.views + 1
     blogdetails.save()
-    return render(request, 'detail.html', {'blog': blogdetails, 'data': data, 'comments': comments, 'replyDict': replyDict, 'moreBlogs': PopularPosts})
+    return render(request, 'detail.html', {'blog': blogdetails, 'data': get_web_data(), 'comments': comments, 'replyDict': replyDict, 'moreBlogs': PopularPosts})
 
 def detailApi(request,slug):
-    blog = Blog.objects.filter(slug=slug).values()
     blogdetails = get_object_or_404(Blog, slug=slug)
     blogdetails.views = blogdetails.views + 1
     blogdetails.save()
@@ -59,7 +92,8 @@ def detailApi(request,slug):
     similar_published_articles = Blog.objects.filter(tags__in=article_tags_ids)\
                                     .exclude(pk=blogdetails.pk)
     similar_articles = similar_published_articles.annotate(same_tags_in_article=Count('tags'))\
-                                .order_by('-same_tags_in_article')[:2].values()
-    data = {'data':list(blog),'related':list(similar_articles)}
+                                .order_by('-same_tags_in_article')[:2]
+    serialized_blog = [serialize_blog(request, blogdetails)]
+    serialized_similar = [serialize_blog(request, article) for article in similar_articles]
+    data = {'data': serialized_blog, 'related': serialized_similar}
     return JsonResponse(data,safe=False)
-
