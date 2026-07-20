@@ -1,1234 +1,1157 @@
 [
-{
-  "model": "auth.user",
-  "pk": 5,
-  "fields": {
-    "password": "pbkdf2_sha256$320000$voUQlHn9lB1PFbzhI86Mjc$ORJk4p+Rk0CkGRed8Z448MdcWNjGVZJCpgNOU2iT/Zo=",
-    "last_login": "2026-07-18T09:59:36.136Z",
-    "is_superuser": true,
-    "username": "sid",
-    "first_name": "sudarshan",
-    "last_name": "kakde",
-    "email": "sudarshankakde1111@gmail.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2021-11-29T01:27:49Z",
-    "groups": [],
-    "user_permissions": [
-      1,
-      2,
-      3,
-      4,
-      9,
-      10,
-      11,
-      12,
-      5,
-      6,
-      7,
-      8,
-      13,
-      14,
-      15,
-      16,
-      25,
-      26,
-      27,
-      28,
-      45,
-      46,
-      47,
-      48,
-      33,
-      34,
-      35,
-      36,
-      57,
-      58,
-      59,
-      60,
-      69,
-      70,
-      71,
-      72,
-      73,
-      74,
-      75,
-      76,
-      49,
-      50,
-      51,
-      52,
-      61,
-      62,
-      63,
-      64,
-      65,
-      66,
-      67,
-      68,
-      37,
-      38,
-      39,
-      40,
-      53,
-      54,
-      55,
-      56,
-      29,
-      30,
-      31,
-      32,
-      41,
-      42,
-      43,
-      44,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24
-    ]
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$voUQlHn9lB1PFbzhI86Mjc$ORJk4p+Rk0CkGRed8Z448MdcWNjGVZJCpgNOU2iT/Zo=",
+      "last_login": "2026-07-18T09:59:36.136Z",
+      "is_superuser": true,
+      "username": "sid",
+      "first_name": "sudarshan",
+      "last_name": "kakde",
+      "email": "sudarshankakde1111@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-11-29T01:27:49Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$CIA4hFQuQUgoHEHBixUJnY$qJrYIY6OFhPPpaoyQTkcH5+sNq64I0UKCJlI2C+wrQk=",
+      "last_login": "2021-12-03T05:52:32.639Z",
+      "is_superuser": false,
+      "username": "Sudarshan",
+      "first_name": "Sudarshan",
+      "last_name": "Kakde",
+      "email": "sudarshankakde5@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-12-03T05:51:59.591Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$RK4Orfp6jQMUKhfdHTrxue$UKP/JWnJpWsqHgH/Fq497QUZPqR5bzrAEHYNg6d92yE=",
+      "last_login": "2021-12-03T07:11:15.083Z",
+      "is_superuser": false,
+      "username": "djmblogs",
+      "first_name": "Dibyajyoti",
+      "last_name": "Mondal",
+      "email": "dibyajyoti.djmblogs@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-12-03T07:10:43.088Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$JFCpohftVdLGJ6LzqMiRvk$oHtuZDyMmNiP3/trKb7n+TYH7doLa8bwOpTFzbCmBio=",
+      "last_login": "2021-12-05T12:15:55.482Z",
+      "is_superuser": false,
+      "username": "Adi",
+      "first_name": "Aditya",
+      "last_name": "Yadav",
+      "email": "ayadav447799@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-12-05T12:15:23.504Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$F82ZDLM97OJ5DciCOvuQAb$vD6T9Kvi0tpK4S5Fgk2Guwhd6W5MUb7gPlMxAxgmtRc=",
+      "last_login": "2022-04-27T09:20:20.234Z",
+      "is_superuser": false,
+      "username": "yash",
+      "first_name": "yash ",
+      "last_name": "maske",
+      "email": "yashmaske9623@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-04-27T09:18:34.739Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$GXWLBR0uWaZ2AnXRK7JKqL$3uo0nFVmFGoImvAfSlBO6K/GuiH+RpU3So34pbTlV9E=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "trektales",
+      "first_name": "Trek",
+      "last_name": "tales",
+      "email": "trektales.com@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-09-10T03:36:34Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "blog.webdata",
+    "pk": 1,
+    "fields": {
+      "site_name": "Sid's Blog",
+      "About_me": "I am a 20-year college student, A programmer \ud83d\udcbb, Cross-platform Application Developer \ud83d\ude35,\r\nand A Web Developer \ud83d\udd78\ufe0f. living in Nagpur, India. I am an Artificial Intelligence Student,\r\ncurrently Studying at J D College Of Engineering Nagpur.",
+      "mine_name": "Sudarshan Kakde",
+      "HomePage_qoute": "Who cares what time you wake up and go to bed? \r\nWhat matters most is what you do with your life in between.",
+      "email": "sudarshankakde1111@gmail.com",
+      "my_image": "DataBase/Images/WebData/WhatsApp_Image_2023-11-19_at_17.22.03_2fff9f88_5yHPMyp_bwttbk",
+      "slider1": "DataBase/Images/WebData/IMG-20210912-WA0018_pnb3kz",
+      "Socail": "https://bento.me/sudarshankakde",
+      "resume_url": null
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 5,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "Css"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 6,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "Ideas"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 7,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "Web Dev"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 8,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "windows"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 9,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "Keyboard"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 10,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "Websites"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 11,
+    "fields": {
+      "created_on": "2022-09-04",
+      "tag": "programing"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 12,
+    "fields": {
+      "created_on": "2022-09-12",
+      "tag": "mind"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 13,
+    "fields": {
+      "created_on": "2023-02-19",
+      "tag": "Roadmap"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 14,
+    "fields": {
+      "created_on": "2023-11-19",
+      "tag": "cross-platform"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 15,
+    "fields": {
+      "created_on": "2023-11-19",
+      "tag": "guide"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 16,
+    "fields": {
+      "created_on": "2023-11-19",
+      "tag": "framework"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 17,
+    "fields": {
+      "created_on": "2023-11-19",
+      "tag": "flutter"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 18,
+    "fields": {
+      "created_on": "2023-12-30",
+      "tag": "Hosting"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 19,
+    "fields": {
+      "created_on": "2024-01-17",
+      "tag": "JavaScript"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 20,
+    "fields": {
+      "created_on": "2024-01-17",
+      "tag": "Frontend"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 21,
+    "fields": {
+      "created_on": "2024-01-17",
+      "tag": "htmx"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 22,
+    "fields": {
+      "created_on": "2024-01-17",
+      "tag": "Asynchronous"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 1,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Tailwind CSS",
+      "logo": "DataBase/Images/Tools/tailwindcss_lttuhc",
+      "publish": true,
+      "type": "framework"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 2,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Github",
+      "logo": "DataBase/Images/Tools/github_ndqzjn",
+      "publish": true,
+      "type": "tool"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 3,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Figma",
+      "logo": "DataBase/Images/Tools/figma_mxgz6a",
+      "publish": true,
+      "type": "tool"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 4,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "JavaScript",
+      "logo": "DataBase/Images/Tools/js_i5kl7z",
+      "publish": true,
+      "type": "language "
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 5,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Rest Api",
+      "logo": "DataBase/Images/Tools/Django_REST_wB0X3dP_ao2o3w",
+      "publish": true,
+      "type": "library"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 6,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Bootstrap",
+      "logo": "DataBase/Images/Tools/bootstrap_oqodje",
+      "publish": false,
+      "type": "framework"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 7,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Canva",
+      "logo": "DataBase/Images/Tools/canva_sneiji",
+      "publish": true,
+      "type": "tool"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 8,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Django",
+      "logo": "DataBase/Images/Tools/django_NcedJR8_sgy44g",
+      "publish": true,
+      "type": "framework"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 9,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Flutter",
+      "logo": "DataBase/Images/Tools/flutter_imxbsv",
+      "publish": true,
+      "type": "framework"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 10,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "React",
+      "logo": "DataBase/Images/Tools/react_ILpjWj0_e8l6on",
+      "publish": true,
+      "type": "library"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 11,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Python",
+      "logo": "DataBase/Images/Tools/python_wremoj",
+      "publish": true,
+      "type": "language "
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 12,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "Postman",
+      "logo": "DataBase/Images/Tools/postman_l4ztxh",
+      "publish": true,
+      "type": "tool"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 13,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "vsCode",
+      "logo": "DataBase/Images/Tools/vscode_iee2rj",
+      "publish": true,
+      "type": "tool"
+    }
+  },
+  {
+    "model": "blog.projecttools",
+    "pk": 14,
+    "fields": {
+      "created_on": "2026-07-20",
+      "toolName": "FileZilla",
+      "logo": "DataBase/Images/Tools/FileZilla_sb9a9a",
+      "publish": true,
+      "type": "tool"
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 1,
+    "fields": {
+      "publish_date": "2021-12-03T10:35:00Z",
+      "image": "DataBase/Images/BlogImages/creative-css3-tutorials_FsJ1vek_cb9gwr",
+      "title": "CSS ideas to spark your Web page",
+      "slug": "css-ideas-to-spark-your-web-page",
+      "summary": "<p>Here are a few of the helpful CSS tricks that will definitely help.</p>",
+      "body": "<h1>CSS ideas to spark your Web page</h1>\r\n<div class=\"contentBox\">\r\n<div>\r\n<h3><strong>Introduction</strong></h3>\r\n<p><strong>C</strong>ascading&nbsp;<strong>S</strong>tyle&nbsp;<strong>S</strong>heets referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable. CSS is not a programming language. It's not a markup language either.&nbsp;<strong>CSS is a style sheet language.</strong>&nbsp;CSS is what you use to style HTML elements selectively. Learning new CSS tricks is one of the best ways to shake up your website design.</p>\r\n<p>Here are a few of the helpful CSS tricks that will definitely help.</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n<div>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>1. Selection in CSS</u></strong></h4>\r\n<p>On the web, we select content for different reasons. Maybe we want to copy a text and quote it somewhere, or maybe copying is just a habit that some users do it make reading easier. Usually, when the user selects any text on the web page, it has a white color with a blue background as blue. Why keep your webpage simple and the same as others. Here is an amazing trick.</p>\r\n<pre class=\"language-css\"><code>p::selection{\r\n          background-color: pink;\r\n          color: rgb(235, 23,41);\r\n}</code></pre>\r\n<p>The above code has a function of displaying red text with the background color pink when selected.</p>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64.png\" alt=\"\" width=\"611\" height=\"156\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>2. Why use more space?</u></strong></h4>\r\n<p>The CSS&nbsp;<strong>overflow-x</strong>&nbsp;property defines what to do when content overflows the content box horizontally (i.e., left and right), such as displaying the content outside of the content box, clipping the content, or displaying a horizontal scroll bar.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code> div { overflow-x: hidden; }</code></pre>\r\n<div class=\"toolbar\">&nbsp;</div>\r\n</div>\r\n<p>In that above line of code, the content is clipped, the overflow content is hidden, and no horizontal scroll bar is displayed. This will display the webpage with no scroll bar horizontally, and hence no space will be wasted.</p>\r\n<p>&nbsp;</p>\r\n<p>Note: Various other parameters are also available with overflow-x.</p>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64_EEh0xZ7.png\" alt=\"\" width=\"616\" height=\"442\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>3. Negation pseudo-class</u></strong></h4>\r\n<p>For selecting an element that doesn&rsquo;t have a certain class and in the case of multiple classes, the&nbsp;<strong>\":not()</strong>\"&nbsp;selector is used.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code>body:not(p){\r\n               color:purple;\r\n}</code></pre>\r\n</div>\r\n<p>The above code will not apply the color purple for the tag &lt;p&gt;.</p>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64_ejcsYOF.png\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>4. Blend Mode</u></strong></h4>\r\n<p>With background-blend mode, we define the blending between the element&rsquo;s background image and its background color.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code>body {\r\n           background-image : url(p1.jpg);\r\n           background-color: purple;\r\n           background-blend-mode :screen;\r\n}</code></pre>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64_PSzNYGJ.png\" alt=\"\" width=\"663\" height=\"386\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>5. Scroll behavior control</u></strong></h4>\r\n<p>The&nbsp;<strong>scroll-behavior</strong>&nbsp;property specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link within a scrollable box.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code>*{\r\n             padding: 0;\r\n             margin: 0;\r\n             scroll-behaviour: smooth;\r\n}</code></pre>\r\n<div class=\"toolbar\">\r\n<div class=\"toolbar-item\">&nbsp;</div>\r\n</div>\r\n</div>\r\n<p>This can be useful when you want to move from down to top just by the click of a button</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
+      "author": 5,
+      "views": 672,
+      "publish": true,
+      "pinned": false,
+      "tags": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 2,
+    "fields": {
+      "publish_date": "2021-12-03T10:50:00Z",
+      "image": "DataBase/Images/BlogImages/download_zgvk4z",
+      "title": "10 Keyboard Shortcuts You Might Not Know!",
+      "slug": "10-keyboard-shortcuts-you-might-not-know",
+      "summary": "<p>In this post I will talk about the keyboard shortcuts, every coder needs to master!</p>",
+      "body": "<h1>10 Keyboard Shortcuts You Might Not Know!</h1>\r\n<div class=\"text-center\">&nbsp;</div>\r\n<div class=\"contentBox\">\r\n<div>\r\n<p>In this post I will talk about the keyboard shortcuts, every coder needs to master!</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n<div>\r\n<div>\r\n<h4>&nbsp;</h4>\r\n<h4>1. Clipboard History</h4>\r\n<h4>Without wasting much time I will start with the first shortcut key which is the clipboard history. You can access your clipboard history by pressing Windows + V key on your keyboard. this opens your clipboard history which can be accessed and navigated using the arrow keys on your keyboard.</h4>\r\n<h4><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short1.gif\" alt=\"\" width=\"600\" height=\"337\" /></h4>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4>2. Windows + arrow keys and dragging a window to right</h4>\r\n<h4>You can open two windows side by side by selecting a window and dragging it to the extreme right side of your monitor. This will give you an option to open two windows side by side.&nbsp;<br />You can also use your Windows + Left, Windows + Up or Windows + Down arrow keys to move this window&nbsp;</h4>\r\n<h4><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short2.gif\" alt=\"\" /></h4>\r\n<h4>3. Windows + 1, 2, 3, 4</h4>\r\n<p>Did you know that you can use Windows + 1, Windows + 2, etc keys to open your first, second, and third windows respectively? Well if not, you need to start integrating this shortcut into your workflow</p>\r\n<p>.<img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short3.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>4. Windows + D to minimize all the opened software&nbsp;</h4>\r\n<p>If you want to minimize all the opened applications in your windows computer, you can do so by pressing Windows + D key on your keyboard. A quick but yet very effective keyboard shortcut you should be using!</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short4.gif\" alt=\"\" /></p>\r\n<h4>5. Control + BackSpace and Control + Delete&nbsp;</h4>\r\n<p>If you wish to delete a word towards the left, you can use Control + BackSpace<br />Similarly, If you wish to delete a word towards the left, you can use Control + Delete key on your keyboard</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short5.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>6. Alt Tab and Windows Tab&nbsp;</h4>\r\n<p>You can use Alt + Tab to navigate through all the opened applications on your windows as shown in the animation below:</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short6.gif\" alt=\"\" /></p>\r\n<h4>7. Shift + End and Shift + Home</h4>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short7.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>8. Windows + P&nbsp;</h4>\r\n<p>Windows + P is used to open the projector preferences on your windows. You can control the monitor layout of your pc. You can choose to either turn on one, two, or duplicate both of your monitors!&nbsp;</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short8.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>9. Windows + L&nbsp;</h4>\r\n<p>This is a very handy shortcut used to lock your pc so that no one can access it without your windows pin/password. You should try to make it a habit to lock your windows computer when you are not around!</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/ezgif.com-gif-maker.gif\" alt=\"\" /></p>\r\n<p>&nbsp;</p>\r\n<h4>10. Bonus: Mouse Wheel &nbsp;</h4>\r\n<p>You can use the Mouse Wheel click to close a tab in Google Chrome and Open a link in a new tab. This saves a lot of time if you are hunting a bug and trying to find the solution to your problem everywhere on the internet!</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short10.gif\" alt=\"\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
+      "author": 5,
+      "views": 388,
+      "publish": true,
+      "pinned": false,
+      "tags": [
+        5,
+        6,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 3,
+    "fields": {
+      "publish_date": "2022-09-05T04:21:59.742Z",
+      "image": "DataBase/Images/BlogImages/BS5-Featured_d8b930",
+      "title": "How to install BlueStacks 5 on Windows 10",
+      "slug": "install-bluestacks5-on-windows-10",
+      "summary": "This article will tell how you can install BlueStacks on your Windows operating system in easy steps",
+      "body": "<h1>How to install BlueStacks 5 on Windows 10 in 5 easy steps</h1>\r\n<div class=\"contentBox\">\r\n<div>\r\n<p>BlueStacks 5 is no less than a beast in the world of Android gaming platforms for PC. Why? Read the points given below, and you&rsquo;ll never ask this question again :</p>\r\n<ul>\r\n<li>It uses 40 % less RAM than other platforms, which will provide you a smooth gaming experience with not being too hard on your PC.</li>\r\n<li>Consumes less CPU while having long sessions.</li>\r\n<li>Comes with 2M+ apps.</li>\r\n<li>40% faster set up than previous versions.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n</div>\r\n<div>\r\n<div>\r\n<p>&nbsp;</p>\r\n<p>This article will tell how you can install BlueStacks 5 on your Windows operating system in 5 easy steps. But, before starting the installation process, make sure that you&rsquo;re PC fulfills the minimum system requirements for BlueStacks 5 :</p>\r\n<p><strong>Operating System:&nbsp;</strong>Windows 7 and above. (Windows 10 recommended)</p>\r\n<p><strong>Minimum Ram:&nbsp;</strong>2GB ( 8 GB or higher is recommended)</p>\r\n<p><strong>Minimum HDD Space:&nbsp;</strong>5GB</p>\r\n<p>Follow the steps given below to download and install BlueStacks on Windows&nbsp; :</p>\r\n<p><strong>Step 1:&nbsp;</strong><a href=\"https://www.bluestacks.com/\" target=\"_blank\" rel=\"noopener\">Click here</a>, and you will be redirected to the official download page of BlueStacks. Download the latest version of BlueStacks. At the time of writing this article, BlueStacks 5 &nbsp;is the latest version, so I will be downloading the BlueStacks 5.</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/install-bluestacks5-on-windows-10/Blue_gif1.gif\" width=\"825\" height=\"464\" /></p>\r\n<p><strong>Step 2:&nbsp;</strong>As soon as the download completes, double click on the installation file and start the installation process.</p>\r\n<p><strong>Step 3:&nbsp;&nbsp;</strong>After completing the installation process, you will need to sign in with your Google play store account. On opening the BlueStacks, you will see a Google play store icon. Click on it to proceed further.</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/install-bluestacks5-on-windows-10/blue_gif2.gif\" width=\"825\" height=\"464\" /></p>\r\n<p><strong>Step 4:&nbsp;</strong>Enter your user id and password, and then click on the Next button.</p>\r\n<p><strong>Step 5:&nbsp;</strong>Agree with the terms &amp; conditions of the Google play store as shown in the below animation.</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/install-bluestacks5-on-windows-10/blue_gif3.gif\" width=\"825\" height=\"464\" /></p>\r\n<p>That&rsquo;s all! With this, you&rsquo;ve successfully installed the BlueStacks 5 on your Windows PC. Now, you can easily download any application from the play store and use it on your Windows computer.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
+      "author": 5,
+      "views": 972,
+      "publish": true,
+      "pinned": false,
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 4,
+    "fields": {
+      "publish_date": "2022-09-05T04:15:51.494Z",
+      "image": "DataBase/Images/BlogImages/tendencias-websites_yev4vi",
+      "title": "Top Sites Web dev should know",
+      "slug": "top-sites-web-dev-should-know",
+      "summary": "<strong>Here are some of the most Useful websites you must know.</strong>",
+      "body": "<h4>Today we are going to see some most useful websites that can make your work easyer.</h4>\r\n<hr />\r\n<h3>1.DevDocs(<a title=\"devdocs.io\" href=\"https://devdocs.io\">devdocs.io</a>)</h3>\r\n<p style=\"text-align: left;\">DevDocs combines multiple API documentations in a fast, organized, and searchable interface.</p>\r\n<p style=\"text-align: left;\">also&nbsp;DevDocs works&nbsp;<a href=\"https://devdocs.io/offline\">offline</a>, on mobile, and can be installed on&nbsp;<a href=\"https://chrome.google.com/webstore/detail/devdocs/mnfehgbmkapmjnhcnbodoamcioleeooe\">Chrome</a>. and it is free and <a href=\"https://github.com/freeCodeCamp/devdocs\">open source</a>.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/yxbljo96\" alt=\"\" width=\"511\" height=\"322\" /><!-- pagebreak --></p>\r\n<hr />\r\n<p><img src=\"https://drive.google.com/file/d/1ba3gssIeGG1lmRgrIK4c9MF8jWthWHrj/view?usp=sharing\" alt=\"\" /></p>\r\n<h3>2.Meta Tags(<a href=\"https://metatags.io\">metatags.io</a>)</h3>\r\n<p style=\"text-align: left;\">With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</p>\r\n<p style=\"text-align: left;\">Meta Tags is a tool to debug and generate meta tag code for any website. With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/yxfkmd6e\" alt=\"\" width=\"517\" height=\"269\" /><!-- pagebreak --></p>\r\n<hr />\r\n<p>&nbsp;</p>\r\n<h3 style=\"text-align: justify;\">3.Over Api(<a href=\"https://overapi.com\">overapi.com</a>)</h3>\r\n<p style=\"text-align: left;\">Collections of All Cheat Sheets. Including all major use programing languages&nbsp;</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://i.pinimg.com/originals/bf/49/bb/bf49bb57e598e99e6f93b9c8ec1cf357.jpg\" width=\"559\" height=\"408\" /><!-- pagebreak --></p>\r\n<hr />\r\n<h3>4.Code Beautify(<a href=\"https://codebeautify.org\">codebeautify.org</a>)</h3>\r\n<p>CodeBeautify is an online code beautifier that allows you to beautify your source code.</p>\r\n<p>CodeBeautify also provides lots of tools that help to save developer's time.</p>\r\n<p>Use search to find more tools.</p>\r\n<h3><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/y6yyzvs5\" alt=\"\" width=\"335\" height=\"242\" /><!-- pagebreak --></h3>\r\n<hr />\r\n<p>&nbsp;</p>\r\n<h3>5.URL Shotner(<a title=\"http://sudarshankakde.pythonanywhere.com\" href=\"http://sudarshankakde.pythonanywhere.com\">urlshotner</a>)</h3>\r\n<p style=\"text-align: left;\">URL Shotner is tool for web devlopers , while doing stuf like copying image from google and pasting it in your img tag you notice that many time url provided by google are too big so here Url shotner plays main role it provide you short from of that big long url so you can code cleary without any mess.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/y2884mht\" alt=\"\" width=\"576\" height=\"432\" /></p>\r\n<hr />\r\n<p>&nbsp;</p>\r\n<h3 style=\"text-align: center;\">That is it for this blog.!!!!\ud83d\ude00&nbsp;</h3>\r\n<p style=\"text-align: center;\"><em><strong>please let me know if any of this website helps you in work and find it helpfull.\ud83d\ude43</strong></em></p>",
+      "author": 5,
+      "views": 860,
+      "publish": true,
+      "pinned": false,
+      "tags": [
+        7,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 8,
+    "fields": {
+      "publish_date": "2023-02-19T01:46:14.124Z",
+      "image": "DataBase/Images/BlogImages/python-developer_q8ipgt",
+      "title": "Roadmap to Becoming an Advanced Python Developer: Key Areas to Focus On",
+      "slug": "roadmap-to-becoming-an-advanced-python-developer-k",
+      "summary": "roadmap to becoming an advanced Python developer, covering four key areas: mastering the fundamentals, building scalable web applications, optimizing performance, and building complex machine learning models.",
+      "body": "<div class=\"w-full border-b border-black/10 dark:border-gray-900/50 text-gray-800 dark:text-gray-100 group bg-gray-50 dark:bg-[#444654]\">\r\n<div class=\"text-base gap-4 md:gap-6 m-auto md:max-w-2xl lg:max-w-2xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0\">\r\n<div class=\"relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]\">\r\n<div class=\"flex flex-grow flex-col gap-3\">\r\n<div class=\"min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p>Python is a high-level, general-purpose programming language used for a wide range of applications, including web development, data science, machine learning, artificial intelligence, automation, and more. Whether you're a beginner or an experienced developer, it's important to have a roadmap for learning Python so that you can make the most of your learning journey. In this blog, we'll outline a Python roadmap for different skill levels and purposes.</p>\r\n<h2>Beginner Python Roadmap</h2>\r\n<p>If you're new to programming or new to Python, here's a suggested roadmap to get started:</p>\r\n<h3>1. Learn the basics of Python</h3>\r\n<p>Start by learning the basics of Python, including syntax, data types, variables, control structures, functions, and input/output. You can find plenty of free online tutorials and courses that cover the basics of Python. Some popular options include:</p>\r\n<ul>\r\n<li><a href=\"https://www.py4e.com/\" target=\"_new\">Python for Everybody</a> by Dr. Chuck Severance</li>\r\n<li><a href=\"https://learncodethehardway.org/python/\" target=\"_new\">Learn Python the Hard Way</a> by Zed Shaw</li>\r\n<li><a href=\"https://www.codecademy.com/learn/learn-python\" target=\"_new\">Codecademy's Python Course</a></li>\r\n</ul>\r\n<h3>2. Practice with exercises and projects</h3>\r\n<p>Once you have a solid foundation in the basics, start practicing with exercises and small projects. There are several websites that provide Python exercises and projects for beginners, such as:</p>\r\n<ul>\r\n<li><a href=\"https://projecteuler.net/\" target=\"_new\">Project Euler</a></li>\r\n<li><a href=\"https://www.hackerrank.com/domains/python\" target=\"_new\">HackerRank</a></li>\r\n<li><a href=\"https://codingbat.com/python\" target=\"_new\">CodingBat</a></li>\r\n</ul>\r\n<h3>3. Learn how to work with data</h3>\r\n<p>Data is at the heart of many Python applications, so it's important to learn how to work with data. Start with the basics of data structures like lists, dictionaries, and sets. Then, learn how to manipulate data using libraries like NumPy and Pandas. Finally, learn how to visualize data using libraries like Matplotlib and Seaborn.</p>\r\n<h3>4. Learn how to build web applications</h3>\r\n<p>Python is a popular choice for building web applications. Learn how to use a web framework like Flask or Django to build web applications. You'll also need to learn HTML, CSS, and JavaScript to build the front end of the application.</p>\r\n<h2>Intermediate Python Roadmap</h2>\r\n<p>If you're comfortable with the basics of Python and want to take your skills to the next level, here's a suggested roadmap:</p>\r\n<h3>1. Learn object-oriented programming</h3>\r\n<p>Python is an object-oriented programming language, so it's important to learn how to use objects, classes, and inheritance effectively. Some resources for learning object-oriented programming in Python include:</p>\r\n<ul>\r\n<li><a href=\"https://www.tutorialsteacher.com/python/python-object-oriented-programming\" target=\"_new\">Python Object-Oriented Programming (OOP) - Tutorial</a></li>\r\n<li><a href=\"https://realpython.com/courses/object-oriented-programming-python/\" target=\"_new\">Object-Oriented Programming in Python</a></li>\r\n</ul>\r\n<h3>2. Learn how to work with databases</h3>\r\n<p>Many Python applications require working with databases. Learn how to work with a database like MySQL or PostgreSQL using libraries like SQLAlchemy or Psycopg2.</p>\r\n<h3>3. Learn how to work with APIs</h3>\r\n<p>Many web applications require working with APIs to retrieve or manipulate data. Learn how to work with REST APIs using libraries like Requests.</p>\r\n<h3>4. Learn how to build machine learning models</h3>\r\n<p>Python is a popular language for building machine learning models. Learn how to use libraries like scikit-learn and TensorFlow to build and train machine learning models.</p>\r\n<h2>Advanced Python Roadmap</h2>\r\n<p>If you're an experienced Python developer and want to take your skills to the next level, here's a suggested roadmap:</p>\r\n<h3>1. Learn how to optimize Python code</h3>\r\n<p>As you build more complex applications, you'll need to optimize your code to make it run</p>\r\n<p>faster and more efficiently. Learn about profiling, algorithm analysis, and other techniques for optimizing your code. Some resources for optimizing Python code include:</p>\r\n<ul>\r\n<li><a href=\"https://www.oreilly.com/library/view/high-performance-python/9781449361747/\" target=\"_new\">High-Performance Python</a> by Micha Gorelick and Ian Ozsvald</li>\r\n<li><a href=\"https://stackimpact.com/blog/python-performance-tips-tricks/\" target=\"_new\">Python Performance Tips &amp; Tricks</a> by StackImpact</li>\r\n</ul>\r\n<h3>2. Learn how to build scalable web applications</h3>\r\n<p>As your web application grows, you'll need to learn how to build scalable web applications. Learn about techniques like load balancing, caching, and database sharding. Some resources for building scalable web applications with Python include:</p>\r\n<ul>\r\n<li><a href=\"https://www.udacity.com/course/scalable-web-applications-using-python--ud858\" target=\"_new\">Scalable Web Architecture and Distributed Systems</a> by Udacity</li>\r\n<li><a href=\"https://www.packtpub.com/product/building-scalable-web-applications-with-python-and-flask/9781788622878\" target=\"_new\">Building Scalable Web Applications with Python and Flask</a> by M.G. Rouge</li>\r\n</ul>\r\n<h3>3. Learn how to build complex machine-learning models</h3>\r\n<p>If you want to specialize in machine learning, you'll need to learn how to build complex machine-learning models. Learn about deep learning, natural language processing, and other advanced machine learning techniques. Some resources for building complex machine-learning models with Python include:</p>\r\n<ul>\r\n<li><a href=\"https://www.manning.com/books/deep-learning-with-python\" target=\"_new\">Deep Learning with Python</a> by Francois Chollet</li>\r\n<li><a href=\"https://www.nltk.org/book/\" target=\"_new\">Natural Language Processing with Python</a> by Steven Bird, Ewan Klein, and Edward Loper</li>\r\n</ul>\r\n<h3>4. Contribute to open-source projects</h3>\r\n<p>One of the best ways to become an advanced Python developer is to contribute to open-source projects. By contributing to open-source projects, you'll learn from experienced developers, build your portfolio, and give back to the community. Some resources for finding open-source Python projects to contribute to include:</p>\r\n<ul>\r\n<li><a href=\"https://openhatch.org/\" target=\"_new\">OpenHatch</a></li>\r\n<li><a href=\"https://github.com/search?q=python&amp;type=Repositories&amp;ref=advsearch&amp;l=Python&amp;l=\" target=\"_new\">GitHub</a></li>\r\n</ul>\r\n<h2>Conclusion</h2>\r\n<p>Python is a versatile programming language with a wide range of applications. Whether you're a beginner or an experienced developer, there's always something new to learn in Python. By following a roadmap, you can ensure that you're learning the skills you need to achieve your goals. Remember, the most important thing is to keep practicing and building new projects. Good luck on your Python learning journey!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+      "author": 5,
+      "views": 1092,
+      "publish": true,
+      "pinned": false,
+      "tags": [
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 10,
+    "fields": {
+      "publish_date": "2023-11-19T11:13:47.285Z",
+      "image": "DataBase/Images/BlogImages/download_cOW3mJl_s8eowg",
+      "title": "A Beginner's Guide to Getting Started with Flutter  to Getting Started with Flutter",
+      "slug": "a-beginners-guide-to-getting-started-with-flutter",
+      "summary": "Dive into Flutter development with a beginner's guide. From setup to creating your first project, explore essential concepts, widgets, and layouts. Ideal for both new coders and experienced developers seeking cross-platform proficiency. Happy coding!",
+      "body": "<h2>Introduction:</h2>\r\n<p>Flutter, developed by Google, has emerged as a popular open-source framework for building cross-platform applications. Whether you're a seasoned developer or just starting your programming journey, Flutter provides an excellent platform for creating beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. In this blog, we'll guide you through the essential steps to get started with Flutter and embark on your journey of app development.</p>\r\n<h4>Step 1: Setting Up Your Development Environment</h4>\r\n<p>Before diving into Flutter development, ensure you have a robust development environment. Flutter supports various operating systems, including Windows, macOS, and Linux. Follow these steps to set up Flutter on your machine:</p>\r\n<p>- Download the Flutter SDK from the official Flutter website (<a title=\"Flutter.dev\" href=\"https://flutter.dev/docs/get-started/install\" target=\"_blank\" rel=\"noopener\">https://flutter.dev/docs/get-started/install</a>).<br />- Extract the downloaded zip file and add the Flutter bin directory to your system's PATH variable.<br />- Install a code editor like Visual Studio Code or Android Studio with the Flutter and Dart plugins.</p>\r\n<h4>Step 2: Checking Flutter Installation</h4>\r\n<p>Once you've set up Flutter, open a terminal and run the following command:</p>\r\n<p><br /><code>flutter doctor</code><br /><br /></p>\r\n<p>This command checks your system for any dependencies needed for Flutter development. Install any missing dependencies as per the instructions provided.</p>\r\n<h4>Step 3: Creating Your First Flutter Project</h4>\r\n<p>Now that your environment is set up, it's time to create your first Flutter project. In the terminal, run:</p>\r\n<p><br /><code>flutter create my_first_flutter_app</code><br /><br /></p>\r\n<p>This command creates a new Flutter project with the name \"my_first_flutter_app.\" You can replace this with your preferred project name.</p>\r\n<h4>Step 4: Running Your Flutter App</h4>\r\n<p>Navigate to your project directory using the `cd` command:</p>\r\n<p><br /><code>cd my_first_flutter_app</code><br /><br /></p>\r\n<p>Run your app using the following command:</p>\r\n<p><br /><code>flutter run</code><br /><br /></p>\r\n<p>This will launch your app on the default emulator or connected device. You can see your changes live as you save your code.</p>\r\n<h4>Step 5: Understanding the Flutter Project Structure</h4>\r\n<p>As a beginner, it's essential to familiarize yourself with the Flutter project structure. Key directories include:</p>\r\n<p>-&nbsp; <strong>lib</strong>: Contains the Dart code for your application.<br />-&nbsp; <strong>test</strong>: Contains unit and widget tests.<br />- <strong>android and ios</strong>: Platform-specific code for Android and iOS.</p>\r\n<h4>Step 6: Learning Dart Basics</h4>\r\n<p>Flutter uses the Dart programming language. Familiarize yourself with Dart's syntax and features. Dart has excellent documentation on its official website (<a title=\"Dart.dev\" href=\"https://dart.dev/guides\" target=\"_blank\" rel=\"noopener\">https://dart.dev/guides</a>).</p>\r\n<h4>Step 7: Exploring Flutter Widgets</h4>\r\n<p>Widgets are the building blocks of Flutter applications. Learn about basic widgets like `<strong>Container</strong>`, `<strong>Row</strong>`, `<strong>Column</strong>`, and more. Refer to the Flutter documentation for a comprehensive list of widgets and their usage (<a title=\"Flutter Widgets\" href=\"https://docs.flutter.dev/widgets\" target=\"_blank\" rel=\"noopener\">https://docs.flutter.dev/widgets</a>).</p>\r\n<h4>Step 8: Embracing Flutter Layouts</h4>\r\n<p>Understanding how to create responsive and adaptive layouts is crucial. Flutter offers a flexible layout system, including widgets like `<strong>Expanded</strong>`, `<strong>ListView</strong>`, and `<strong>GridView</strong>`.</p>\r\n<h4>Step 9: Interactivity and State Management</h4>\r\n<p>Explore Flutter's approach to handling user input and managing state. Learn about `<strong>StatefulWidget</strong>` and `<strong>StatelessWidget</strong>` and how to handle user interactions.</p>\r\n<h4>Conclusion:</h4>\r\n<p>Congratulations! You've taken the first steps in your Flutter journey. This guide provides a foundation for your Flutter development, but remember that practice and exploration are key. As you progress, delve deeper into advanced topics such as state management, navigation, and integrating with APIs. Flutter's vibrant community and extensive documentation will be valuable resources on your path to becoming a proficient Flutter developer. Happy coding!</p>",
+      "author": 5,
+      "views": 2965,
+      "publish": true,
+      "pinned": false,
+      "tags": [
+        11,
+        14,
+        15,
+        16,
+        17
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 11,
+    "fields": {
+      "publish_date": "2023-12-30T05:25:55.903Z",
+      "image": "DataBase/Images/BlogImages/1_6De3_rvIoAjZ6D5WBinW_Q_v0yxy6",
+      "title": "Hostinger VPS: A Cautionary Tale of Suspensions and Frustrations",
+      "slug": "hostinger-vps-a-cautionary-tale-of-suspensions-and",
+      "summary": "Hostinger, a popular choice for hosting, fell short in my experience with their VPS. Facing frequent suspensions for alleged spamming, the lack of clear explanations and short notice periods created frustration.",
+      "body": "<h3><strong>Navigating VPS Challenges with Hostinger: A Personal Odyssey</strong></h3>\r\n<p>Setting out on my online venture, I opted for Hostinger's one-year VPS plan, expecting a seamless experience. However, my journey took an unexpected turn, and what ensued was a series of frustrations that I feel compelled to share as a cautionary tale for potential Hostinger users.</p>\r\n<p>&nbsp;</p>\r\n<h3><strong>A Promising Start, A Swift Turn</strong></h3>\r\n<p>The initial excitement of diving into Hostinger's one-year VPS plan was soon clouded by unexpected suspensions, just two months into my hosting endeavor. The culprit? Alleged spamming on the network, an accusation vehemently denied on my part. Hostinger relented after I presented my case, but this turned out to be just the tip of the iceberg.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>The Relentless Cycle Unveiled</strong></h3>\r\n<p>Like clockwork, another suspension hit shortly after the first incident, once again citing spam-related concerns. Despite successfully defending my innocence, the relief was short-lived. The third suspension struck with a mere one-hour notice to back up my data before the ominous threat of account cancellation loomed large.</p>\r\n<h2>&nbsp;</h2>\r\n<h3><strong>A Battle for Hosting Stability</strong></h3>\r\n<p>Desperation set in as I fought to salvage my hosting experience. Negotiations spared my account temporarily, but the respite was short-lived. Just 15 days later, another suspension blindsided me, prompting serious doubts about the reliability and fairness of Hostinger's services.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>The Frustration of the Unexplained</strong></h3>\r\n<p>Adding to the frustration was Hostinger's steadfast reluctance to shed light on the root cause of these suspensions. Despite taking every precaution on my end, I found myself in the dark, desperately trying to address an elusive problem. The lack of transparency from Hostinger intensified my sense of frustration.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>A Cautionary Note to Potential Users</strong></h3>\r\n<p>For those contemplating Hostinger for their VPS needs, I feel compelled to offer a word of caution based on my tumultuous experience. Frequent suspensions, a lack of clarity, and an unsettling sense of uncertainty were the hallmarks of my journey. Unless you're ready to risk both your VPS data and your investment, I strongly recommend exploring alternative hosting options with a more transparent and reliable track record.</p>\r\n<p>&nbsp;</p>\r\n<p>In the ever-evolving landscape of online hosting, transparency and reliability are paramount. My hope is that by sharing my story, others can make informed decisions about their hosting providers, steering clear of the challenges I faced with Hostinger's VPS service. Choose wisely, and may your online journey be smoother than mine.</p>",
+      "author": 5,
+      "views": 843,
+      "publish": false,
+      "pinned": false,
+      "tags": [
+        7,
+        18
+      ]
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 12,
+    "fields": {
+      "publish_date": "2024-01-17T13:38:41.659Z",
+      "image": "DataBase/Images/BlogImages/social-3_ja6mjh",
+      "title": "Introduction to Htmx",
+      "slug": "introduction-to-htmx",
+      "summary": "Explore the dynamic capabilities of htmx, a lightweight JavaScript library. From booting to advanced features like caching, security, validation, and debugging, master htmx for seamless web development.",
+      "body": "<div class=\"\">\r\n<h2>Introduction to htmx</h2>\r\n<p><br />htmx is a JavaScript library that facilitates dynamic web development by allowing for real-time updates without requiring a complete page reload. It acts as a bridge between the server and client, making it easier to build interactive and responsive web applications.</p>\r\n<h4>How htmx Works</h4>\r\n<p><br />htmx achieves its functionality by leveraging HTML attributes. Developers annotate HTML elements with htmx-specific attributes to define behaviors such as making an asynchronous request to the server, updating content dynamically, or replacing entire sections of the page.</p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>\r\n<p><strong>Triggering Server-Side Actions:</strong> htmx enables developers to trigger server-side actions directly from the client by adding attributes like <code>hx-get</code>, <code>hx-post</code>, or <code>hx-put</code> to HTML elements. These attributes specify the type of HTTP request to be made when the associated event occurs.</p>\r\n</li>\r\n<li>\r\n<p><strong>Dynamic Content Loading:</strong> Through attributes like <code>hx-get</code> or <code>hx-trigger</code>, htmx facilitates the loading of dynamic content from the server without refreshing the entire page. This allows for smoother user experiences and faster response times.</p>\r\n</li>\r\n<li>\r\n<p><strong>Partial Page Updates:</strong> With <code>hx-swap</code> and <code>hx-target</code> attributes, htmx can selectively replace or update parts of the HTML document, reducing the need for full-page reloads and improving the overall performance of the application.</p>\r\n</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h4>Use Cases of htmx</h4>\r\n<ol>\r\n<li>\r\n<p><strong>Form Submissions:</strong> htmx simplifies form submissions by handling them asynchronously, providing instant feedback to users without reloading the entire page.</p>\r\n</li>\r\n<li>\r\n<p><strong>Real-Time Updates:</strong> Applications requiring real-time data, such as chat applications or collaborative editing tools, can benefit from htmx to fetch and display updates seamlessly.</p>\r\n</li>\r\n<li>\r\n<p><strong>Pagination and Infinite Scrolling:</strong> Implementing pagination or infinite scrolling becomes more straightforward with htmx, as it enables loading additional content without reloading the entire page.</p>\r\n</li>\r\n<li>\r\n<p><strong>Modal Dialogs and Popovers:</strong> Enhance user interactions by using htmx to load and display modal dialogs or popovers without navigating away from the current page.</p>\r\n</li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n<h4>How to Use htmx</h4>\r\n<p>To integrate htmx into your project, follow these basic steps:</p>\r\n<ol>\r\n<li>\r\n<p><strong>Include htmx in your project:</strong> You can either download the library or use a CDN. Include it in your HTML file with a script tag.</p>\r\n</li>\r\n<li>\r\n<p><strong>Annotate HTML elements:</strong> Add htmx attributes to HTML elements to define the desired behavior. For example, use <code>hx-get</code> to fetch content asynchronously.</p>\r\n</li>\r\n<li>\r\n<p><strong>Configure server-side responses:</strong> Ensure your server responds to htmx requests appropriately. You can use various backend frameworks or vanilla server-side code to handle these requests.</p>\r\n</li>\r\n<li>\r\n<p><strong>Enhance and refine:</strong> Experiment with additional htmx features and attributes to further enhance your application's interactivity and responsiveness.</p>\r\n</li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n<h3>simple Example&nbsp;</h3>\r\n<p>Below is a simple example of how you can implement htmx in a basic HTML file. This example demonstrates a scenario where clicking a button triggers an asynchronous request to fetch and display dynamic content from the server without a full page reload.</p>\r\n<pre class=\"language-markup\"><code>&lt;!DOCTYPE html&gt;\r\n&lt;html lang=\"en\"&gt;\r\n&lt;head&gt;\r\n    &lt;meta charset=\"UTF-8\"&gt;\r\n    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;\r\n    &lt;title&gt;htmx Example&lt;/title&gt;\r\n    &lt;!-- Include htmx library from CDN --&gt;\r\n    &lt;script src=\"https://unpkg.com/htmx.org@1.7.2/dist/htmx.js\"&gt;&lt;/script&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n\r\n&lt;!-- Trigger button with htmx attributes --&gt;\r\n&lt;button hx-get=\"/api/data\" hx-trigger=\"click\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n\r\n&lt;!-- Display area for fetched data --&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n</code></pre>\r\n<p>In this example:</p>\r\n<ul>\r\n<li>\r\n<p>We include the htmx library using a script tag that fetches it from the CDN.</p>\r\n</li>\r\n<li>\r\n<p>The button is annotated with htmx attributes:</p>\r\n<ul>\r\n<li><code>hx-get</code>: Specifies the URL to send an HTTP GET request to (\"/api/data\" in this case).</li>\r\n<li><code>hx-trigger</code>: Defines the event that triggers the request (in this case, a click event).</li>\r\n<li><code>hx-target</code>: Specifies the HTML element where the response will be inserted or updated (here, an element with the ID \"result\").</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p>The <code>#result</code> div will be updated with the content fetched from the server when the button is clicked.</p>\r\n</li>\r\n</ul>\r\n<p>This is a minimal example, and in a real-world scenario, you would have a server-side endpoint (\"/api/data\") that handles the htmx request and returns the appropriate data. The server-side implementation would depend on your backend technology (Node.js, Python, PHP, etc.). The key is to ensure that your server responds to htmx requests and provides the necessary data to update the client-side content dynamically.</p>\r\n<h3>Htmx Request and Response</h3>\r\n<p>Let's go through some key htmx attributes and illustrate their usage with code snippets.</p>\r\n<ol>\r\n<li>\r\n<p><strong>hx-get:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the URL for an HTTP GET request when a particular event occurs.</li>\r\n<li><strong>Example:</strong>\r\n<div>\r\n<div>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;</code></pre>\r\n</div>\r\n</div>\r\nIn this example, clicking the button triggers an asynchronous GET request to \"/api/data\", and the response is inserted into the HTML element with the ID \"result.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-post:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Similar to <code>hx-get</code>, but for HTTP POST requests.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;form hx-post=\"/api/save\" hx-target=\"#result\"&gt;\r\n    &lt;!-- Form fields go here --&gt;\r\n    &lt;button type=\"submit\"&gt;Save Data&lt;/button&gt;\r\n&lt;/form&gt;\r\n</code></pre>\r\nThis form, when submitted, triggers a POST request to \"/api/save,\" and the response is inserted into the element with the ID \"result.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-trigger:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the event that triggers the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-trigger=\"click\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;</code></pre>\r\nThe GET request is triggered when the button is clicked. Other values for <code>hx-trigger</code> include \"mouseover,\" \"submit,\" etc.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-target:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the HTML element where the response will be inserted or updated.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nThe content fetched from \"/api/data\" will be inserted into the HTML element with the ID \"result.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-swap:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Defines how the response should be inserted or updated. Options include \"innerHTML,\" \"outerHTML,\" \"beforebegin,\" etc.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;div hx-get=\"/api/data\" hx-swap=\"outerHTML\" hx-target=\"#result\"&gt;Load Data&lt;/div&gt;\r\n&lt;div id=\"result\"&gt;&lt;!-- Response will replace this entire div --&gt;&lt;/div&gt;\r\n</code></pre>\r\n</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-confirm:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Asks for confirmation before performing the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/delete\" hx-confirm=\"Are you sure?\" hx-target=\"#result\"&gt;Delete&lt;/button&gt;</code></pre>\r\nWhen the button is clicked, a confirmation prompt appears, and if confirmed, a GET request is made to \"/api/delete.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-params:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Allows sending additional parameters with the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-params=\"param1=abc&amp;param2=123\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;</code></pre>\r\nAdditional parameters \"param1\" and \"param2\" are sent with the GET request.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Animation with htmx:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-indicator:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specify the element to show as an indicator during the htmx request.</li>\r\n<li><strong>Example:</strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-indicator=\"#loading\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"loading\" style=\"display: none;\"&gt;Loading...&lt;/div&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nIn this example, when the button is clicked, the content of \"#loading\" is displayed as an indicator during the request, and the fetched data replaces the content in \"#result\" when the request is complete.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-indicator-style:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Defines the style for the indicator during the htmx request.</li>\r\n<li><strong>Example:</strong>\r\n<div>\r\n<div class=\"\">\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-indicator=\"#loading\" hx-indicator-style=\"color: red;\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"loading\" style=\"display: none; color: red;\"&gt;Loading...&lt;/div&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nThe indicator can have a specific style, such as text color, during the request.</div>\r\n<div>&nbsp;</div>\r\n</div>\r\n</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Controlling Request Status:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-set:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Sets a variable with a value when the htmx request starts or completes.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-set=\"loading=true\" hx-set-after=\"loading=false\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nIn this example, the variable \"loading\" is set to true before the request starts and set to false after the request is complete. You can use this variable for custom logic or styling.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-trigger-on:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies an event to trigger when the htmx request completes successfully.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-trigger-on=\"customEvent\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\" hx-on=\"customEvent: alert('Request Completed!');\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nAfter a successful request, the custom event \"customEvent\" is triggered, and you can associate actions with it.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-error:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the action to take if an error occurs during the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-error=\"alert('Error occurred!')\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nIf there's an error in the request, an alert with the message \"Error occurred!\" is displayed.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<div>\r\n<div>\r\n<h3>Caching in htmx:</h3>\r\n<ol>\r\n<li><strong>hx-cache:</strong>\r\n<ul>\r\n<li><strong>Description:</strong> Enables caching for htmx requests.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-cache=\"true\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nWhen <code>hx-cache</code> is set to \"true,\" htmx caches the response, and subsequent requests to the same URL will use the cached data. This can be useful to improve performance and reduce server load.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Security Considerations in htmx:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-headers:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Allows sending custom headers with htmx requests for security purposes.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-headers=\"Authorization: Bearer YourToken\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nYou can include headers like authorization tokens to secure htmx requests.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-secure:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Enables security features, preventing cross-site request forgery (CSRF) attacks.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-post=\"/api/save\" hx-secure=\"true\" hx-target=\"#result\"&gt;Save Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nSetting <code>hx-secure</code> to \"true\" adds CSRF protection to POST requests.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Validation in htmx:</h3>\r\n<ol>\r\n<li><strong>hx-vals:</strong>\r\n<ul>\r\n<li><strong>Description:</strong> Allows specifying validation targets that need to be validated before submitting a form.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;form hx-post=\"/api/save\" hx-target=\"#result\" hx-vals=\"#formInput\"&gt;\r\n    &lt;input type=\"text\" id=\"formInput\" required&gt;\r\n    &lt;button type=\"submit\"&gt;Save Data&lt;/button&gt;\r\n&lt;/form&gt;\r\n</code></pre>\r\nThe form will only be submitted if the input with ID \"formInput\" is valid.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Debugging in htmx:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-log:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Enables logging htmx events to the browser console for debugging purposes.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-log=\"true\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nWhen <code>hx-log</code> is set to \"true,\" htmx events and information will be logged to the browser console, aiding in debugging.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-debug:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Enables the htmx debug mode, providing detailed information about requests in the browser console.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-debug=\"true\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nEnabling <code>hx-debug</code> provides more extensive debugging information in the console.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n</div>\r\n</div>\r\n</div>",
+      "author": 5,
+      "views": 1526,
+      "publish": false,
+      "pinned": false,
+      "tags": [
+        5,
+        7,
+        10,
+        15,
+        19,
+        20,
+        21,
+        22
+      ]
+    }
+  },
+  {
+    "model": "blog.subscribers",
+    "pk": 38,
+    "fields": {
+      "email": "sudarshankakde1111@gmail.com",
+      "date": "2023-11-19T12:24:40.315Z"
+    }
+  },
+  {
+    "model": "blog.subscribers",
+    "pk": 39,
+    "fields": {
+      "email": "sid@gmail.com",
+      "date": "2023-12-19T14:20:27.601Z"
+    }
+  },
+  {
+    "model": "blog.subscribers",
+    "pk": 40,
+    "fields": {
+      "email": "asdf@gmail.com",
+      "date": "2023-12-19T23:27:36.102Z"
+    }
+  },
+  {
+    "model": "blog.subscribers",
+    "pk": 41,
+    "fields": {
+      "email": "af@adf.com",
+      "date": "2023-12-19T23:30:28.692Z"
+    }
+  },
+  {
+    "model": "blog.subscribers",
+    "pk": 42,
+    "fields": {
+      "email": "dad@fadf.com",
+      "date": "2023-12-19T23:32:21.636Z"
+    }
+  },
+  {
+    "model": "blog.mailmessage",
+    "pk": 5,
+    "fields": {
+      "title": null,
+      "message": "Update From Sids Blog"
+    }
+  },
+  {
+    "model": "blog.mailmessage",
+    "pk": 6,
+    "fields": {
+      "title": null,
+      "message": "Test Mail"
+    }
+  },
+  {
+    "model": "blog.mailmessage",
+    "pk": 7,
+    "fields": {
+      "title": null,
+      "message": "Update From Sids Blog"
+    }
+  },
+  {
+    "model": "blog.mailmessage",
+    "pk": 8,
+    "fields": {
+      "title": "sdfsdaf",
+      "message": "sadfadssfs"
+    }
+  },
+  {
+    "model": "blog.contactme",
+    "pk": 66,
+    "fields": {
+      "Full_Name": "Michaelhix",
+      "Email_Id": "jackpgbr2@shopmp3.org",
+      "Message_To_Me": "Sur le site vous trouvez des options interactives et une variete de salons de videochat. Seulement ici vous pourrez  profiter de conversations video enrichissantes. Inscrivez-vous sur la plateforme Bed and Bamboo et commencez votre experience Coco chat deja sans delai\u00a0!  <a href=https://bedandbamboo.fr/>Coco chat</a>, <a href=https://bedandbamboo.fr/en/>Chatrandom</a>, <a href=https://bedandbamboo.fr/de/>Chatrandom</a>, <a href=https://bedandbamboo.fr/nl/>Chatrandom</a>  <a href=https://bedandbamboo.fr/nettchat/>nettchat</a>, <a href=https://bedandbamboo.fr/monkey/>Monkey</a>, <a href=https://bedandbamboo.fr/de/omegle-alternativen/>omegle-alternativen</a>, <a href=https://bedandbamboo.fr/en/omegle-alternativen/>omegle-alternativen</a>, <a href=https://bedandbamboo.fr/nl/chillplanet/>chillplanet</a>, <a href=https://bedandbamboo.fr/nl/chatplaza/>chatplaza</a> 2025 \r\n<a href=\"https://bedandbamboo.fr/\">Coco chat</a> \r\n<a href=\"https://bedandbamboo.fr/en/\">Chatrandom</a> \r\n<a href=\"https://bedandbamboo.fr/de/\">Chatrandom</a> \r\n<a href=\"https://bedandbamboo.fr/nl/\">Chatrandom</a> \r\n<a href=\"https://bedandbamboo.fr/nettchat/\">nettchat</a> \r\n<a href=\"https://bedandbamboo.fr/monkey/\">monkey</a> \r\n<a href=\"https://bedandbamboo.fr/de/omegle-alternativen/\">omegle-alternativen</a> \r\n<a href=\"https://bedandbamboo.fr/en/omegle-alternatives/\">omegle-alternatives</a> \r\n<a href=\"https://bedandbamboo.fr/nl/chillplanet/\">chillplanet</a> \r\n<a href=\"https://bedandbamboo.fr/nl/chatplaza/\">chatplaza</a>",
+      "Contacted_On": "2025-01-19T00:52:10.079Z"
+    }
+  },
+  {
+    "model": "blog.contactme",
+    "pk": 67,
+    "fields": {
+      "Full_Name": "Michaelhix",
+      "Email_Id": "jackpgbr2@shopmp3.org",
+      "Message_To_Me": "Sur la plateforme Bed and Bamboo vous profitez de des fonctionnalites uniques et un assortiment de forums video. Seulement ici vous pourrez  experimenter des chats video de haute qualite. Inscrivez-vous sur la plateforme Bed and Bamboo et plongez dans le chat video Coco chat deja en ce moment\u00a0!  [url=https://hoodrichfrance.fr/]Coco chat[/url], [url=https://hoodrichfrance.fr/en/]Chatrandom[/url], [url=https://hoodrichfrance.fr/de/]Chatrandom[/url], [url=https://hoodrichfrance.fr/nl/]Chatrandom[/url]  [url=https://hoodrichfrance.fr/nettchat/]nettchat[/url], [url=https://hoodrichfrance.fr/monkey/]Monkey[/url], [url=https://hoodrichfrance.fr/de/omegle-alternativen/]omegle-alternativen[/url], [url=https://hoodrichfrance.fr/en/omegle-alternativen/]omegle-alternativen[/url], [url=https://hoodrichfrance.fr/nl/chillplanet/]chillplanet[/url], [url=https://hoodrichfrance.fr/nl/chatplaza/]chatplaza[/url] 2025 \r\n<a href=\"https://hoodrichfrance.fr/\">Coco chat</a> \r\n<a href=\"https://hoodrichfrance.fr/en/\">Chatrandom</a> \r\n<a href=\"https://hoodrichfrance.fr/de/\">Chatrandom</a> \r\n<a href=\"https://hoodrichfrance.fr/nl/\">Chatrandom</a> \r\n<a href=\"https://hoodrichfrance.fr/nettchat/\">nettchat</a> \r\n<a href=\"https://hoodrichfrance.fr/monkey/\">monkey</a> \r\n<a href=\"https://hoodrichfrance.fr/de/omegle-alternativen/\">omegle-alternativen</a> \r\n<a href=\"https://hoodrichfrance.fr/en/omegle-alternatives/\">omegle-alternatives</a> \r\n<a href=\"https://hoodrichfrance.fr/nl/chillplanet/\">chillplanet</a> \r\n<a href=\"https://hoodrichfrance.fr/nl/chatplaza/\">chatplaza</a>",
+      "Contacted_On": "2025-01-20T05:41:14.673Z"
+    }
+  },
+  {
+    "model": "blog.contactme",
+    "pk": 68,
+    "fields": {
+      "Full_Name": "Bhagwan ",
+      "Email_Id": "bhagwang01@gmail.com",
+      "Message_To_Me": "Hello \nContact Api test",
+      "Contacted_On": "2025-05-20T09:26:28.197Z"
+    }
+  },
+  {
+    "model": "blog.contactme",
+    "pk": 69,
+    "fields": {
+      "Full_Name": "Bhagwan ",
+      "Email_Id": "bhagwang01@gmail.com",
+      "Message_To_Me": "Hello \nContact Api test",
+      "Contacted_On": "2025-05-20T09:26:40.217Z"
+    }
+  },
+  {
+    "model": "blog.contactme",
+    "pk": 70,
+    "fields": {
+      "Full_Name": "Patricia S",
+      "Email_Id": "rachel@oval9.com",
+      "Message_To_Me": "Hi, I represent an SEO company that specialize in getting you AI citations and higher rankings on Google. I\u2019d like to offer you a 100% free SEO audit for your website. Would you be interested?",
+      "Contacted_On": "2025-06-10T08:27:23.031Z"
+    }
+  },
+  {
+    "model": "blog.contactme",
+    "pk": 71,
+    "fields": {
+      "Full_Name": "sudarshan kakde",
+      "Email_Id": "sudarshankakde1111@gmail.com",
+      "Message_To_Me": "create an note taker web app for stroing daily class notes and manage your data also make sure to make it such as any new user can use it and can take there daily training notes as well ",
+      "Contacted_On": "2025-09-16T05:40:03.245Z"
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 1,
+    "fields": {
+      "name": "Trek Tales",
+      "slug": "trek-tales",
+      "summary": "The beautiful thing about hiking is that it's truly an activity everyone can do.\r\nWhether you're young or old, an expert or an amateur.",
+      "projectType": "Travel Agency",
+      "skills": "Full-Stack , Design",
+      "doneOn": "2 month ago",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2023-12-18_144655_sqnzhp",
+      "link": "https://trektales.pythonanywhere.com/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Trek Tales is a premium travel booking and route planning portal designed for hiking communities and adventure travelers. The platform helps trekkers organize excursions and share detailed reviews of outdoor trails.</p>\n          <h3>Core Challenges</h3><p>Managing high-fidelity image uploads of trail maps and preserving responsive layouts across mobile devices was a core development focus. The solution required high performance in database queries for locations.</p>\n          <h3>Our Solution</h3><p>We built a clean Django backend paired with responsive UI styles. Trail catalog pages and review comment threads allow users to rate difficulties and submit coordinate maps directly to the database.</p>",
+      "ranking": 6,
+      "tools": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 2,
+    "fields": {
+      "name": "Sid's Blog",
+      "slug": "sids-blog",
+      "summary": "My personal blog where I share coding tips, snippets and my day-to-day life.",
+      "projectType": "Blog Site",
+      "skills": "Full-Stack , Design",
+      "doneOn": "5 month ago",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2023-12-18_143639_qma5zd",
+      "link": "http://sudharshankakde.pythonanywhere.com/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Sid's Blog is a highly responsive personal technical blog showcasing coding tutorials, development guides, and software tips. The blog serves as a personal repository and technical publication platform.</p>\n          <h3>Key Features</h3><p>Features an optimized Django search backend, custom markdown content parser, tag categorizations, and newsletter subscriptions to keep readers updated on tech stories.</p>",
+      "ranking": 5,
+      "tools": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 3,
+    "fields": {
+      "name": "Jalda International Export",
+      "slug": "jalda-international-export",
+      "summary": "International import export business.",
+      "projectType": "Business Website",
+      "skills": "Full Stack",
+      "doneOn": "1 month ago",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/pexels-nicolas-poupart-2360569_kv78ds",
+      "link": "https://www.jaldainternationalexports.com/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Jalda International Export is a B2B product showcase website built to promote import/export goods globally. The portal bridges international buyers with agricultural and industrial product supplies.</p>\n          <h3>Key Features</h3><p>Includes a clean multilingual catalog structure, detailed specifications sheet, and a secure corporate inquiry contact form routing directly to trade coordinators.</p>",
+      "ranking": 7,
+      "tools": [
+        1,
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 4,
+    "fields": {
+      "name": "Cosmic Clock Tab",
+      "slug": "cosmic-clock-tab",
+      "summary": "Introducing GalaxyTime Extension \u2013 Your Gateway to Cosmic Timekeeping!\r\n\r\nUnleash the power of the universe every time you open a new tab with the GalaxyTime Extension. Immerse yourself in the celestial beauty of analog timekeeping, where time meets the cosmos in a seamless fusion of functionality and aesthetics. This innovative extension transforms your new tab into a captivating visual experience, allowing you to explore time with style.",
+      "projectType": "Chrome Extention",
+      "skills": "Frontend , Design",
+      "doneOn": "12-12-2023",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Cosmic_Clock_Tab_5_prgjfl",
+      "link": "https://chromewebstore.google.com/detail/cosmic-clock-tab/fkhekgmkiegooikfdjjcdfafcnbehehm",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Cosmic Clock Tab (GalaxyTime Extension) is a Chrome Extension that transforms the new tab browser window into a celestial timekeeping interface. It blends advanced analogue design with astronomical themes.</p>\n          <h3>Key Features</h3><p>Features custom analogue clock themes, custom search queries, interactive star chart backgrounds, and smooth framerate rendering using vanilla CSS and JavaScript animations.</p>",
+      "ranking": 2,
+      "tools": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 5,
+    "fields": {
+      "name": "Ellora Expenses",
+      "slug": "ellora-expenses",
+      "summary": "Daily Employee's Expenses Management.",
+      "projectType": "Cross-Platfrom Devlopment",
+      "skills": "Flutter",
+      "doneOn": "10-Nov-2023",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Flutter_Dev_fhjp3n",
+      "link": "http://www.sudarshankakde.site",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Ellora Expenses is a cross-platform mobile application developed with Flutter to manage daily employee expenses, track claims, and generate receipt scans for corporate reimbursement.</p>\n          <h3>Key Features</h3><p>Includes dynamic visual charts, secure offline data storage, expense categorization, and seamless cloud database synchronization.</p>",
+      "ranking": 4,
+      "tools": [
+        3,
+        8,
+        9,
+        12,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 6,
+    "fields": {
+      "name": "Ekarth Studio",
+      "slug": "ekarth-studio",
+      "summary": "Frontend Project build with pure html css jquery and bootrap",
+      "projectType": "Art Work Showcase",
+      "skills": "Frontend , Design",
+      "doneOn": "27-12-2023",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Ekarth_Screenshot_hr0agu",
+      "link": "https://sudarshankakde.github.io/EkarthStudio/index.html",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Ekarth Studio is a digital art showcase and e-commerce platform built for a professional art studio based in Maharashtra. It displays photography galleries, blogs, and custom art products.</p>\n          <h3>Key Features</h3><p>Designed with HTML5, CSS3, jQuery, and Bootstrap 5. Highlights include high-performance lightbox galleries and scroll-triggered animations to showcase artwork.</p>",
+      "ranking": 5,
+      "tools": [
+        2,
+        6,
+        7,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 7,
+    "fields": {
+      "name": "Shree Computers",
+      "slug": "shree-computers",
+      "summary": "Web site for related shop",
+      "projectType": "Business Showcase",
+      "skills": "Frontend Site",
+      "doneOn": "10-10-2021",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Shree_computers_bw1exp",
+      "link": "https://sudarshankakde.github.io/Shree-Computer",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Shree Computers is a business showcase portal developed for a retail computer and hardware repair shop. It enables customers to check service offerings, hardware pricing, and request repair quotes online.</p>\n          <h3>Key Features</h3><p>Enables local customers to request custom desktop builds, check repair statuses, and contact support staff directly.</p>",
+      "ranking": 10,
+      "tools": [
+        1,
+        2,
+        4,
+        6,
+        10,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 8,
+    "fields": {
+      "name": "Aarohan Holidays",
+      "slug": "aarohan-holidays",
+      "summary": "Welcome to Aarohan Holidays, your gateway to unforgettable journeys and extraordinary adventures. At Aarohan Holidays, we believe travel is more than just visiting new places\r\nIt's about creating memories that last a lifetime. With Aarohan Holidays, you can go on trips that are carefully planned and perfectly organized.",
+      "projectType": "Travel Agency",
+      "skills": "Full-Stack , Design",
+      "doneOn": "10/05/2024",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/aarohan_card_guls3l",
+      "link": "https://aarohan-rho.vercel.app/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Aarohan Holidays is a travel agency application built to offer curated holiday packages and booking workflows. It is optimized for maximum mobile responsiveness and SEO visibility.</p>\n          <h3>Key Features</h3><p>Includes travel packages, destination catalog guides, and direct WhatsApp contact actions to secure customized vacation plans.</p>",
+      "ranking": 2,
+      "tools": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 9,
+    "fields": {
+      "name": "wholsetail",
+      "slug": "wholsetail",
+      "summary": "wholesaler and reatiler platfrom",
+      "projectType": "Business Website",
+      "skills": "Full Stack , Design",
+      "doneOn": "25/12/2024",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2025-01-16_230132_sdsgdl",
+      "link": "https://wholsetail.com/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Wholsetail is a wholesale and retail supply chain management platform. It facilitates communication between suppliers, retailers, and final consumers with built-in stock tracking.</p>\n          <h3>Key Features</h3><p>Enables dual account types (wholesaler/retailer), bulk ordering discount models, and automated ledger invoice generation.</p>",
+      "ranking": 4,
+      "tools": [
+        1,
+        2,
+        5,
+        8,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 10,
+    "fields": {
+      "name": "Webkatta",
+      "slug": "webkatta",
+      "summary": "Empowering the Future with Innovative IT Solutions",
+      "projectType": "IT Firm",
+      "skills": "Full Stack , Design , SEO",
+      "doneOn": "5-09-2025",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/webkatta_npgvtg",
+      "link": "https://webkatta.in/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Webkatta is a Nagpur-based IT consultation agency website. It showcases specialized services in custom web solutions, mobile app architectures, AI systems, and cloud management.</p>\n           <h3>Key Features</h3><p>Built with Next.js and Tailwind CSS, featuring modern UI animations, interactive project portfolio, and responsive contact forms.</p>",
+      "ranking": 3,
+      "tools": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        10,
+        13,
+        14
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 11,
+    "fields": {
+      "name": "BALARAMA BHUVENTURE PVT LTD",
+      "slug": "balarama-bhuventure-pvt-ltd",
+      "summary": "Fresh. Organic.\r\nNourishing & Ancient\r\nPractice Based Product In\r\nChh.Sambhajinagar, Maharashtra\r\nWelcome to BALARAMA BHUVENTURE PRIVATE LIMITED your trusted source for farm-fresh, high-quality products collects directly from farms fresh with care in Chh Sambhajinagar.",
+      "projectType": "Business Website",
+      "skills": "Full Stack , Design",
+      "doneOn": "25-08-2025",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2025-08-27_003218_ii77sk",
+      "link": "https://www.balaramabhuventure.com/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>Balarama Bhuventure is a business website for farm-fresh organic and ancient agricultural products based in Chh. Sambhajinagar. It showcases natural products collected directly from local farms.</p>\n           <h3>Key Features</h3><p>Features an organic product catalog, description of natural farming practices, and corporate bulk inquiry workflows.</p>",
+      "ranking": 2,
+      "tools": [
+        1,
+        2,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 12,
+    "fields": {
+      "name": "NSBNMVH",
+      "slug": "nsbnmvh",
+      "summary": "An educational website for NSBNMV Hadgaon, designed to showcase information about the institution, its mission, academic environment, and activities. The platform supports bilingual (Marathi and English) content, making it accessible to a broader audience. Developed for streamlined school management and to present resources, updates, and announcements online for students, teachers, and parents.",
+      "projectType": "School Site",
+      "skills": "Full-Stack , Design , SEO",
+      "doneOn": "15-10-2025",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/generated-image_lajf8d",
+      "link": "https://nsbnmvh-school.vercel.app/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>NSBNMVH is a school communication portal designed to share news, notifications, calendars, and student activity highlights with parents and administrators.</p>\n           <h3>Key Features</h3><p>Includes announcements boards, download portal for school materials, and responsive calendar schedule views.</p>",
+      "ranking": 2,
+      "tools": [
+        1,
+        2,
+        5,
+        10,
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 13,
+    "fields": {
+      "name": "React-Share-Utilities",
+      "slug": "react-share-utilities",
+      "summary": "Lightweight React utilities for sharing content, copying to clipboard, opening deep links with smart fallbacks, and rendering share/copy UI components. Works with React 18+ and is built with TypeScript, zero runtime dependencies, and drop-in components for social sharing and clipboard support.",
+      "projectType": "Open-Source, NPM Package",
+      "skills": "TypeScript, Web APIs",
+      "doneOn": "Ongoing open-source project",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2025-12-28_222618_ueftkr",
+      "link": "https://react-share.sudarshankakde.tech/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>React-Share-Utilities is an open-source library that simplifies sharing links, content, and media from React apps using modern navigator web APIs.</p>\n           <h3>Key Features</h3><p>Lightweight wrapper with fallback sharing modals and easy component configuration.</p>",
+      "ranking": 1,
+      "tools": [
+        1,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.projects",
+    "pk": 14,
+    "fields": {
+      "name": "Dummy Server API: Mock Backend Service",
+      "slug": "dummy-server-api-mock-backend-service",
+      "summary": "A dummy server project designed to simulate real-world backend functionality using RESTful APIs. It provides structured endpoints for authentication, CRUD operations, and data handling, enabling frontend developers to test and integrate applications without relying on a live production server.",
+      "projectType": "Full Stack",
+      "skills": "REST API, Backend Architecture, Authentication",
+      "doneOn": "January 2025",
+      "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2026-02-11_at_2.37.53PM_1_wf5rxl",
+      "link": "https://sudarshankakde.pythonanywhere.com/",
+      "github_link": null,
+      "case_study": "<h3>Project Overview</h3><p>A mock REST API service that acts as a dummy backend for frontend testing, returning customizable mock JSON datasets instantly.</p>\n           <h3>Key Features</h3><p>Supports dynamic REST endpoints, JSON responses, search simulation, and status code debugging.</p>",
+      "ranking": 1,
+      "tools": [
+        1,
+        2,
+        5,
+        6,
+        8,
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  {
+    "model": "blog.experience",
+    "pk": 4,
+    "fields": {
+      "company": "Threepreneur Global Pvt Ltd",
+      "role": "Web Developer",
+      "period": "Nov 2025 - Present",
+      "responsibilities": "Optimized React.js application performance by 35% by improving component rendering, implementing Redux and Redux-Saga for asynchronous state management, and minimizing unnecessary re-renders.\nImproved data handling efficiency by 40% by implementing client-side pagination, filtering, and search across grid and table layouts for large datasets.\nReduced form validation errors by 50% by implementing schema-based validation using Yup, improving data accuracy and overall user experience.",
+      "type": "job",
+      "certificate": "",
+      "certificate_url": null,
+      "publish": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "blog.experience",
+    "pk": 5,
+    "fields": {
+      "company": "Skyhighes Technologies",
+      "role": "Full-Stack Developer Intern",
+      "period": "Dec 2024 \u2013 March 2025",
+      "responsibilities": "Developed and deployed robust web applications that leverage modern frameworks and technologies, such as ReactJS and Django, to meet client requirements.\nDesigned and built mobile application interfaces using React Native, delivering intuitive and responsive user experiences.\nCollaborated with cross-functional teams to deliver innovative solutions for the development of websites and mobile applications.\nEnhanced application performance by optimizing API integrations and database queries, ensuring scalability and reliability.",
+      "type": "internship",
+      "certificate": "",
+      "certificate_url": "https://drive.google.com/file/d/1XpHd1h-kru5_13PtkUmuz33tSXIJJ0cE/view?usp=sharing",
+      "publish": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "blog.experience",
+    "pk": 6,
+    "fields": {
+      "company": "The Website Makers",
+      "role": "Web Development Intern",
+      "period": "Dec 2023 \u2013 March 2024",
+      "responsibilities": "Amplified web development skills by working on diverse live projects, collaborating with team members to deliver quality solutions.",
+      "type": "internship",
+      "certificate": "",
+      "certificate_url": "https://drive.google.com/file/d/1qz5Ht_ebzhdefYkEYp3m52VY0gbn3PuJ/view?usp=sharing",
+      "publish": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "blog.experience",
+    "pk": 7,
+    "fields": {
+      "company": "PHN Technology Pvt. Ltd.",
+      "role": "Web Developer Intern",
+      "period": "April 2023 \u2013 June 2023",
+      "responsibilities": "Developed and maintained scalable web applications using Django and REST APIs, improving the functionality of dynamic websites.\nEnhanced performance by optimizing database queries in MySQL, achieving a reduction 20% in response times.\nCollaborated in a Linux-based environment, ensuring seamless deployment and debugging of back-end services.",
+      "type": "internship",
+      "certificate": "",
+      "certificate_url": "https://drive.google.com/file/d/1zVFSEZY0hkPCYswD6KK9t69MZCSRmjsd/view?usp=sharing",
+      "publish": true,
+      "order": 4
+    }
+  },
+  {
+    "model": "blog.experience",
+    "pk": 8,
+    "fields": {
+      "company": "Ekatta-Innovators",
+      "role": "Web Developer Intern",
+      "period": "Nov 2021\u2013 Jan 2022",
+      "responsibilities": "Built modular backend solutions for live projects using Python and Django, ensuring scalability and maintainability.\nApplied RESTful APIs to integrate frontend frameworks like Tailwind CSS for interactive user interfaces.\nCollaborated with the team to design distributed systems, gaining exposure to enterprise-level application architecture.",
+      "type": "internship",
+      "certificate": "",
+      "certificate_url": null,
+      "publish": true,
+      "order": 5
+    }
   }
-},
-{
-  "model": "auth.user",
-  "pk": 9,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$CIA4hFQuQUgoHEHBixUJnY$qJrYIY6OFhPPpaoyQTkcH5+sNq64I0UKCJlI2C+wrQk=",
-    "last_login": "2021-12-03T05:52:32.639Z",
-    "is_superuser": false,
-    "username": "Sudarshan",
-    "first_name": "Sudarshan",
-    "last_name": "Kakde",
-    "email": "sudarshankakde5@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-12-03T05:51:59.591Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 10,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$RK4Orfp6jQMUKhfdHTrxue$UKP/JWnJpWsqHgH/Fq497QUZPqR5bzrAEHYNg6d92yE=",
-    "last_login": "2021-12-03T07:11:15.083Z",
-    "is_superuser": false,
-    "username": "djmblogs",
-    "first_name": "Dibyajyoti",
-    "last_name": "Mondal",
-    "email": "dibyajyoti.djmblogs@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-12-03T07:10:43.088Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 12,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$JFCpohftVdLGJ6LzqMiRvk$oHtuZDyMmNiP3/trKb7n+TYH7doLa8bwOpTFzbCmBio=",
-    "last_login": "2021-12-05T12:15:55.482Z",
-    "is_superuser": false,
-    "username": "Adi",
-    "first_name": "Aditya",
-    "last_name": "Yadav",
-    "email": "ayadav447799@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-12-05T12:15:23.504Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 13,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$F82ZDLM97OJ5DciCOvuQAb$vD6T9Kvi0tpK4S5Fgk2Guwhd6W5MUb7gPlMxAxgmtRc=",
-    "last_login": "2022-04-27T09:20:20.234Z",
-    "is_superuser": false,
-    "username": "yash",
-    "first_name": "yash ",
-    "last_name": "maske",
-    "email": "yashmaske9623@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2022-04-27T09:18:34.739Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 14,
-  "fields": {
-    "password": "pbkdf2_sha256$320000$GXWLBR0uWaZ2AnXRK7JKqL$3uo0nFVmFGoImvAfSlBO6K/GuiH+RpU3So34pbTlV9E=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "trektales",
-    "first_name": "Trek",
-    "last_name": "tales",
-    "email": "trektales.com@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2022-09-10T03:36:34Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "blog.webdata",
-  "pk": 1,
-  "fields": {
-    "site_name": "Sid's Blog",
-    "About_me": "I am a 20-year college student, A programmer 💻, Cross-platform Application Developer 😵,\r\nand A Web Developer 🕸️. living in Nagpur, India. I am an Artificial Intelligence Student,\r\ncurrently Studying at J D College Of Engineering Nagpur.",
-    "mine_name": "Sudarshan Kakde",
-    "HomePage_qoute": "Who cares what time you wake up and go to bed? \r\nWhat matters most is what you do with your life in between.",
-    "email": "sudarshankakde1111@gmail.com",
-    "my_image": "DataBase/Images/WebData/WhatsApp_Image_2023-11-19_at_17.22.03_2fff9f88_5yHPMyp_bwttbk",
-    "slider1": "DataBase/Images/WebData/IMG-20210912-WA0018_pnb3kz",
-    "Socail": "https://bento.me/sudarshankakde",
-    "resume_url": null
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 5,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "Css"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 6,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "Ideas"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 7,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "Web Dev"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 8,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "windows"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 9,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "Keyboard"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 10,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "Websites"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 11,
-  "fields": {
-    "created_on": "2022-09-04",
-    "tag": "programing"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 12,
-  "fields": {
-    "created_on": "2022-09-12",
-    "tag": "mind"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 13,
-  "fields": {
-    "created_on": "2023-02-19",
-    "tag": "Roadmap"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 14,
-  "fields": {
-    "created_on": "2023-11-19",
-    "tag": "cross-platform"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 15,
-  "fields": {
-    "created_on": "2023-11-19",
-    "tag": "guide"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 16,
-  "fields": {
-    "created_on": "2023-11-19",
-    "tag": "framework"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 17,
-  "fields": {
-    "created_on": "2023-11-19",
-    "tag": "flutter"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 18,
-  "fields": {
-    "created_on": "2023-12-30",
-    "tag": "Hosting"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 19,
-  "fields": {
-    "created_on": "2024-01-17",
-    "tag": "JavaScript"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 20,
-  "fields": {
-    "created_on": "2024-01-17",
-    "tag": "Frontend"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 21,
-  "fields": {
-    "created_on": "2024-01-17",
-    "tag": "htmx"
-  }
-},
-{
-  "model": "blog.tag",
-  "pk": 22,
-  "fields": {
-    "created_on": "2024-01-17",
-    "tag": "Asynchronous"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 1,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Tailwind CSS",
-    "logo": "DataBase/Images/Tools/tailwindcss_lttuhc",
-    "publish": true,
-    "type": "framework"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 2,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Github",
-    "logo": "DataBase/Images/Tools/github_ndqzjn",
-    "publish": true,
-    "type": "tool"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 3,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Figma",
-    "logo": "DataBase/Images/Tools/figma_mxgz6a",
-    "publish": true,
-    "type": "tool"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 4,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "JavaScript",
-    "logo": "DataBase/Images/Tools/js_i5kl7z",
-    "publish": true,
-    "type": "language "
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 5,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Rest Api",
-    "logo": "DataBase/Images/Tools/Django_REST_wB0X3dP_ao2o3w",
-    "publish": true,
-    "type": "library"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 6,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Bootstrap",
-    "logo": "DataBase/Images/Tools/bootstrap_oqodje",
-    "publish": false,
-    "type": "framework"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 7,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Canva",
-    "logo": "DataBase/Images/Tools/canva_sneiji",
-    "publish": true,
-    "type": "tool"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 8,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Django",
-    "logo": "DataBase/Images/Tools/django_NcedJR8_sgy44g",
-    "publish": true,
-    "type": "framework"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 9,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Flutter",
-    "logo": "DataBase/Images/Tools/flutter_imxbsv",
-    "publish": true,
-    "type": "framework"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 10,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "React",
-    "logo": "DataBase/Images/Tools/react_ILpjWj0_e8l6on",
-    "publish": true,
-    "type": "library"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 11,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Python",
-    "logo": "DataBase/Images/Tools/python_wremoj",
-    "publish": true,
-    "type": "language "
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 12,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "Postman",
-    "logo": "DataBase/Images/Tools/postman_l4ztxh",
-    "publish": true,
-    "type": "tool"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 13,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "vsCode",
-    "logo": "DataBase/Images/Tools/vscode_iee2rj",
-    "publish": true,
-    "type": "tool"
-  }
-},
-{
-  "model": "blog.projecttools",
-  "pk": 14,
-  "fields": {
-    "created_on": "2026-07-20",
-    "toolName": "FileZilla",
-    "logo": "DataBase/Images/Tools/FileZilla_sb9a9a",
-    "publish": true,
-    "type": "tool"
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 1,
-  "fields": {
-    "publish_date": "2021-12-03T10:35:00Z",
-    "image": "DataBase/Images/BlogImages/creative-css3-tutorials_FsJ1vek_cb9gwr",
-    "title": "CSS ideas to spark your Web page",
-    "slug": "css-ideas-to-spark-your-web-page",
-    "summary": "<p>Here are a few of the helpful CSS tricks that will definitely help.</p>",
-    "body": "<h1>CSS ideas to spark your Web page</h1>\r\n<div class=\"contentBox\">\r\n<div>\r\n<h3><strong>Introduction</strong></h3>\r\n<p><strong>C</strong>ascading&nbsp;<strong>S</strong>tyle&nbsp;<strong>S</strong>heets referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable. CSS is not a programming language. It's not a markup language either.&nbsp;<strong>CSS is a style sheet language.</strong>&nbsp;CSS is what you use to style HTML elements selectively. Learning new CSS tricks is one of the best ways to shake up your website design.</p>\r\n<p>Here are a few of the helpful CSS tricks that will definitely help.</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n<div>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>1. Selection in CSS</u></strong></h4>\r\n<p>On the web, we select content for different reasons. Maybe we want to copy a text and quote it somewhere, or maybe copying is just a habit that some users do it make reading easier. Usually, when the user selects any text on the web page, it has a white color with a blue background as blue. Why keep your webpage simple and the same as others. Here is an amazing trick.</p>\r\n<pre class=\"language-css\"><code>p::selection{\r\n          background-color: pink;\r\n          color: rgb(235, 23,41);\r\n}</code></pre>\r\n<p>The above code has a function of displaying red text with the background color pink when selected.</p>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64.png\" alt=\"\" width=\"611\" height=\"156\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>2. Why use more space?</u></strong></h4>\r\n<p>The CSS&nbsp;<strong>overflow-x</strong>&nbsp;property defines what to do when content overflows the content box horizontally (i.e., left and right), such as displaying the content outside of the content box, clipping the content, or displaying a horizontal scroll bar.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code> div { overflow-x: hidden; }</code></pre>\r\n<div class=\"toolbar\">&nbsp;</div>\r\n</div>\r\n<p>In that above line of code, the content is clipped, the overflow content is hidden, and no horizontal scroll bar is displayed. This will display the webpage with no scroll bar horizontally, and hence no space will be wasted.</p>\r\n<p>&nbsp;</p>\r\n<p>Note: Various other parameters are also available with overflow-x.</p>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64_EEh0xZ7.png\" alt=\"\" width=\"616\" height=\"442\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>3. Negation pseudo-class</u></strong></h4>\r\n<p>For selecting an element that doesn&rsquo;t have a certain class and in the case of multiple classes, the&nbsp;<strong>\":not()</strong>\"&nbsp;selector is used.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code>body:not(p){\r\n               color:purple;\r\n}</code></pre>\r\n</div>\r\n<p>The above code will not apply the color purple for the tag &lt;p&gt;.</p>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64_ejcsYOF.png\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>4. Blend Mode</u></strong></h4>\r\n<p>With background-blend mode, we define the blending between the element&rsquo;s background image and its background color.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code>body {\r\n           background-image : url(p1.jpg);\r\n           background-color: purple;\r\n           background-blend-mode :screen;\r\n}</code></pre>\r\n<p><img src=\"http://api.codewithharry.com/media/blogFiles/css-ideas-to-spark-your-web-page/base64_PSzNYGJ.png\" alt=\"\" width=\"663\" height=\"386\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4><strong><u>5. Scroll behavior control</u></strong></h4>\r\n<p>The&nbsp;<strong>scroll-behavior</strong>&nbsp;property specifies whether to smoothly animate the scroll position, instead of a straight jump, when the user clicks on a link within a scrollable box.</p>\r\n<div class=\"code-toolbar\">\r\n<pre class=\"language-css\"><code>*{\r\n             padding: 0;\r\n             margin: 0;\r\n             scroll-behaviour: smooth;\r\n}</code></pre>\r\n<div class=\"toolbar\">\r\n<div class=\"toolbar-item\">&nbsp;</div>\r\n</div>\r\n</div>\r\n<p>This can be useful when you want to move from down to top just by the click of a button</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
-    "author": 5,
-    "views": 672,
-    "publish": true,
-    "pinned": false,
-    "tags": [
-      5,
-      6,
-      7,
-      8,
-      9,
-      10
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 2,
-  "fields": {
-    "publish_date": "2021-12-03T10:50:00Z",
-    "image": "DataBase/Images/BlogImages/download_zgvk4z",
-    "title": "10 Keyboard Shortcuts You Might Not Know!",
-    "slug": "10-keyboard-shortcuts-you-might-not-know",
-    "summary": "<p>In this post I will talk about the keyboard shortcuts, every coder needs to master!</p>",
-    "body": "<h1>10 Keyboard Shortcuts You Might Not Know!</h1>\r\n<div class=\"text-center\">&nbsp;</div>\r\n<div class=\"contentBox\">\r\n<div>\r\n<p>In this post I will talk about the keyboard shortcuts, every coder needs to master!</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n<div>\r\n<div>\r\n<h4>&nbsp;</h4>\r\n<h4>1. Clipboard History</h4>\r\n<h4>Without wasting much time I will start with the first shortcut key which is the clipboard history. You can access your clipboard history by pressing Windows + V key on your keyboard. this opens your clipboard history which can be accessed and navigated using the arrow keys on your keyboard.</h4>\r\n<h4><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short1.gif\" alt=\"\" width=\"600\" height=\"337\" /></h4>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h4>2. Windows + arrow keys and dragging a window to right</h4>\r\n<h4>You can open two windows side by side by selecting a window and dragging it to the extreme right side of your monitor. This will give you an option to open two windows side by side.&nbsp;<br />You can also use your Windows + Left, Windows + Up or Windows + Down arrow keys to move this window&nbsp;</h4>\r\n<h4><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short2.gif\" alt=\"\" /></h4>\r\n<h4>3. Windows + 1, 2, 3, 4</h4>\r\n<p>Did you know that you can use Windows + 1, Windows + 2, etc keys to open your first, second, and third windows respectively? Well if not, you need to start integrating this shortcut into your workflow</p>\r\n<p>.<img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short3.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>4. Windows + D to minimize all the opened software&nbsp;</h4>\r\n<p>If you want to minimize all the opened applications in your windows computer, you can do so by pressing Windows + D key on your keyboard. A quick but yet very effective keyboard shortcut you should be using!</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short4.gif\" alt=\"\" /></p>\r\n<h4>5. Control + BackSpace and Control + Delete&nbsp;</h4>\r\n<p>If you wish to delete a word towards the left, you can use Control + BackSpace<br />Similarly, If you wish to delete a word towards the left, you can use Control + Delete key on your keyboard</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short5.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>6. Alt Tab and Windows Tab&nbsp;</h4>\r\n<p>You can use Alt + Tab to navigate through all the opened applications on your windows as shown in the animation below:</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short6.gif\" alt=\"\" /></p>\r\n<h4>7. Shift + End and Shift + Home</h4>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short7.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>8. Windows + P&nbsp;</h4>\r\n<p>Windows + P is used to open the projector preferences on your windows. You can control the monitor layout of your pc. You can choose to either turn on one, two, or duplicate both of your monitors!&nbsp;</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short8.gif\" alt=\"\" width=\"600\" height=\"337\" /></p>\r\n<h4>9. Windows + L&nbsp;</h4>\r\n<p>This is a very handy shortcut used to lock your pc so that no one can access it without your windows pin/password. You should try to make it a habit to lock your windows computer when you are not around!</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/ezgif.com-gif-maker.gif\" alt=\"\" /></p>\r\n<p>&nbsp;</p>\r\n<h4>10. Bonus: Mouse Wheel &nbsp;</h4>\r\n<p>You can use the Mouse Wheel click to close a tab in Google Chrome and Open a link in a new tab. This saves a lot of time if you are hunting a bug and trying to find the solution to your problem everywhere on the internet!</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/keyboard-shortcuts-you-might-not-know/short10.gif\" alt=\"\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
-    "author": 5,
-    "views": 388,
-    "publish": true,
-    "pinned": false,
-    "tags": [
-      5,
-      6,
-      8,
-      9,
-      10
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 3,
-  "fields": {
-    "publish_date": "2022-09-05T04:21:59.742Z",
-    "image": "DataBase/Images/BlogImages/BS5-Featured_d8b930",
-    "title": "How to install BlueStacks 5 on Windows 10",
-    "slug": "install-bluestacks5-on-windows-10",
-    "summary": "This article will tell how you can install BlueStacks on your Windows operating system in easy steps",
-    "body": "<h1>How to install BlueStacks 5 on Windows 10 in 5 easy steps</h1>\r\n<div class=\"contentBox\">\r\n<div>\r\n<p>BlueStacks 5 is no less than a beast in the world of Android gaming platforms for PC. Why? Read the points given below, and you&rsquo;ll never ask this question again :</p>\r\n<ul>\r\n<li>It uses 40 % less RAM than other platforms, which will provide you a smooth gaming experience with not being too hard on your PC.</li>\r\n<li>Consumes less CPU while having long sessions.</li>\r\n<li>Comes with 2M+ apps.</li>\r\n<li>40% faster set up than previous versions.</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n</div>\r\n<div>\r\n<div>\r\n<p>&nbsp;</p>\r\n<p>This article will tell how you can install BlueStacks 5 on your Windows operating system in 5 easy steps. But, before starting the installation process, make sure that you&rsquo;re PC fulfills the minimum system requirements for BlueStacks 5 :</p>\r\n<p><strong>Operating System:&nbsp;</strong>Windows 7 and above. (Windows 10 recommended)</p>\r\n<p><strong>Minimum Ram:&nbsp;</strong>2GB ( 8 GB or higher is recommended)</p>\r\n<p><strong>Minimum HDD Space:&nbsp;</strong>5GB</p>\r\n<p>Follow the steps given below to download and install BlueStacks on Windows&nbsp; :</p>\r\n<p><strong>Step 1:&nbsp;</strong><a href=\"https://www.bluestacks.com/\" target=\"_blank\" rel=\"noopener\">Click here</a>, and you will be redirected to the official download page of BlueStacks. Download the latest version of BlueStacks. At the time of writing this article, BlueStacks 5 &nbsp;is the latest version, so I will be downloading the BlueStacks 5.</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/install-bluestacks5-on-windows-10/Blue_gif1.gif\" width=\"825\" height=\"464\" /></p>\r\n<p><strong>Step 2:&nbsp;</strong>As soon as the download completes, double click on the installation file and start the installation process.</p>\r\n<p><strong>Step 3:&nbsp;&nbsp;</strong>After completing the installation process, you will need to sign in with your Google play store account. On opening the BlueStacks, you will see a Google play store icon. Click on it to proceed further.</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/install-bluestacks5-on-windows-10/blue_gif2.gif\" width=\"825\" height=\"464\" /></p>\r\n<p><strong>Step 4:&nbsp;</strong>Enter your user id and password, and then click on the Next button.</p>\r\n<p><strong>Step 5:&nbsp;</strong>Agree with the terms &amp; conditions of the Google play store as shown in the below animation.</p>\r\n<p><img src=\"https://api.codewithharry.com/media/blogFiles/install-bluestacks5-on-windows-10/blue_gif3.gif\" width=\"825\" height=\"464\" /></p>\r\n<p>That&rsquo;s all! With this, you&rsquo;ve successfully installed the BlueStacks 5 on your Windows PC. Now, you can easily download any application from the play store and use it on your Windows computer.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</div>\r\n</div>\r\n</div>",
-    "author": 5,
-    "views": 972,
-    "publish": true,
-    "pinned": false,
-    "tags": [
-      8
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 4,
-  "fields": {
-    "publish_date": "2022-09-05T04:15:51.494Z",
-    "image": "DataBase/Images/BlogImages/tendencias-websites_yev4vi",
-    "title": "Top Sites Web dev should know",
-    "slug": "top-sites-web-dev-should-know",
-    "summary": "<strong>Here are some of the most Useful websites you must know.</strong>",
-    "body": "<h4>Today we are going to see some most useful websites that can make your work easyer.</h4>\r\n<hr />\r\n<h3>1.DevDocs(<a title=\"devdocs.io\" href=\"https://devdocs.io\">devdocs.io</a>)</h3>\r\n<p style=\"text-align: left;\">DevDocs combines multiple API documentations in a fast, organized, and searchable interface.</p>\r\n<p style=\"text-align: left;\">also&nbsp;DevDocs works&nbsp;<a href=\"https://devdocs.io/offline\">offline</a>, on mobile, and can be installed on&nbsp;<a href=\"https://chrome.google.com/webstore/detail/devdocs/mnfehgbmkapmjnhcnbodoamcioleeooe\">Chrome</a>. and it is free and <a href=\"https://github.com/freeCodeCamp/devdocs\">open source</a>.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/yxbljo96\" alt=\"\" width=\"511\" height=\"322\" /><!-- pagebreak --></p>\r\n<hr />\r\n<p><img src=\"https://drive.google.com/file/d/1ba3gssIeGG1lmRgrIK4c9MF8jWthWHrj/view?usp=sharing\" alt=\"\" /></p>\r\n<h3>2.Meta Tags(<a href=\"https://metatags.io\">metatags.io</a>)</h3>\r\n<p style=\"text-align: left;\">With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</p>\r\n<p style=\"text-align: left;\">Meta Tags is a tool to debug and generate meta tag code for any website. With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/yxfkmd6e\" alt=\"\" width=\"517\" height=\"269\" /><!-- pagebreak --></p>\r\n<hr />\r\n<p>&nbsp;</p>\r\n<h3 style=\"text-align: justify;\">3.Over Api(<a href=\"https://overapi.com\">overapi.com</a>)</h3>\r\n<p style=\"text-align: left;\">Collections of All Cheat Sheets. Including all major use programing languages&nbsp;</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://i.pinimg.com/originals/bf/49/bb/bf49bb57e598e99e6f93b9c8ec1cf357.jpg\" width=\"559\" height=\"408\" /><!-- pagebreak --></p>\r\n<hr />\r\n<h3>4.Code Beautify(<a href=\"https://codebeautify.org\">codebeautify.org</a>)</h3>\r\n<p>CodeBeautify is an online code beautifier that allows you to beautify your source code.</p>\r\n<p>CodeBeautify also provides lots of tools that help to save developer's time.</p>\r\n<p>Use search to find more tools.</p>\r\n<h3><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/y6yyzvs5\" alt=\"\" width=\"335\" height=\"242\" /><!-- pagebreak --></h3>\r\n<hr />\r\n<p>&nbsp;</p>\r\n<h3>5.URL Shotner(<a title=\"http://sudarshankakde.pythonanywhere.com\" href=\"http://sudarshankakde.pythonanywhere.com\">urlshotner</a>)</h3>\r\n<p style=\"text-align: left;\">URL Shotner is tool for web devlopers , while doing stuf like copying image from google and pasting it in your img tag you notice that many time url provided by google are too big so here Url shotner plays main role it provide you short from of that big long url so you can code cleary without any mess.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://tinyurl.com/y2884mht\" alt=\"\" width=\"576\" height=\"432\" /></p>\r\n<hr />\r\n<p>&nbsp;</p>\r\n<h3 style=\"text-align: center;\">That is it for this blog.!!!!😀&nbsp;</h3>\r\n<p style=\"text-align: center;\"><em><strong>please let me know if any of this website helps you in work and find it helpfull.🙃</strong></em></p>",
-    "author": 5,
-    "views": 860,
-    "publish": true,
-    "pinned": false,
-    "tags": [
-      7,
-      10,
-      11
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 8,
-  "fields": {
-    "publish_date": "2023-02-19T01:46:14.124Z",
-    "image": "DataBase/Images/BlogImages/python-developer_q8ipgt",
-    "title": "Roadmap to Becoming an Advanced Python Developer: Key Areas to Focus On",
-    "slug": "roadmap-to-becoming-an-advanced-python-developer-k",
-    "summary": "roadmap to becoming an advanced Python developer, covering four key areas: mastering the fundamentals, building scalable web applications, optimizing performance, and building complex machine learning models.",
-    "body": "<div class=\"w-full border-b border-black/10 dark:border-gray-900/50 text-gray-800 dark:text-gray-100 group bg-gray-50 dark:bg-[#444654]\">\r\n<div class=\"text-base gap-4 md:gap-6 m-auto md:max-w-2xl lg:max-w-2xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0\">\r\n<div class=\"relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]\">\r\n<div class=\"flex flex-grow flex-col gap-3\">\r\n<div class=\"min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p>Python is a high-level, general-purpose programming language used for a wide range of applications, including web development, data science, machine learning, artificial intelligence, automation, and more. Whether you're a beginner or an experienced developer, it's important to have a roadmap for learning Python so that you can make the most of your learning journey. In this blog, we'll outline a Python roadmap for different skill levels and purposes.</p>\r\n<h2>Beginner Python Roadmap</h2>\r\n<p>If you're new to programming or new to Python, here's a suggested roadmap to get started:</p>\r\n<h3>1. Learn the basics of Python</h3>\r\n<p>Start by learning the basics of Python, including syntax, data types, variables, control structures, functions, and input/output. You can find plenty of free online tutorials and courses that cover the basics of Python. Some popular options include:</p>\r\n<ul>\r\n<li><a href=\"https://www.py4e.com/\" target=\"_new\">Python for Everybody</a> by Dr. Chuck Severance</li>\r\n<li><a href=\"https://learncodethehardway.org/python/\" target=\"_new\">Learn Python the Hard Way</a> by Zed Shaw</li>\r\n<li><a href=\"https://www.codecademy.com/learn/learn-python\" target=\"_new\">Codecademy's Python Course</a></li>\r\n</ul>\r\n<h3>2. Practice with exercises and projects</h3>\r\n<p>Once you have a solid foundation in the basics, start practicing with exercises and small projects. There are several websites that provide Python exercises and projects for beginners, such as:</p>\r\n<ul>\r\n<li><a href=\"https://projecteuler.net/\" target=\"_new\">Project Euler</a></li>\r\n<li><a href=\"https://www.hackerrank.com/domains/python\" target=\"_new\">HackerRank</a></li>\r\n<li><a href=\"https://codingbat.com/python\" target=\"_new\">CodingBat</a></li>\r\n</ul>\r\n<h3>3. Learn how to work with data</h3>\r\n<p>Data is at the heart of many Python applications, so it's important to learn how to work with data. Start with the basics of data structures like lists, dictionaries, and sets. Then, learn how to manipulate data using libraries like NumPy and Pandas. Finally, learn how to visualize data using libraries like Matplotlib and Seaborn.</p>\r\n<h3>4. Learn how to build web applications</h3>\r\n<p>Python is a popular choice for building web applications. Learn how to use a web framework like Flask or Django to build web applications. You'll also need to learn HTML, CSS, and JavaScript to build the front end of the application.</p>\r\n<h2>Intermediate Python Roadmap</h2>\r\n<p>If you're comfortable with the basics of Python and want to take your skills to the next level, here's a suggested roadmap:</p>\r\n<h3>1. Learn object-oriented programming</h3>\r\n<p>Python is an object-oriented programming language, so it's important to learn how to use objects, classes, and inheritance effectively. Some resources for learning object-oriented programming in Python include:</p>\r\n<ul>\r\n<li><a href=\"https://www.tutorialsteacher.com/python/python-object-oriented-programming\" target=\"_new\">Python Object-Oriented Programming (OOP) - Tutorial</a></li>\r\n<li><a href=\"https://realpython.com/courses/object-oriented-programming-python/\" target=\"_new\">Object-Oriented Programming in Python</a></li>\r\n</ul>\r\n<h3>2. Learn how to work with databases</h3>\r\n<p>Many Python applications require working with databases. Learn how to work with a database like MySQL or PostgreSQL using libraries like SQLAlchemy or Psycopg2.</p>\r\n<h3>3. Learn how to work with APIs</h3>\r\n<p>Many web applications require working with APIs to retrieve or manipulate data. Learn how to work with REST APIs using libraries like Requests.</p>\r\n<h3>4. Learn how to build machine learning models</h3>\r\n<p>Python is a popular language for building machine learning models. Learn how to use libraries like scikit-learn and TensorFlow to build and train machine learning models.</p>\r\n<h2>Advanced Python Roadmap</h2>\r\n<p>If you're an experienced Python developer and want to take your skills to the next level, here's a suggested roadmap:</p>\r\n<h3>1. Learn how to optimize Python code</h3>\r\n<p>As you build more complex applications, you'll need to optimize your code to make it run</p>\r\n<p>faster and more efficiently. Learn about profiling, algorithm analysis, and other techniques for optimizing your code. Some resources for optimizing Python code include:</p>\r\n<ul>\r\n<li><a href=\"https://www.oreilly.com/library/view/high-performance-python/9781449361747/\" target=\"_new\">High-Performance Python</a> by Micha Gorelick and Ian Ozsvald</li>\r\n<li><a href=\"https://stackimpact.com/blog/python-performance-tips-tricks/\" target=\"_new\">Python Performance Tips &amp; Tricks</a> by StackImpact</li>\r\n</ul>\r\n<h3>2. Learn how to build scalable web applications</h3>\r\n<p>As your web application grows, you'll need to learn how to build scalable web applications. Learn about techniques like load balancing, caching, and database sharding. Some resources for building scalable web applications with Python include:</p>\r\n<ul>\r\n<li><a href=\"https://www.udacity.com/course/scalable-web-applications-using-python--ud858\" target=\"_new\">Scalable Web Architecture and Distributed Systems</a> by Udacity</li>\r\n<li><a href=\"https://www.packtpub.com/product/building-scalable-web-applications-with-python-and-flask/9781788622878\" target=\"_new\">Building Scalable Web Applications with Python and Flask</a> by M.G. Rouge</li>\r\n</ul>\r\n<h3>3. Learn how to build complex machine-learning models</h3>\r\n<p>If you want to specialize in machine learning, you'll need to learn how to build complex machine-learning models. Learn about deep learning, natural language processing, and other advanced machine learning techniques. Some resources for building complex machine-learning models with Python include:</p>\r\n<ul>\r\n<li><a href=\"https://www.manning.com/books/deep-learning-with-python\" target=\"_new\">Deep Learning with Python</a> by Francois Chollet</li>\r\n<li><a href=\"https://www.nltk.org/book/\" target=\"_new\">Natural Language Processing with Python</a> by Steven Bird, Ewan Klein, and Edward Loper</li>\r\n</ul>\r\n<h3>4. Contribute to open-source projects</h3>\r\n<p>One of the best ways to become an advanced Python developer is to contribute to open-source projects. By contributing to open-source projects, you'll learn from experienced developers, build your portfolio, and give back to the community. Some resources for finding open-source Python projects to contribute to include:</p>\r\n<ul>\r\n<li><a href=\"https://openhatch.org/\" target=\"_new\">OpenHatch</a></li>\r\n<li><a href=\"https://github.com/search?q=python&amp;type=Repositories&amp;ref=advsearch&amp;l=Python&amp;l=\" target=\"_new\">GitHub</a></li>\r\n</ul>\r\n<h2>Conclusion</h2>\r\n<p>Python is a versatile programming language with a wide range of applications. Whether you're a beginner or an experienced developer, there's always something new to learn in Python. By following a roadmap, you can ensure that you're learning the skills you need to achieve your goals. Remember, the most important thing is to keep practicing and building new projects. Good luck on your Python learning journey!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
-    "author": 5,
-    "views": 1092,
-    "publish": true,
-    "pinned": false,
-    "tags": [
-      11,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 10,
-  "fields": {
-    "publish_date": "2023-11-19T11:13:47.285Z",
-    "image": "DataBase/Images/BlogImages/download_cOW3mJl_s8eowg",
-    "title": "A Beginner's Guide to Getting Started with Flutter  to Getting Started with Flutter",
-    "slug": "a-beginners-guide-to-getting-started-with-flutter",
-    "summary": "Dive into Flutter development with a beginner's guide. From setup to creating your first project, explore essential concepts, widgets, and layouts. Ideal for both new coders and experienced developers seeking cross-platform proficiency. Happy coding!",
-    "body": "<h2>Introduction:</h2>\r\n<p>Flutter, developed by Google, has emerged as a popular open-source framework for building cross-platform applications. Whether you're a seasoned developer or just starting your programming journey, Flutter provides an excellent platform for creating beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. In this blog, we'll guide you through the essential steps to get started with Flutter and embark on your journey of app development.</p>\r\n<h4>Step 1: Setting Up Your Development Environment</h4>\r\n<p>Before diving into Flutter development, ensure you have a robust development environment. Flutter supports various operating systems, including Windows, macOS, and Linux. Follow these steps to set up Flutter on your machine:</p>\r\n<p>- Download the Flutter SDK from the official Flutter website (<a title=\"Flutter.dev\" href=\"https://flutter.dev/docs/get-started/install\" target=\"_blank\" rel=\"noopener\">https://flutter.dev/docs/get-started/install</a>).<br />- Extract the downloaded zip file and add the Flutter bin directory to your system's PATH variable.<br />- Install a code editor like Visual Studio Code or Android Studio with the Flutter and Dart plugins.</p>\r\n<h4>Step 2: Checking Flutter Installation</h4>\r\n<p>Once you've set up Flutter, open a terminal and run the following command:</p>\r\n<p><br /><code>flutter doctor</code><br /><br /></p>\r\n<p>This command checks your system for any dependencies needed for Flutter development. Install any missing dependencies as per the instructions provided.</p>\r\n<h4>Step 3: Creating Your First Flutter Project</h4>\r\n<p>Now that your environment is set up, it's time to create your first Flutter project. In the terminal, run:</p>\r\n<p><br /><code>flutter create my_first_flutter_app</code><br /><br /></p>\r\n<p>This command creates a new Flutter project with the name \"my_first_flutter_app.\" You can replace this with your preferred project name.</p>\r\n<h4>Step 4: Running Your Flutter App</h4>\r\n<p>Navigate to your project directory using the `cd` command:</p>\r\n<p><br /><code>cd my_first_flutter_app</code><br /><br /></p>\r\n<p>Run your app using the following command:</p>\r\n<p><br /><code>flutter run</code><br /><br /></p>\r\n<p>This will launch your app on the default emulator or connected device. You can see your changes live as you save your code.</p>\r\n<h4>Step 5: Understanding the Flutter Project Structure</h4>\r\n<p>As a beginner, it's essential to familiarize yourself with the Flutter project structure. Key directories include:</p>\r\n<p>-&nbsp; <strong>lib</strong>: Contains the Dart code for your application.<br />-&nbsp; <strong>test</strong>: Contains unit and widget tests.<br />- <strong>android and ios</strong>: Platform-specific code for Android and iOS.</p>\r\n<h4>Step 6: Learning Dart Basics</h4>\r\n<p>Flutter uses the Dart programming language. Familiarize yourself with Dart's syntax and features. Dart has excellent documentation on its official website (<a title=\"Dart.dev\" href=\"https://dart.dev/guides\" target=\"_blank\" rel=\"noopener\">https://dart.dev/guides</a>).</p>\r\n<h4>Step 7: Exploring Flutter Widgets</h4>\r\n<p>Widgets are the building blocks of Flutter applications. Learn about basic widgets like `<strong>Container</strong>`, `<strong>Row</strong>`, `<strong>Column</strong>`, and more. Refer to the Flutter documentation for a comprehensive list of widgets and their usage (<a title=\"Flutter Widgets\" href=\"https://docs.flutter.dev/widgets\" target=\"_blank\" rel=\"noopener\">https://docs.flutter.dev/widgets</a>).</p>\r\n<h4>Step 8: Embracing Flutter Layouts</h4>\r\n<p>Understanding how to create responsive and adaptive layouts is crucial. Flutter offers a flexible layout system, including widgets like `<strong>Expanded</strong>`, `<strong>ListView</strong>`, and `<strong>GridView</strong>`.</p>\r\n<h4>Step 9: Interactivity and State Management</h4>\r\n<p>Explore Flutter's approach to handling user input and managing state. Learn about `<strong>StatefulWidget</strong>` and `<strong>StatelessWidget</strong>` and how to handle user interactions.</p>\r\n<h4>Conclusion:</h4>\r\n<p>Congratulations! You've taken the first steps in your Flutter journey. This guide provides a foundation for your Flutter development, but remember that practice and exploration are key. As you progress, delve deeper into advanced topics such as state management, navigation, and integrating with APIs. Flutter's vibrant community and extensive documentation will be valuable resources on your path to becoming a proficient Flutter developer. Happy coding!</p>",
-    "author": 5,
-    "views": 2965,
-    "publish": true,
-    "pinned": false,
-    "tags": [
-      11,
-      14,
-      15,
-      16,
-      17
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 11,
-  "fields": {
-    "publish_date": "2023-12-30T05:25:55.903Z",
-    "image": "DataBase/Images/BlogImages/1_6De3_rvIoAjZ6D5WBinW_Q_v0yxy6",
-    "title": "Hostinger VPS: A Cautionary Tale of Suspensions and Frustrations",
-    "slug": "hostinger-vps-a-cautionary-tale-of-suspensions-and",
-    "summary": "Hostinger, a popular choice for hosting, fell short in my experience with their VPS. Facing frequent suspensions for alleged spamming, the lack of clear explanations and short notice periods created frustration.",
-    "body": "<h3><strong>Navigating VPS Challenges with Hostinger: A Personal Odyssey</strong></h3>\r\n<p>Setting out on my online venture, I opted for Hostinger's one-year VPS plan, expecting a seamless experience. However, my journey took an unexpected turn, and what ensued was a series of frustrations that I feel compelled to share as a cautionary tale for potential Hostinger users.</p>\r\n<p>&nbsp;</p>\r\n<h3><strong>A Promising Start, A Swift Turn</strong></h3>\r\n<p>The initial excitement of diving into Hostinger's one-year VPS plan was soon clouded by unexpected suspensions, just two months into my hosting endeavor. The culprit? Alleged spamming on the network, an accusation vehemently denied on my part. Hostinger relented after I presented my case, but this turned out to be just the tip of the iceberg.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>The Relentless Cycle Unveiled</strong></h3>\r\n<p>Like clockwork, another suspension hit shortly after the first incident, once again citing spam-related concerns. Despite successfully defending my innocence, the relief was short-lived. The third suspension struck with a mere one-hour notice to back up my data before the ominous threat of account cancellation loomed large.</p>\r\n<h2>&nbsp;</h2>\r\n<h3><strong>A Battle for Hosting Stability</strong></h3>\r\n<p>Desperation set in as I fought to salvage my hosting experience. Negotiations spared my account temporarily, but the respite was short-lived. Just 15 days later, another suspension blindsided me, prompting serious doubts about the reliability and fairness of Hostinger's services.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>The Frustration of the Unexplained</strong></h3>\r\n<p>Adding to the frustration was Hostinger's steadfast reluctance to shed light on the root cause of these suspensions. Despite taking every precaution on my end, I found myself in the dark, desperately trying to address an elusive problem. The lack of transparency from Hostinger intensified my sense of frustration.</p>\r\n<h3>&nbsp;</h3>\r\n<h3><strong>A Cautionary Note to Potential Users</strong></h3>\r\n<p>For those contemplating Hostinger for their VPS needs, I feel compelled to offer a word of caution based on my tumultuous experience. Frequent suspensions, a lack of clarity, and an unsettling sense of uncertainty were the hallmarks of my journey. Unless you're ready to risk both your VPS data and your investment, I strongly recommend exploring alternative hosting options with a more transparent and reliable track record.</p>\r\n<p>&nbsp;</p>\r\n<p>In the ever-evolving landscape of online hosting, transparency and reliability are paramount. My hope is that by sharing my story, others can make informed decisions about their hosting providers, steering clear of the challenges I faced with Hostinger's VPS service. Choose wisely, and may your online journey be smoother than mine.</p>",
-    "author": 5,
-    "views": 843,
-    "publish": false,
-    "pinned": false,
-    "tags": [
-      7,
-      18
-    ]
-  }
-},
-{
-  "model": "blog.blog",
-  "pk": 12,
-  "fields": {
-    "publish_date": "2024-01-17T13:38:41.659Z",
-    "image": "DataBase/Images/BlogImages/social-3_ja6mjh",
-    "title": "Introduction to Htmx",
-    "slug": "introduction-to-htmx",
-    "summary": "Explore the dynamic capabilities of htmx, a lightweight JavaScript library. From booting to advanced features like caching, security, validation, and debugging, master htmx for seamless web development.",
-    "body": "<div class=\"\">\r\n<h2>Introduction to htmx</h2>\r\n<p><br />htmx is a JavaScript library that facilitates dynamic web development by allowing for real-time updates without requiring a complete page reload. It acts as a bridge between the server and client, making it easier to build interactive and responsive web applications.</p>\r\n<h4>How htmx Works</h4>\r\n<p><br />htmx achieves its functionality by leveraging HTML attributes. Developers annotate HTML elements with htmx-specific attributes to define behaviors such as making an asynchronous request to the server, updating content dynamically, or replacing entire sections of the page.</p>\r\n<p>&nbsp;</p>\r\n<ul>\r\n<li>\r\n<p><strong>Triggering Server-Side Actions:</strong> htmx enables developers to trigger server-side actions directly from the client by adding attributes like <code>hx-get</code>, <code>hx-post</code>, or <code>hx-put</code> to HTML elements. These attributes specify the type of HTTP request to be made when the associated event occurs.</p>\r\n</li>\r\n<li>\r\n<p><strong>Dynamic Content Loading:</strong> Through attributes like <code>hx-get</code> or <code>hx-trigger</code>, htmx facilitates the loading of dynamic content from the server without refreshing the entire page. This allows for smoother user experiences and faster response times.</p>\r\n</li>\r\n<li>\r\n<p><strong>Partial Page Updates:</strong> With <code>hx-swap</code> and <code>hx-target</code> attributes, htmx can selectively replace or update parts of the HTML document, reducing the need for full-page reloads and improving the overall performance of the application.</p>\r\n</li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<h4>Use Cases of htmx</h4>\r\n<ol>\r\n<li>\r\n<p><strong>Form Submissions:</strong> htmx simplifies form submissions by handling them asynchronously, providing instant feedback to users without reloading the entire page.</p>\r\n</li>\r\n<li>\r\n<p><strong>Real-Time Updates:</strong> Applications requiring real-time data, such as chat applications or collaborative editing tools, can benefit from htmx to fetch and display updates seamlessly.</p>\r\n</li>\r\n<li>\r\n<p><strong>Pagination and Infinite Scrolling:</strong> Implementing pagination or infinite scrolling becomes more straightforward with htmx, as it enables loading additional content without reloading the entire page.</p>\r\n</li>\r\n<li>\r\n<p><strong>Modal Dialogs and Popovers:</strong> Enhance user interactions by using htmx to load and display modal dialogs or popovers without navigating away from the current page.</p>\r\n</li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n<h4>How to Use htmx</h4>\r\n<p>To integrate htmx into your project, follow these basic steps:</p>\r\n<ol>\r\n<li>\r\n<p><strong>Include htmx in your project:</strong> You can either download the library or use a CDN. Include it in your HTML file with a script tag.</p>\r\n</li>\r\n<li>\r\n<p><strong>Annotate HTML elements:</strong> Add htmx attributes to HTML elements to define the desired behavior. For example, use <code>hx-get</code> to fetch content asynchronously.</p>\r\n</li>\r\n<li>\r\n<p><strong>Configure server-side responses:</strong> Ensure your server responds to htmx requests appropriately. You can use various backend frameworks or vanilla server-side code to handle these requests.</p>\r\n</li>\r\n<li>\r\n<p><strong>Enhance and refine:</strong> Experiment with additional htmx features and attributes to further enhance your application's interactivity and responsiveness.</p>\r\n</li>\r\n</ol>\r\n<p>&nbsp;</p>\r\n<h3>simple Example&nbsp;</h3>\r\n<p>Below is a simple example of how you can implement htmx in a basic HTML file. This example demonstrates a scenario where clicking a button triggers an asynchronous request to fetch and display dynamic content from the server without a full page reload.</p>\r\n<pre class=\"language-markup\"><code>&lt;!DOCTYPE html&gt;\r\n&lt;html lang=\"en\"&gt;\r\n&lt;head&gt;\r\n    &lt;meta charset=\"UTF-8\"&gt;\r\n    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;\r\n    &lt;title&gt;htmx Example&lt;/title&gt;\r\n    &lt;!-- Include htmx library from CDN --&gt;\r\n    &lt;script src=\"https://unpkg.com/htmx.org@1.7.2/dist/htmx.js\"&gt;&lt;/script&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n\r\n&lt;!-- Trigger button with htmx attributes --&gt;\r\n&lt;button hx-get=\"/api/data\" hx-trigger=\"click\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n\r\n&lt;!-- Display area for fetched data --&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n</code></pre>\r\n<p>In this example:</p>\r\n<ul>\r\n<li>\r\n<p>We include the htmx library using a script tag that fetches it from the CDN.</p>\r\n</li>\r\n<li>\r\n<p>The button is annotated with htmx attributes:</p>\r\n<ul>\r\n<li><code>hx-get</code>: Specifies the URL to send an HTTP GET request to (\"/api/data\" in this case).</li>\r\n<li><code>hx-trigger</code>: Defines the event that triggers the request (in this case, a click event).</li>\r\n<li><code>hx-target</code>: Specifies the HTML element where the response will be inserted or updated (here, an element with the ID \"result\").</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p>The <code>#result</code> div will be updated with the content fetched from the server when the button is clicked.</p>\r\n</li>\r\n</ul>\r\n<p>This is a minimal example, and in a real-world scenario, you would have a server-side endpoint (\"/api/data\") that handles the htmx request and returns the appropriate data. The server-side implementation would depend on your backend technology (Node.js, Python, PHP, etc.). The key is to ensure that your server responds to htmx requests and provides the necessary data to update the client-side content dynamically.</p>\r\n<h3>Htmx Request and Response</h3>\r\n<p>Let's go through some key htmx attributes and illustrate their usage with code snippets.</p>\r\n<ol>\r\n<li>\r\n<p><strong>hx-get:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the URL for an HTTP GET request when a particular event occurs.</li>\r\n<li><strong>Example:</strong>\r\n<div>\r\n<div>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;</code></pre>\r\n</div>\r\n</div>\r\nIn this example, clicking the button triggers an asynchronous GET request to \"/api/data\", and the response is inserted into the HTML element with the ID \"result.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-post:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Similar to <code>hx-get</code>, but for HTTP POST requests.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;form hx-post=\"/api/save\" hx-target=\"#result\"&gt;\r\n    &lt;!-- Form fields go here --&gt;\r\n    &lt;button type=\"submit\"&gt;Save Data&lt;/button&gt;\r\n&lt;/form&gt;\r\n</code></pre>\r\nThis form, when submitted, triggers a POST request to \"/api/save,\" and the response is inserted into the element with the ID \"result.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-trigger:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the event that triggers the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-trigger=\"click\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;</code></pre>\r\nThe GET request is triggered when the button is clicked. Other values for <code>hx-trigger</code> include \"mouseover,\" \"submit,\" etc.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-target:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the HTML element where the response will be inserted or updated.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nThe content fetched from \"/api/data\" will be inserted into the HTML element with the ID \"result.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-swap:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Defines how the response should be inserted or updated. Options include \"innerHTML,\" \"outerHTML,\" \"beforebegin,\" etc.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;div hx-get=\"/api/data\" hx-swap=\"outerHTML\" hx-target=\"#result\"&gt;Load Data&lt;/div&gt;\r\n&lt;div id=\"result\"&gt;&lt;!-- Response will replace this entire div --&gt;&lt;/div&gt;\r\n</code></pre>\r\n</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-confirm:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Asks for confirmation before performing the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/delete\" hx-confirm=\"Are you sure?\" hx-target=\"#result\"&gt;Delete&lt;/button&gt;</code></pre>\r\nWhen the button is clicked, a confirmation prompt appears, and if confirmed, a GET request is made to \"/api/delete.\"</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-params:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Allows sending additional parameters with the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-params=\"param1=abc&amp;param2=123\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;</code></pre>\r\nAdditional parameters \"param1\" and \"param2\" are sent with the GET request.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Animation with htmx:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-indicator:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specify the element to show as an indicator during the htmx request.</li>\r\n<li><strong>Example:</strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-indicator=\"#loading\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"loading\" style=\"display: none;\"&gt;Loading...&lt;/div&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nIn this example, when the button is clicked, the content of \"#loading\" is displayed as an indicator during the request, and the fetched data replaces the content in \"#result\" when the request is complete.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-indicator-style:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Defines the style for the indicator during the htmx request.</li>\r\n<li><strong>Example:</strong>\r\n<div>\r\n<div class=\"\">\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-indicator=\"#loading\" hx-indicator-style=\"color: red;\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"loading\" style=\"display: none; color: red;\"&gt;Loading...&lt;/div&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nThe indicator can have a specific style, such as text color, during the request.</div>\r\n<div>&nbsp;</div>\r\n</div>\r\n</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Controlling Request Status:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-set:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Sets a variable with a value when the htmx request starts or completes.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-set=\"loading=true\" hx-set-after=\"loading=false\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nIn this example, the variable \"loading\" is set to true before the request starts and set to false after the request is complete. You can use this variable for custom logic or styling.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-trigger-on:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies an event to trigger when the htmx request completes successfully.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-trigger-on=\"customEvent\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\" hx-on=\"customEvent: alert('Request Completed!');\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nAfter a successful request, the custom event \"customEvent\" is triggered, and you can associate actions with it.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-error:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Specifies the action to take if an error occurs during the htmx request.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-target=\"#result\" hx-error=\"alert('Error occurred!')\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nIf there's an error in the request, an alert with the message \"Error occurred!\" is displayed.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<div>\r\n<div>\r\n<h3>Caching in htmx:</h3>\r\n<ol>\r\n<li><strong>hx-cache:</strong>\r\n<ul>\r\n<li><strong>Description:</strong> Enables caching for htmx requests.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-cache=\"true\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nWhen <code>hx-cache</code> is set to \"true,\" htmx caches the response, and subsequent requests to the same URL will use the cached data. This can be useful to improve performance and reduce server load.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Security Considerations in htmx:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-headers:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Allows sending custom headers with htmx requests for security purposes.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-headers=\"Authorization: Bearer YourToken\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nYou can include headers like authorization tokens to secure htmx requests.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-secure:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Enables security features, preventing cross-site request forgery (CSRF) attacks.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-post=\"/api/save\" hx-secure=\"true\" hx-target=\"#result\"&gt;Save Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nSetting <code>hx-secure</code> to \"true\" adds CSRF protection to POST requests.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Validation in htmx:</h3>\r\n<ol>\r\n<li><strong>hx-vals:</strong>\r\n<ul>\r\n<li><strong>Description:</strong> Allows specifying validation targets that need to be validated before submitting a form.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;form hx-post=\"/api/save\" hx-target=\"#result\" hx-vals=\"#formInput\"&gt;\r\n    &lt;input type=\"text\" id=\"formInput\" required&gt;\r\n    &lt;button type=\"submit\"&gt;Save Data&lt;/button&gt;\r\n&lt;/form&gt;\r\n</code></pre>\r\nThe form will only be submitted if the input with ID \"formInput\" is valid.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n<h3>Debugging in htmx:</h3>\r\n<ol>\r\n<li>\r\n<p><strong>hx-log:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Enables logging htmx events to the browser console for debugging purposes.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-log=\"true\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nWhen <code>hx-log</code> is set to \"true,\" htmx events and information will be logged to the browser console, aiding in debugging.</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p><strong>hx-debug:</strong></p>\r\n<ul>\r\n<li><strong>Description:</strong> Enables the htmx debug mode, providing detailed information about requests in the browser console.</li>\r\n<li><strong><strong>Example:</strong></strong>\r\n<pre class=\"language-markup\"><code>&lt;button hx-get=\"/api/data\" hx-debug=\"true\" hx-target=\"#result\"&gt;Load Data&lt;/button&gt;\r\n&lt;div id=\"result\"&gt;&lt;/div&gt;\r\n</code></pre>\r\nEnabling <code>hx-debug</code> provides more extensive debugging information in the console.</li>\r\n</ul>\r\n</li>\r\n</ol>\r\n</div>\r\n</div>\r\n</div>",
-    "author": 5,
-    "views": 1526,
-    "publish": false,
-    "pinned": false,
-    "tags": [
-      5,
-      7,
-      10,
-      15,
-      19,
-      20,
-      21,
-      22
-    ]
-  }
-},
-{
-  "model": "blog.subscribers",
-  "pk": 38,
-  "fields": {
-    "email": "sudarshankakde1111@gmail.com",
-    "date": "2023-11-19T12:24:40.315Z"
-  }
-},
-{
-  "model": "blog.subscribers",
-  "pk": 39,
-  "fields": {
-    "email": "sid@gmail.com",
-    "date": "2023-12-19T14:20:27.601Z"
-  }
-},
-{
-  "model": "blog.subscribers",
-  "pk": 40,
-  "fields": {
-    "email": "asdf@gmail.com",
-    "date": "2023-12-19T23:27:36.102Z"
-  }
-},
-{
-  "model": "blog.subscribers",
-  "pk": 41,
-  "fields": {
-    "email": "af@adf.com",
-    "date": "2023-12-19T23:30:28.692Z"
-  }
-},
-{
-  "model": "blog.subscribers",
-  "pk": 42,
-  "fields": {
-    "email": "dad@fadf.com",
-    "date": "2023-12-19T23:32:21.636Z"
-  }
-},
-{
-  "model": "blog.mailmessage",
-  "pk": 5,
-  "fields": {
-    "title": null,
-    "message": "Update From Sids Blog"
-  }
-},
-{
-  "model": "blog.mailmessage",
-  "pk": 6,
-  "fields": {
-    "title": null,
-    "message": "Test Mail"
-  }
-},
-{
-  "model": "blog.mailmessage",
-  "pk": 7,
-  "fields": {
-    "title": null,
-    "message": "Update From Sids Blog"
-  }
-},
-{
-  "model": "blog.mailmessage",
-  "pk": 8,
-  "fields": {
-    "title": "sdfsdaf",
-    "message": "sadfadssfs"
-  }
-},
-{
-  "model": "blog.contactme",
-  "pk": 66,
-  "fields": {
-    "Full_Name": "Michaelhix",
-    "Email_Id": "jackpgbr2@shopmp3.org",
-    "Message_To_Me": "Sur le site vous trouvez des options interactives et une variete de salons de videochat. Seulement ici vous pourrez  profiter de conversations video enrichissantes. Inscrivez-vous sur la plateforme Bed and Bamboo et commencez votre experience Coco chat deja sans delai !  <a href=https://bedandbamboo.fr/>Coco chat</a>, <a href=https://bedandbamboo.fr/en/>Chatrandom</a>, <a href=https://bedandbamboo.fr/de/>Chatrandom</a>, <a href=https://bedandbamboo.fr/nl/>Chatrandom</a>  <a href=https://bedandbamboo.fr/nettchat/>nettchat</a>, <a href=https://bedandbamboo.fr/monkey/>Monkey</a>, <a href=https://bedandbamboo.fr/de/omegle-alternativen/>omegle-alternativen</a>, <a href=https://bedandbamboo.fr/en/omegle-alternativen/>omegle-alternativen</a>, <a href=https://bedandbamboo.fr/nl/chillplanet/>chillplanet</a>, <a href=https://bedandbamboo.fr/nl/chatplaza/>chatplaza</a> 2025 \r\n<a href=\"https://bedandbamboo.fr/\">Coco chat</a> \r\n<a href=\"https://bedandbamboo.fr/en/\">Chatrandom</a> \r\n<a href=\"https://bedandbamboo.fr/de/\">Chatrandom</a> \r\n<a href=\"https://bedandbamboo.fr/nl/\">Chatrandom</a> \r\n<a href=\"https://bedandbamboo.fr/nettchat/\">nettchat</a> \r\n<a href=\"https://bedandbamboo.fr/monkey/\">monkey</a> \r\n<a href=\"https://bedandbamboo.fr/de/omegle-alternativen/\">omegle-alternativen</a> \r\n<a href=\"https://bedandbamboo.fr/en/omegle-alternatives/\">omegle-alternatives</a> \r\n<a href=\"https://bedandbamboo.fr/nl/chillplanet/\">chillplanet</a> \r\n<a href=\"https://bedandbamboo.fr/nl/chatplaza/\">chatplaza</a>",
-    "Contacted_On": "2025-01-19T00:52:10.079Z"
-  }
-},
-{
-  "model": "blog.contactme",
-  "pk": 67,
-  "fields": {
-    "Full_Name": "Michaelhix",
-    "Email_Id": "jackpgbr2@shopmp3.org",
-    "Message_To_Me": "Sur la plateforme Bed and Bamboo vous profitez de des fonctionnalites uniques et un assortiment de forums video. Seulement ici vous pourrez  experimenter des chats video de haute qualite. Inscrivez-vous sur la plateforme Bed and Bamboo et plongez dans le chat video Coco chat deja en ce moment !  [url=https://hoodrichfrance.fr/]Coco chat[/url], [url=https://hoodrichfrance.fr/en/]Chatrandom[/url], [url=https://hoodrichfrance.fr/de/]Chatrandom[/url], [url=https://hoodrichfrance.fr/nl/]Chatrandom[/url]  [url=https://hoodrichfrance.fr/nettchat/]nettchat[/url], [url=https://hoodrichfrance.fr/monkey/]Monkey[/url], [url=https://hoodrichfrance.fr/de/omegle-alternativen/]omegle-alternativen[/url], [url=https://hoodrichfrance.fr/en/omegle-alternativen/]omegle-alternativen[/url], [url=https://hoodrichfrance.fr/nl/chillplanet/]chillplanet[/url], [url=https://hoodrichfrance.fr/nl/chatplaza/]chatplaza[/url] 2025 \r\n<a href=\"https://hoodrichfrance.fr/\">Coco chat</a> \r\n<a href=\"https://hoodrichfrance.fr/en/\">Chatrandom</a> \r\n<a href=\"https://hoodrichfrance.fr/de/\">Chatrandom</a> \r\n<a href=\"https://hoodrichfrance.fr/nl/\">Chatrandom</a> \r\n<a href=\"https://hoodrichfrance.fr/nettchat/\">nettchat</a> \r\n<a href=\"https://hoodrichfrance.fr/monkey/\">monkey</a> \r\n<a href=\"https://hoodrichfrance.fr/de/omegle-alternativen/\">omegle-alternativen</a> \r\n<a href=\"https://hoodrichfrance.fr/en/omegle-alternatives/\">omegle-alternatives</a> \r\n<a href=\"https://hoodrichfrance.fr/nl/chillplanet/\">chillplanet</a> \r\n<a href=\"https://hoodrichfrance.fr/nl/chatplaza/\">chatplaza</a>",
-    "Contacted_On": "2025-01-20T05:41:14.673Z"
-  }
-},
-{
-  "model": "blog.contactme",
-  "pk": 68,
-  "fields": {
-    "Full_Name": "Bhagwan ",
-    "Email_Id": "bhagwang01@gmail.com",
-    "Message_To_Me": "Hello \nContact Api test",
-    "Contacted_On": "2025-05-20T09:26:28.197Z"
-  }
-},
-{
-  "model": "blog.contactme",
-  "pk": 69,
-  "fields": {
-    "Full_Name": "Bhagwan ",
-    "Email_Id": "bhagwang01@gmail.com",
-    "Message_To_Me": "Hello \nContact Api test",
-    "Contacted_On": "2025-05-20T09:26:40.217Z"
-  }
-},
-{
-  "model": "blog.contactme",
-  "pk": 70,
-  "fields": {
-    "Full_Name": "Patricia S",
-    "Email_Id": "rachel@oval9.com",
-    "Message_To_Me": "Hi, I represent an SEO company that specialize in getting you AI citations and higher rankings on Google. I’d like to offer you a 100% free SEO audit for your website. Would you be interested?",
-    "Contacted_On": "2025-06-10T08:27:23.031Z"
-  }
-},
-{
-  "model": "blog.contactme",
-  "pk": 71,
-  "fields": {
-    "Full_Name": "sudarshan kakde",
-    "Email_Id": "sudarshankakde1111@gmail.com",
-    "Message_To_Me": "create an note taker web app for stroing daily class notes and manage your data also make sure to make it such as any new user can use it and can take there daily training notes as well ",
-    "Contacted_On": "2025-09-16T05:40:03.245Z"
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 1,
-  "fields": {
-    "name": "Trek Tales",
-    "slug": "trek-tales",
-    "summary": "The beautiful thing about hiking is that it's truly an activity everyone can do.\r\nWhether you're young or old, an expert or an amateur.",
-    "projectType": "Travel Agency",
-    "skills": "Full-Stack , Design",
-    "doneOn": "2 month ago",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2023-12-18_144655_sqnzhp",
-    "link": "https://trektales.pythonanywhere.com/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Trek Tales is a premium travel booking and route planning portal designed for hiking communities and adventure travelers. The platform helps trekkers organize excursions and share detailed reviews of outdoor trails.</p>\n          <h3>Core Challenges</h3><p>Managing high-fidelity image uploads of trail maps and preserving responsive layouts across mobile devices was a core development focus. The solution required high performance in database queries for locations.</p>\n          <h3>Our Solution</h3><p>We built a clean Django backend paired with responsive UI styles. Trail catalog pages and review comment threads allow users to rate difficulties and submit coordinate maps directly to the database.</p>",
-    "ranking": 6,
-    "tools": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 2,
-  "fields": {
-    "name": "Sid's Blog",
-    "slug": "sids-blog",
-    "summary": "My personal blog where I share coding tips, snippets and my day-to-day life.",
-    "projectType": "Blog Site",
-    "skills": "Full-Stack , Design",
-    "doneOn": "5 month ago",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2023-12-18_143639_qma5zd",
-    "link": "http://sudharshankakde.pythonanywhere.com/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Sid's Blog is a highly responsive personal technical blog showcasing coding tutorials, development guides, and software tips. The blog serves as a personal repository and technical publication platform.</p>\n          <h3>Key Features</h3><p>Features an optimized Django search backend, custom markdown content parser, tag categorizations, and newsletter subscriptions to keep readers updated on tech stories.</p>",
-    "ranking": 5,
-    "tools": [
-      1,
-      2,
-      3,
-      4,
-      5
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 3,
-  "fields": {
-    "name": "Jalda International Export",
-    "slug": "jalda-international-export",
-    "summary": "International import export business.",
-    "projectType": "Business Website",
-    "skills": "Full Stack",
-    "doneOn": "1 month ago",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/pexels-nicolas-poupart-2360569_kv78ds",
-    "link": "https://www.jaldainternationalexports.com/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Jalda International Export is a B2B product showcase website built to promote import/export goods globally. The portal bridges international buyers with agricultural and industrial product supplies.</p>\n          <h3>Key Features</h3><p>Includes a clean multilingual catalog structure, detailed specifications sheet, and a secure corporate inquiry contact form routing directly to trade coordinators.</p>",
-    "ranking": 7,
-    "tools": [
-      1,
-      2,
-      4
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 4,
-  "fields": {
-    "name": "Cosmic Clock Tab",
-    "slug": "cosmic-clock-tab",
-    "summary": "Introducing GalaxyTime Extension – Your Gateway to Cosmic Timekeeping!\r\n\r\nUnleash the power of the universe every time you open a new tab with the GalaxyTime Extension. Immerse yourself in the celestial beauty of analog timekeeping, where time meets the cosmos in a seamless fusion of functionality and aesthetics. This innovative extension transforms your new tab into a captivating visual experience, allowing you to explore time with style.",
-    "projectType": "Chrome Extention",
-    "skills": "Frontend , Design",
-    "doneOn": "12-12-2023",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Cosmic_Clock_Tab_5_prgjfl",
-    "link": "https://chromewebstore.google.com/detail/cosmic-clock-tab/fkhekgmkiegooikfdjjcdfafcnbehehm",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Cosmic Clock Tab (GalaxyTime Extension) is a Chrome Extension that transforms the new tab browser window into a celestial timekeeping interface. It blends advanced analogue design with astronomical themes.</p>\n          <h3>Key Features</h3><p>Features custom analogue clock themes, custom search queries, interactive star chart backgrounds, and smooth framerate rendering using vanilla CSS and JavaScript animations.</p>",
-    "ranking": 2,
-    "tools": [
-      1,
-      2
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 5,
-  "fields": {
-    "name": "Ellora Expenses",
-    "slug": "ellora-expenses",
-    "summary": "Daily Employee's Expenses Management.",
-    "projectType": "Cross-Platfrom Devlopment",
-    "skills": "Flutter",
-    "doneOn": "10-Nov-2023",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Flutter_Dev_fhjp3n",
-    "link": "http://www.sudarshankakde.site",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Ellora Expenses is a cross-platform mobile application developed with Flutter to manage daily employee expenses, track claims, and generate receipt scans for corporate reimbursement.</p>\n          <h3>Key Features</h3><p>Includes dynamic visual charts, secure offline data storage, expense categorization, and seamless cloud database synchronization.</p>",
-    "ranking": 4,
-    "tools": [
-      3,
-      8,
-      9,
-      12,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 6,
-  "fields": {
-    "name": "Ekarth Studio",
-    "slug": "ekarth-studio",
-    "summary": "Frontend Project build with pure html css jquery and bootrap",
-    "projectType": "Art Work Showcase",
-    "skills": "Frontend , Design",
-    "doneOn": "27-12-2023",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Ekarth_Screenshot_hr0agu",
-    "link": "https://sudarshankakde.github.io/EkarthStudio/index.html",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Ekarth Studio is a digital art showcase and e-commerce platform built for a professional art studio based in Maharashtra. It displays photography galleries, blogs, and custom art products.</p>\n          <h3>Key Features</h3><p>Designed with HTML5, CSS3, jQuery, and Bootstrap 5. Highlights include high-performance lightbox galleries and scroll-triggered animations to showcase artwork.</p>",
-    "ranking": 5,
-    "tools": [
-      2,
-      6,
-      7,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 7,
-  "fields": {
-    "name": "Shree Computers",
-    "slug": "shree-computers",
-    "summary": "Web site for related shop",
-    "projectType": "Business Showcase",
-    "skills": "Frontend Site",
-    "doneOn": "10-10-2021",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Shree_computers_bw1exp",
-    "link": "https://sudarshankakde.github.io/Shree-Computer",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Shree Computers is a business showcase portal developed for a retail computer and hardware repair shop. It enables customers to check service offerings, hardware pricing, and request repair quotes online.</p>\n          <h3>Key Features</h3><p>Enables local customers to request custom desktop builds, check repair statuses, and contact support staff directly.</p>",
-    "ranking": 10,
-    "tools": [
-      1,
-      2,
-      4,
-      6,
-      10,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 8,
-  "fields": {
-    "name": "Aarohan Holidays",
-    "slug": "aarohan-holidays",
-    "summary": "Welcome to Aarohan Holidays, your gateway to unforgettable journeys and extraordinary adventures. At Aarohan Holidays, we believe travel is more than just visiting new places\r\nIt's about creating memories that last a lifetime. With Aarohan Holidays, you can go on trips that are carefully planned and perfectly organized.",
-    "projectType": "Travel Agency",
-    "skills": "Full-Stack , Design",
-    "doneOn": "10/05/2024",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/aarohan_card_guls3l",
-    "link": "https://aarohan-rho.vercel.app/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Aarohan Holidays is a travel agency application built to offer curated holiday packages and booking workflows. It is optimized for maximum mobile responsiveness and SEO visibility.</p>\n          <h3>Key Features</h3><p>Includes travel packages, destination catalog guides, and direct WhatsApp contact actions to secure customized vacation plans.</p>",
-    "ranking": 2,
-    "tools": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      8,
-      10,
-      11,
-      12,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 9,
-  "fields": {
-    "name": "wholsetail",
-    "slug": "wholsetail",
-    "summary": "wholesaler and reatiler platfrom",
-    "projectType": "Business Website",
-    "skills": "Full Stack , Design",
-    "doneOn": "25/12/2024",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2025-01-16_230132_sdsgdl",
-    "link": "https://wholsetail.com/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Wholsetail is a wholesale and retail supply chain management platform. It facilitates communication between suppliers, retailers, and final consumers with built-in stock tracking.</p>\n          <h3>Key Features</h3><p>Enables dual account types (wholesaler/retailer), bulk ordering discount models, and automated ledger invoice generation.</p>",
-    "ranking": 4,
-    "tools": [
-      1,
-      2,
-      5,
-      8,
-      10,
-      11
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 10,
-  "fields": {
-    "name": "Webkatta",
-    "slug": "webkatta",
-    "summary": "Empowering the Future with Innovative IT Solutions",
-    "projectType": "IT Firm",
-    "skills": "Full Stack , Design , SEO",
-    "doneOn": "5-09-2025",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/webkatta_npgvtg",
-    "link": "https://webkatta.in/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Webkatta is a Nagpur-based IT consultation agency website. It showcases specialized services in custom web solutions, mobile app architectures, AI systems, and cloud management.</p>\n           <h3>Key Features</h3><p>Built with Next.js and Tailwind CSS, featuring modern UI animations, interactive project portfolio, and responsive contact forms.</p>",
-    "ranking": 3,
-    "tools": [
-      1,
-      2,
-      3,
-      4,
-      8,
-      10,
-      13,
-      14
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 11,
-  "fields": {
-    "name": "BALARAMA BHUVENTURE PVT LTD",
-    "slug": "balarama-bhuventure-pvt-ltd",
-    "summary": "Fresh. Organic.\r\nNourishing & Ancient\r\nPractice Based Product In\r\nChh.Sambhajinagar, Maharashtra\r\nWelcome to BALARAMA BHUVENTURE PRIVATE LIMITED your trusted source for farm-fresh, high-quality products collects directly from farms fresh with care in Chh Sambhajinagar.",
-    "projectType": "Business Website",
-    "skills": "Full Stack , Design",
-    "doneOn": "25-08-2025",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2025-08-27_003218_ii77sk",
-    "link": "https://www.balaramabhuventure.com/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>Balarama Bhuventure is a business website for farm-fresh organic and ancient agricultural products based in Chh. Sambhajinagar. It showcases natural products collected directly from local farms.</p>\n           <h3>Key Features</h3><p>Features an organic product catalog, description of natural farming practices, and corporate bulk inquiry workflows.</p>",
-    "ranking": 2,
-    "tools": [
-      1,
-      2,
-      4,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 12,
-  "fields": {
-    "name": "NSBNMVH",
-    "slug": "nsbnmvh",
-    "summary": "An educational website for NSBNMV Hadgaon, designed to showcase information about the institution, its mission, academic environment, and activities. The platform supports bilingual (Marathi and English) content, making it accessible to a broader audience. Developed for streamlined school management and to present resources, updates, and announcements online for students, teachers, and parents.",
-    "projectType": "School Site",
-    "skills": "Full-Stack , Design , SEO",
-    "doneOn": "15-10-2025",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/generated-image_lajf8d",
-    "link": "https://nsbnmvh-school.vercel.app/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>NSBNMVH is a school communication portal designed to share news, notifications, calendars, and student activity highlights with parents and administrators.</p>\n           <h3>Key Features</h3><p>Includes announcements boards, download portal for school materials, and responsive calendar schedule views.</p>",
-    "ranking": 2,
-    "tools": [
-      1,
-      2,
-      5,
-      10,
-      11,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 13,
-  "fields": {
-    "name": "React-Share-Utilities",
-    "slug": "react-share-utilities",
-    "summary": "Lightweight React utilities for sharing content, copying to clipboard, opening deep links with smart fallbacks, and rendering share/copy UI components. Works with React 18+ and is built with TypeScript, zero runtime dependencies, and drop-in components for social sharing and clipboard support.",
-    "projectType": "Open-Source, NPM Package",
-    "skills": "TypeScript, Web APIs",
-    "doneOn": "Ongoing open-source project",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2025-12-28_222618_ueftkr",
-    "link": "https://react-share.sudarshankakde.tech/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>React-Share-Utilities is an open-source library that simplifies sharing links, content, and media from React apps using modern navigator web APIs.</p>\n           <h3>Key Features</h3><p>Lightweight wrapper with fallback sharing modals and easy component configuration.</p>",
-    "ranking": 1,
-    "tools": [
-      1,
-      3,
-      4,
-      6,
-      9,
-      10,
-      11,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.projects",
-  "pk": 14,
-  "fields": {
-    "name": "Dummy Server API: Mock Backend Service",
-    "slug": "dummy-server-api-mock-backend-service",
-    "summary": "A dummy server project designed to simulate real-world backend functionality using RESTful APIs. It provides structured endpoints for authentication, CRUD operations, and data handling, enabling frontend developers to test and integrate applications without relying on a live production server.",
-    "projectType": "Full Stack",
-    "skills": "REST API, Backend Architecture, Authentication",
-    "doneOn": "January 2025",
-    "Thumbnail": "DataBase/Images/Projects/Thumbnail/Screenshot_2026-02-11_at_2.37.53PM_1_wf5rxl",
-    "link": "https://sudarshankakde.pythonanywhere.com/",
-    "github_link": null,
-    "case_study": "<h3>Project Overview</h3><p>A mock REST API service that acts as a dummy backend for frontend testing, returning customizable mock JSON datasets instantly.</p>\n           <h3>Key Features</h3><p>Supports dynamic REST endpoints, JSON responses, search simulation, and status code debugging.</p>",
-    "ranking": 1,
-    "tools": [
-      1,
-      2,
-      5,
-      6,
-      8,
-      11,
-      12,
-      13
-    ]
-  }
-},
-{
-  "model": "blog.experience",
-  "pk": 4,
-  "fields": {
-    "company": "Threepreneur Global Pvt Ltd",
-    "role": "Web Developer",
-    "period": "Nov 2025 - Present",
-    "responsibilities": "Optimized React.js application performance by 35% by improving component rendering, implementing Redux and Redux-Saga for asynchronous state management, and minimizing unnecessary re-renders.\nImproved data handling efficiency by 40% by implementing client-side pagination, filtering, and search across grid and table layouts for large datasets.\nReduced form validation errors by 50% by implementing schema-based validation using Yup, improving data accuracy and overall user experience.",
-    "type": "job",
-    "certificate": "",
-    "certificate_url": null,
-    "publish": true,
-    "order": 1
-  }
-},
-{
-  "model": "blog.experience",
-  "pk": 5,
-  "fields": {
-    "company": "Skyhighes Technologies",
-    "role": "Full-Stack Developer Intern",
-    "period": "Dec 2024 – March 2025",
-    "responsibilities": "Developed and deployed robust web applications that leverage modern frameworks and technologies, such as ReactJS and Django, to meet client requirements.\nDesigned and built mobile application interfaces using React Native, delivering intuitive and responsive user experiences.\nCollaborated with cross-functional teams to deliver innovative solutions for the development of websites and mobile applications.\nEnhanced application performance by optimizing API integrations and database queries, ensuring scalability and reliability.",
-    "type": "internship",
-    "certificate": "",
-    "certificate_url": "https://drive.google.com/file/d/1XpHd1h-kru5_13PtkUmuz33tSXIJJ0cE/view?usp=sharing",
-    "publish": true,
-    "order": 2
-  }
-},
-{
-  "model": "blog.experience",
-  "pk": 6,
-  "fields": {
-    "company": "The Website Makers",
-    "role": "Web Development Intern",
-    "period": "Dec 2023 – March 2024",
-    "responsibilities": "Amplified web development skills by working on diverse live projects, collaborating with team members to deliver quality solutions.",
-    "type": "internship",
-    "certificate": "",
-    "certificate_url": "https://drive.google.com/file/d/1qz5Ht_ebzhdefYkEYp3m52VY0gbn3PuJ/view?usp=sharing",
-    "publish": true,
-    "order": 3
-  }
-},
-{
-  "model": "blog.experience",
-  "pk": 7,
-  "fields": {
-    "company": "PHN Technology Pvt. Ltd.",
-    "role": "Web Developer Intern",
-    "period": "April 2023 – June 2023",
-    "responsibilities": "Developed and maintained scalable web applications using Django and REST APIs, improving the functionality of dynamic websites.\nEnhanced performance by optimizing database queries in MySQL, achieving a reduction 20% in response times.\nCollaborated in a Linux-based environment, ensuring seamless deployment and debugging of back-end services.",
-    "type": "internship",
-    "certificate": "",
-    "certificate_url": "https://drive.google.com/file/d/1zVFSEZY0hkPCYswD6KK9t69MZCSRmjsd/view?usp=sharing",
-    "publish": true,
-    "order": 4
-  }
-},
-{
-  "model": "blog.experience",
-  "pk": 8,
-  "fields": {
-    "company": "Ekatta-Innovators",
-    "role": "Web Developer Intern",
-    "period": "Nov 2021– Jan 2022",
-    "responsibilities": "Built modular backend solutions for live projects using Python and Django, ensuring scalability and maintainability.\nApplied RESTful APIs to integrate frontend frameworks like Tailwind CSS for interactive user interfaces.\nCollaborated with the team to design distributed systems, gaining exposure to enterprise-level application architecture.",
-    "type": "internship",
-    "certificate": "",
-    "certificate_url": null,
-    "publish": true,
-    "order": 5
-  }
-}
 ]
