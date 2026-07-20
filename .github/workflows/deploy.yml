@@ -17,4 +17,4 @@ jobs:
             -H "Content-Type: application/json" \
             -H "X-Hub-Signature-256: sha256=$SIGNATURE" \
             -d "$PAYLOAD" \
-            https://sudarshankakde.pythonanywhere.com/api/deploy-webhook
+            https://sudharshankakde.pythonanywhere.com/api/deploy-webhook
