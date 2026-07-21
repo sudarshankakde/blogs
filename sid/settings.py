@@ -151,8 +151,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/DataBase/'
 
-STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATICFILES_DIR] if os.path.exists(STATICFILES_DIR) else []
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
