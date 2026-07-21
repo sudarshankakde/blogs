@@ -29,7 +29,7 @@ load_dotenv(BASE_DIR / '.env')
 SECRET_KEY = 'django-insecure--wjan*1y5vu!)gp1gcapv*++6cdsa59w%=@l6)&c-79cuxu88z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =  os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['*']
 SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
@@ -150,6 +150,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/DataBase/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STORAGES = {
     "default": {
