@@ -44,6 +44,7 @@ r"^https://\w+\.domain\.com$",
 
 INSTALLED_APPS = [
     'jazzmin',
+    'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
     'corsheaders',
@@ -54,7 +55,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
 
 ]
