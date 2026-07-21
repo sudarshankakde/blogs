@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.html import strip_tags
 from django.conf import settings
-from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects, ProjectTools, Experience
+from blog.models import Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe, Projects, ProjectTools, Experience, GalleryImage, Service
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -12,13 +12,8 @@ from django.template.loader import render_to_string
 from django.http import HttpResponse, JsonResponse
 import json
 import random
-data = None
-
 def get_web_data():
-    global data
-    if data is None:
-        data = webData.objects.first()
-    return data
+    return webData.objects.first()
 
 # html pages
 def subscription(request):
@@ -420,3 +415,43 @@ def experienceApi(request):
             }
         }
         return JsonResponse(response, safe=False)
+
+
+def galleryApi(request):
+    if request.method == "GET":
+        images = GalleryImage.objects.filter(publish=True).order_by('order', '-id')
+        serialized_images = [
+            {
+                'id': img.id,
+                'text': img.title,
+                'image': request.build_absolute_uri(img.image.url) if img.image else "",
+            }
+            for img in images
+        ]
+        return JsonResponse({'data': serialized_images}, safe=False)
+
+
+def aboutApi(request):
+    if request.method == "GET":
+        web_info = get_web_data()
+        services = Service.objects.filter(publish=True).order_by('order', 'id')
+        
+        serialized_services = [
+            {
+                'id': s.id,
+                'title': s.title,
+                'description': s.description,
+                'icon': s.icon or "",
+                'order': s.order
+            }
+            for s in services
+        ]
+        
+        response = {
+            'about_me': web_info.About_me if web_info else "",
+            'mine_name': web_info.mine_name if web_info else "Sudarshan Kakde",
+            'quote': web_info.HomePage_qoute if web_info else "",
+            'email': web_info.email if web_info else "",
+            'services': serialized_services
+        }
+        return JsonResponse(response)

@@ -11,13 +11,8 @@ import json
 from rest_framework import serializers
 from django.db.models import Count
 # Create your views here.
-data = None
-
 def get_web_data():
-    global data
-    if data is None:
-        data = webData.objects.first()
-    return data
+    return webData.objects.first()
 
 
 def AllBlogs(request):

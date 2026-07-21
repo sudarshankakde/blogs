@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.utils.html import format_html, format_html_join
-from .models import Blog, tag, webData, BlogComment
-from .models import MailMessage, Subscribers, ContactMe, Projects, ProjectTools, Experience
+from .models import (
+    Blog, webData, BlogComment, Subscribers, MailMessage, tag, ContactMe,
+    Projects, ProjectTools, Experience, GalleryImage, Service
+)
 
 
 # ─── Custom Actions ────────────────────────────────────────────────────────────
@@ -145,6 +147,9 @@ class BlogCommentAdmin(admin.ModelAdmin):
 
 @admin.register(webData)
 class WebDataAdmin(admin.ModelAdmin):
+    class Media:
+        js = ('js/tinyInject.js',)
+
     list_display = ('mine_name', 'site_name', 'email')
 
 
@@ -254,6 +259,36 @@ class ExperienceAdmin(admin.ModelAdmin):
             )
         return '—'
     certificate_preview.short_description = 'Preview'
+
+
+@admin.register(GalleryImage)
+class GalleryImageAdmin(admin.ModelAdmin):
+    list_display = ('title', 'order', 'publish', 'created_at', 'image_preview')
+    list_editable = ('order', 'publish')
+    list_filter = ('publish',)
+    search_fields = ('title',)
+    ordering = ('order', '-id')
+    readonly_fields = ('image_preview',)
+
+    def image_preview(self, obj):
+        if obj.image:
+            return format_html(
+                '<img src="{}" style="max-height:120px;border-radius:6px;border:1px solid #444" />',
+                obj.image.url
+            )
+        return '—'
+    image_preview.short_description = 'Preview'
+
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'icon', 'order', 'publish', 'created_at')
+    list_editable = ('order', 'publish')
+    list_filter = ('publish',)
+    search_fields = ('title', 'description')
+    ordering = ('order', 'id')
+
+
 
 
 

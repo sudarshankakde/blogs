@@ -142,3 +142,28 @@ class Experience(models.Model):
     def __str__(self):
         return f"{self.role} at {self.company}"
 
+
+class GalleryImage(models.Model):
+    title = models.CharField(max_length=100, blank=True, default="Gallery Image", help_text="Label text displayed under image card")
+    image = models.ImageField(upload_to='Images/Gallery')
+    order = models.IntegerField(default=0, help_text="Ordering index (smaller values first)")
+    publish = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title or f"Gallery Image {self.id}"
+
+
+class Service(models.Model):
+    title = models.CharField(max_length=150)
+    description = models.TextField()
+    icon = models.CharField(max_length=100, blank=True, null=True, help_text="Emoji or icon label e.g. 🕸️, 💻, 🎨")
+    order = models.IntegerField(default=0, help_text="Ordering index (smaller values first)")
+    publish = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+
+

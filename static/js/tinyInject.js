@@ -9,10 +9,11 @@ script.onload = function () {
     const bodyEl = document.getElementById("id_body");
     if (bodyEl) bodyEl.removeAttribute("required");
     const caseStudyEl = document.getElementById("id_case_study");
-    if (caseStudyEl) caseStudyEl.removeAttribute("required");
+    const aboutMeEl = document.getElementById("id_About_me");
+    if (aboutMeEl) aboutMeEl.removeAttribute("required");
 
     tinymce.init({
-        selector: "#id_body, #id_case_study",
+        selector: "#id_body, #id_case_study, #id_About_me, #id_HomePage_qoute",
         height: 500,
         width: '100%',
         plugins: [

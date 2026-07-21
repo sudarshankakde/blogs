@@ -16,6 +16,8 @@ urlpatterns = [
     path('deploy-webhook', deploy.deploy_webhook, name='deploy_webhook'),
     path('resume', views.resumeApi, name='resumeApi'),
     path('experience', views.experienceApi, name='experienceApi'),
+    path('gallery', views.galleryApi, name='galleryApi'),
+    path('about', views.aboutApi, name='aboutApi'),
 ]
 
 
